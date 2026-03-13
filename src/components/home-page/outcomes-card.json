@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_home_page_outcomes_cards",
+  "info": {
+    "displayName": "Outcomes Card"
+  },
+  "options": {},
+  "attributes": {
+    "industry": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "challenge": {
+      "type": "text"
+    },
+    "service": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "kpi_1_value": {
+      "type": "string"
+    },
+    "kpi_1_label": {
+      "type": "string"
+    },
+    "kpi_2_value": {
+      "type": "string"
+    },
+    "kpi_2_label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_industries",
+  "info": {
+    "displayName": "industry"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "industryCard": {
+      "type": "component",
+      "component": "home-page.industry-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_why_thynkwises",
+  "info": {
+    "displayName": "Why Thynkwise"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "why_card": {
+      "type": "component",
+      "component": "home-page.why-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

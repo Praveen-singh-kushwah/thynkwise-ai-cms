@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_cloud_providers",
+  "info": {
+    "displayName": "cloud-provider"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "home-page.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
