@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "cybersecurity_pages",
+  "info": {
+    "singularName": "cybersecurity-page",
+    "pluralName": "cybersecurity-pages",
+    "displayName": "cybersecurity-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cybersecurity_hero": {
+      "type": "component",
+      "component": "cybersecurity-page.cybersecurity-hero",
+      "repeatable": false
+    },
+    "security_event": {
+      "type": "component",
+      "component": "cybersecurity-page.security-event",
+      "repeatable": true
+    },
+    "security_domains": {
+      "type": "component",
+      "component": "cloud-migration-page.migration-service-types",
+      "repeatable": false
+    },
+    "security_service_catalogue": {
+      "type": "component",
+      "component": "cybersecurity-page.security-service-catalogue",
+      "repeatable": false
+    },
+    "security_compliance_frameworks": {
+      "type": "component",
+      "component": "cybersecurity-page.security-compliance-frameworks",
+      "repeatable": false
+    },
+    "why_thynkwise_security": {
+      "type": "component",
+      "component": "managed-services-page.why-thynkwise",
+      "repeatable": false
+    },
+    "security_stats_band": {
+      "type": "component",
+      "component": "managed-services-page.stats-band",
+      "repeatable": false
+    },
+    "security_case_studies": {
+      "type": "component",
+      "component": "managed-services-page.case-studies",
+      "repeatable": false
+    },
+    "security_partner": {
+      "type": "component",
+      "component": "cybersecurity-page.security-partners",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "managed-services-page.faq",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "managed-services-page.final-cta",
+      "repeatable": false
+    }
+  }
+}

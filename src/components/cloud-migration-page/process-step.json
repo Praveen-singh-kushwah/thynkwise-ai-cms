@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_cloud_migration_page_process_steps",
+  "info": {
+    "displayName": "process_step"
+  },
+  "options": {},
+  "attributes": {
+    "step_number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

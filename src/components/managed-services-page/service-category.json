@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_managed_services_page_service_categories",
+  "info": {
+    "displayName": "service_category"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "component": "managed-services-page.services",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

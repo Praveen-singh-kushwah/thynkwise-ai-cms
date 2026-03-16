@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_managed_services_page_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "faq_item": {
+      "type": "component",
+      "component": "faq.faq-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

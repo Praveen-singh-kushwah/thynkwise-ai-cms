@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_cybersecurity_page_services",
+  "info": {
+    "displayName": "services"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description_points": {
+      "type": "component",
+      "component": "cybersecurity-page.description-points",
+      "repeatable": true
+    },
+    "tag": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

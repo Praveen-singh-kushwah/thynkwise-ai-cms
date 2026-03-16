@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_cybersecurity_page_partners",
+  "info": {
+    "displayName": "partners"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

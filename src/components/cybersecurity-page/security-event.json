@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_cybersecurity_page_security_events",
+  "info": {
+    "displayName": "security_event"
+  },
+  "options": {},
+  "attributes": {
+    "severity": {
+      "type": "enumeration",
+      "enum": [
+        "severity",
+        "high",
+        "medium"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "meta_tag": {
+      "type": "component",
+      "component": "cybersecurity-page.meta",
+      "repeatable": true
+    },
+    "status_cb": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

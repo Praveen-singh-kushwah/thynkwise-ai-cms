@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_card_2s",
+  "info": {
+    "displayName": "card-2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "badgeText": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "stat": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true
+    },
+    "point": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

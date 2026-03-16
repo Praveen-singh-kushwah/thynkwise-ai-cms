@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_card_1s",
+  "info": {
+    "displayName": "card-1"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

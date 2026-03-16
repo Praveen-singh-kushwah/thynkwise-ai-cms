@@ -1,0 +1,80 @@
+{
+  "kind": "singleType",
+  "collectionName": "gpuaas_pages",
+  "info": {
+    "singularName": "gpuaas-page",
+    "pluralName": "gpuaas-pages",
+    "displayName": "gpuaas-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "gpuaas-page.hero",
+      "repeatable": false
+    },
+    "gpuaas_who_deploys": {
+      "type": "component",
+      "component": "gpuaas-page.gpuaas-who-deploys",
+      "repeatable": false
+    },
+    "gpuaas_delivery_models": {
+      "type": "component",
+      "component": "gpuaas-page.gpuaas-delivery-models",
+      "repeatable": false
+    },
+    "gpu_architecture": {
+      "type": "component",
+      "component": "gpuaas-page.gpu-architecture",
+      "repeatable": false
+    },
+    "workload_library": {
+      "type": "component",
+      "component": "gpuaas-page.workload-library",
+      "repeatable": false
+    },
+    "framework_stack": {
+      "type": "component",
+      "component": "gpuaas-page.framework-stack",
+      "repeatable": false
+    },
+    "turnkey_systems": {
+      "type": "component",
+      "component": "gpuaas-page.turnkey-systems",
+      "repeatable": false
+    },
+    "why_thynkwise": {
+      "type": "component",
+      "component": "managed-services-page.why-thynkwise",
+      "repeatable": false
+    },
+    "outcomes": {
+      "type": "component",
+      "component": "gpuaas-page.outcomes",
+      "repeatable": false
+    },
+    "partner_ecosystem": {
+      "type": "component",
+      "component": "gpuaas-page.partner-ecosystem",
+      "repeatable": false
+    },
+    "common_questions": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": false
+    },
+    "cta_section": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "gpuaas-page.faq",
+      "repeatable": false
+    }
+  }
+}

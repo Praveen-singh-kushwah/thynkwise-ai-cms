@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cloud_migration_page_quick_answers",
+  "info": {
+    "displayName": "quick_answer"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_cloud_migration_page_cloud_migration_heroes",
+  "info": {
+    "displayName": "cloud_migration_hero"
+  },
+  "options": {},
+  "attributes": {
+    "kicker_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primary_cta_text": {
+      "type": "string"
+    },
+    "primary_cta_link": {
+      "type": "string"
+    },
+    "secondary_cta_text": {
+      "type": "string"
+    },
+    "secondary_cta_link": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "component": "cloud-migration-page.stats",
+      "repeatable": true
+    },
+    "process_step": {
+      "type": "component",
+      "component": "cloud-migration-page.process-step",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

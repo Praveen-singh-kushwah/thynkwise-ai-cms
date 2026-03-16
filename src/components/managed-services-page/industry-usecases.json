@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_managed_services_page_industry_usecases",
+  "info": {
+    "displayName": "industry_usecases"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "usecase": {
+      "type": "component",
+      "component": "industry-usecases.usecase",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

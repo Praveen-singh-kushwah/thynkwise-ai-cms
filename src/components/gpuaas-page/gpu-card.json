@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_gpuaas_page_gpu_cards",
+  "info": {
+    "displayName": "gpu_card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    },
+    "list_point": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true
+    },
+    "tag": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_gpuaas_page_turnkey_systems",
+  "info": {
+    "displayName": "turnkey_systems"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "shared.card-2",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

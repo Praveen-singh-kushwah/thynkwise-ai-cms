@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_gpuaas_page_section_1s",
+  "info": {
+    "displayName": "section-1"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "short_code": {
+      "type": "string"
+    },
+    "points": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

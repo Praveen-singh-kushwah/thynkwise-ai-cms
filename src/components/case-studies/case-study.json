@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_case_studies_case_studies",
+  "info": {
+    "displayName": "case_study"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "industry": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "kpi_1_value": {
+      "type": "string"
+    },
+    "kpi_1_label": {
+      "type": "string"
+    },
+    "kpi_2_value": {
+      "type": "string"
+    },
+    "kpi_2_label": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "text"
+    },
+    "key_outcome": {
+      "type": "string"
+    },
+    "points": {
+      "type": "component",
+      "component": "cybersecurity-page.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

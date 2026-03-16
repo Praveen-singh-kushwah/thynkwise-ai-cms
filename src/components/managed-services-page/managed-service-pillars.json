@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_managed_services_page_managed_service_pillars",
+  "info": {
+    "displayName": "managed_service_pillars"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "pillar": {
+      "type": "component",
+      "component": "managed-services-page.pillar",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

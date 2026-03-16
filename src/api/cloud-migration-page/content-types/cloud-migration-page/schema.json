@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "cloud_migration_pages",
+  "info": {
+    "singularName": "cloud-migration-page",
+    "pluralName": "cloud-migration-pages",
+    "displayName": "cloud-migration-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cloud_migration_hero": {
+      "type": "component",
+      "component": "cloud-migration-page.cloud-migration-hero",
+      "repeatable": false
+    },
+    "quick_answer": {
+      "type": "component",
+      "component": "cloud-migration-page.quick-answer",
+      "repeatable": true
+    },
+    "migration_process": {
+      "type": "component",
+      "component": "cloud-migration-page.migration-process",
+      "repeatable": false
+    },
+    "migration_risk_management": {
+      "type": "component",
+      "component": "cloud-migration-page.migration-risk-management",
+      "repeatable": false
+    },
+    "migration_service_types": {
+      "type": "component",
+      "component": "cloud-migration-page.migration-service-types",
+      "repeatable": false
+    },
+    "six_r_framework": {
+      "type": "component",
+      "component": "cloud-migration-page.six-r-framework",
+      "repeatable": false
+    },
+    "industry_migration": {
+      "type": "component",
+      "component": "cloud-migration-page.industry-migration",
+      "repeatable": false
+    },
+    "trust_stats": {
+      "type": "component",
+      "component": "cloud-migration-page.trust-stats",
+      "repeatable": true
+    },
+    "case_study": {
+      "type": "component",
+      "component": "managed-services-page.case-studies",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "managed-services-page.faq",
+      "repeatable": false
+    },
+    "cta_section": {
+      "type": "component",
+      "component": "managed-services-page.final-cta",
+      "repeatable": false
+    }
+  }
+}

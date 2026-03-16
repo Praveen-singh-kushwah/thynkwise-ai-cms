@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_cloud_migration_page_process_step_detaileds",
+  "info": {
+    "displayName": "process_step_detailed"
+  },
+  "options": {},
+  "attributes": {
+    "timeline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "deliverables": {
+      "type": "component",
+      "component": "cloud-migration-page.deliverables",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

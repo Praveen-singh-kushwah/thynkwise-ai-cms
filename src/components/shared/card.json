@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_cards",
+  "info": {
+    "displayName": "card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "points": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

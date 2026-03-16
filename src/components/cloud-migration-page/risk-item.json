@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_cloud_migration_page_risk_items",
+  "info": {
+    "displayName": "risk_item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_gpuaas_page_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "faq": {
+      "type": "component",
+      "component": "shared.question-and-answer",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

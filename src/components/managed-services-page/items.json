@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_managed_services_page_items",
+  "info": {
+    "displayName": "items"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

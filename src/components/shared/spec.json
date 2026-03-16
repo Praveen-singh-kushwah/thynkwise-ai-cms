@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_specs",
+  "info": {
+    "displayName": "spec"
+  },
+  "options": {},
+  "attributes": {
+    "spec": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

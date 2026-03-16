@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_gpuaas_page_gpu_architecture_vendors",
+  "info": {
+    "displayName": "GPU Architecture Vendors"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "component": "shared.card-1",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

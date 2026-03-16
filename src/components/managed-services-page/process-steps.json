@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_managed_services_page_process_steps",
+  "info": {
+    "displayName": "process_steps"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "process_step": {
+      "type": "component",
+      "component": "managed-services.process-step",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

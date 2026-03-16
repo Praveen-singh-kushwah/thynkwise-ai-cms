@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_ctas",
+  "info": {
+    "displayName": "cta"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primary_cta_text": {
+      "type": "string"
+    },
+    "primary_cta_link": {
+      "type": "string"
+    },
+    "secondary_cta_text": {
+      "type": "string"
+    },
+    "secondary_cta_link": {
+      "type": "string"
+    },
+    "points": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_managed_services_page_pillars",
+  "info": {
+    "displayName": "pillar"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "managed-services-page.items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

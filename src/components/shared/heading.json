@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_headings",
+  "info": {
+    "displayName": "heading"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

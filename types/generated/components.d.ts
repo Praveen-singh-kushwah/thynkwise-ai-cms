@@ -1,5 +1,701 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutHero extends Struct.ComponentSchema {
+  collectionName: 'components_about_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    heading: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface CaseStudiesCaseStudy extends Struct.ComponentSchema {
+  collectionName: 'components_case_studies_case_studies';
+  info: {
+    displayName: 'case_study';
+  };
+  attributes: {
+    company: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images'>;
+    industry: Schema.Attribute.String;
+    key_outcome: Schema.Attribute.String;
+    kpi_1_label: Schema.Attribute.String;
+    kpi_1_value: Schema.Attribute.String;
+    kpi_2_label: Schema.Attribute.String;
+    kpi_2_value: Schema.Attribute.String;
+    outcome: Schema.Attribute.Text;
+    points: Schema.Attribute.Component<'cybersecurity-page.points', true>;
+    quote: Schema.Attribute.Text;
+  };
+}
+
+export interface CloudMigrationPageCloudMigrationHero
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_cloud_migration_heroes';
+  info: {
+    displayName: 'cloud_migration_hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    kicker_text: Schema.Attribute.String;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    process_step: Schema.Attribute.Component<
+      'cloud-migration-page.process-step',
+      true
+    >;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'cloud-migration-page.stats', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageDeliverables extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_deliverables';
+  info: {
+    displayName: 'deliverables';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageIndustryCard extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_industry_cards';
+  info: {
+    displayName: 'industry_card';
+  };
+  attributes: {
+    compliance: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    industry: Schema.Attribute.String;
+    primary_cloud: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    timeline: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageIndustryMigration
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_industry_migrations';
+  info: {
+    displayName: 'industry_migration';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    industry_card: Schema.Attribute.Component<
+      'cloud-migration-page.industry-card',
+      true
+    >;
+  };
+}
+
+export interface CloudMigrationPageMigrationProcess
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_migration_processes';
+  info: {
+    displayName: 'migration_process';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    process_step_detailed: Schema.Attribute.Component<
+      'cloud-migration-page.process-step-detailed',
+      true
+    >;
+  };
+}
+
+export interface CloudMigrationPageMigrationRiskManagement
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_migration_risk_managements';
+  info: {
+    displayName: 'migration_risk_management';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    risk_item: Schema.Attribute.Component<
+      'cloud-migration-page.risk-item',
+      true
+    >;
+    solution_item: Schema.Attribute.Component<
+      'cloud-migration-page.solution-item',
+      true
+    >;
+  };
+}
+
+export interface CloudMigrationPageMigrationService
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_migration_services';
+  info: {
+    displayName: 'migration_service';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    tag: Schema.Attribute.Component<'cloud-migration-page.tag', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageMigrationServiceTypes
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_migration_service_types';
+  info: {
+    displayName: 'migration_service_types';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    migration_service: Schema.Attribute.Component<
+      'cloud-migration-page.migration-service',
+      true
+    >;
+  };
+}
+
+export interface CloudMigrationPageProcessStep extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_process_steps';
+  info: {
+    displayName: 'process_step';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    step_number: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageProcessStepDetailed
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_process_step_detaileds';
+  info: {
+    displayName: 'process_step_detailed';
+  };
+  attributes: {
+    deliverables: Schema.Attribute.Component<
+      'cloud-migration-page.deliverables',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    timeline: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageQuickAnswer extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_quick_answers';
+  info: {
+    displayName: 'quick_answer';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.Text;
+  };
+}
+
+export interface CloudMigrationPageRiskItem extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_risk_items';
+  info: {
+    displayName: 'risk_item';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageSixRFramework
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_six_r_frameworks';
+  info: {
+    displayName: 'six_r_framework';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    six_r_strategy: Schema.Attribute.Component<
+      'cloud-migration-page.six-r-strategy',
+      true
+    >;
+  };
+}
+
+export interface CloudMigrationPageSixRStrategy extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_six_r_strategies';
+  info: {
+    displayName: 'six_r_strategy';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    number: Schema.Attribute.Integer;
+    timeline: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageSolutionItem extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_solution_items';
+  info: {
+    displayName: 'solution_item';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageStats extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_stats';
+  info: {
+    displayName: 'stats';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageTag extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_tags';
+  info: {
+    displayName: 'tag';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
+export interface CloudMigrationPageTrustStats extends Struct.ComponentSchema {
+  collectionName: 'components_cloud_migration_page_trust_stats';
+  info: {
+    displayName: 'trust_stats';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPageCybersecurityHero
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_cybersecurity_heroes';
+  info: {
+    displayName: 'cybersecurity_hero';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    trust_point: Schema.Attribute.Component<
+      'cybersecurity-page.trust-points',
+      true
+    >;
+  };
+}
+
+export interface CybersecurityPageDescriptionPoints
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_description_points';
+  info: {
+    displayName: 'description_points';
+  };
+  attributes: {
+    point: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPageFramework extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_frameworks';
+  info: {
+    displayName: 'framework';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPageMeta extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_metas';
+  info: {
+    displayName: 'meta';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPagePartnerCategory
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_partner_categories';
+  info: {
+    displayName: 'partner_category';
+  };
+  attributes: {
+    category_name: Schema.Attribute.String;
+    partners: Schema.Attribute.Component<'cybersecurity-page.partners', true>;
+  };
+}
+
+export interface CybersecurityPagePartners extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_partners';
+  info: {
+    displayName: 'partners';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPagePoints extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_points';
+  info: {
+    displayName: 'points';
+  };
+  attributes: {
+    point: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPageSecurityComplianceFrameworks
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_security_compliance_frameworks';
+  info: {
+    displayName: 'security_compliance_frameworks';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    framework: Schema.Attribute.Component<'cybersecurity-page.framework', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPageSecurityEvent extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_security_events';
+  info: {
+    displayName: 'security_event';
+  };
+  attributes: {
+    meta_tag: Schema.Attribute.Component<'cybersecurity-page.meta', true>;
+    severity: Schema.Attribute.Enumeration<['severity', 'high', 'medium']>;
+    status_cb: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPageSecurityPartners
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_security_partners';
+  info: {
+    displayName: 'security_partners';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    partner_category: Schema.Attribute.Component<
+      'cybersecurity-page.partner-category',
+      true
+    >;
+  };
+}
+
+export interface CybersecurityPageSecurityServiceCatalogue
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_security_service_catalogues';
+  info: {
+    displayName: 'security_service_catalogue';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    service_category: Schema.Attribute.Component<
+      'cybersecurity-page.service-category',
+      true
+    >;
+  };
+}
+
+export interface CybersecurityPageServiceCategory
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_service_categories';
+  info: {
+    displayName: 'service_category';
+  };
+  attributes: {
+    category_icon: Schema.Attribute.Media<'images'>;
+    category_name: Schema.Attribute.String;
+    services: Schema.Attribute.Component<'cybersecurity-page.services', true>;
+  };
+}
+
+export interface CybersecurityPageServices extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_services';
+  info: {
+    displayName: 'services';
+  };
+  attributes: {
+    description_points: Schema.Attribute.Component<
+      'cybersecurity-page.description-points',
+      true
+    >;
+    icon: Schema.Attribute.Media<'images'>;
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CybersecurityPageTrustPoints extends Struct.ComponentSchema {
+  collectionName: 'components_cybersecurity_page_trust_points';
+  info: {
+    displayName: 'trust_points';
+  };
+  attributes: {
+    trust_point: Schema.Attribute.String;
+  };
+}
+
+export interface FaqFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_faq_faq_items';
+  info: {
+    displayName: 'faq_item';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.Text;
+  };
+}
+
+export interface GpuaasPageCard extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    point: Schema.Attribute.Component<'shared.points', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GpuaasPageFaq extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    faq: Schema.Attribute.Component<'shared.question-and-answer', true>;
+  };
+}
+
+export interface GpuaasPageFrameworkStack extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_framework_stacks';
+  info: {
+    displayName: 'framework_stack';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'gpuaas-page.card', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface GpuaasPageGpuArchitecture extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_gpu_architectures';
+  info: {
+    displayName: 'gpu-architecture';
+  };
+  attributes: {
+    gpu_architecture_types: Schema.Attribute.Component<
+      'gpuaas-page.gpu-architecture-types',
+      true
+    >;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface GpuaasPageGpuArchitectureTypes extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_gpu_architecture_types';
+  info: {
+    displayName: 'gpu-architecture-types';
+  };
+  attributes: {
+    gpu_card: Schema.Attribute.Component<'gpuaas-page.gpu-card', true>;
+    section_1: Schema.Attribute.Component<'gpuaas-page.section-1', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GpuaasPageGpuArchitectureVendors
+  extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_gpu_architecture_vendors';
+  info: {
+    displayName: 'GPU Architecture Vendors';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card-1', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GpuaasPageGpuCard extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_gpu_cards';
+  info: {
+    displayName: 'gpu_card';
+  };
+  attributes: {
+    list_point: Schema.Attribute.Component<'shared.stat', true>;
+    model: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    tag: Schema.Attribute.Component<'shared.points', true>;
+    variant: Schema.Attribute.Component<'shared.points', true>;
+  };
+}
+
+export interface GpuaasPageGpuServerOemPartners extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_gpu_server_oem_partners';
+  info: {
+    displayName: 'GPU Server OEM Partners';
+  };
+  attributes: {};
+}
+
+export interface GpuaasPageGpuaasDeliveryModels extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_gpuaas_delivery_models';
+  info: {
+    displayName: 'gpuaas_delivery_models';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface GpuaasPageGpuaasWhoDeploys extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_gpuaas_who_deploys';
+  info: {
+    displayName: 'gpuaas_who_deploys';
+  };
+  attributes: {
+    gpuaas_deploy_user: Schema.Attribute.Component<'shared.card', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface GpuaasPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    gpu_availability: Schema.Attribute.Component<
+      'shared.gpu-availability',
+      true
+    >;
+    text: Schema.Attribute.Component<'shared.hero', false>;
+  };
+}
+
+export interface GpuaasPageOutcomes extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_outcomes';
+  info: {
+    displayName: 'Outcomes';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card-3', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface GpuaasPagePartnerEcosystem extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_partner_ecosystems';
+  info: {
+    displayName: 'Partner Ecosystem';
+  };
+  attributes: {
+    card_4: Schema.Attribute.Component<'shared.card-4', false>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+    section_1: Schema.Attribute.Component<
+      'gpuaas-page.gpu-architecture-vendors',
+      true
+    >;
+  };
+}
+
+export interface GpuaasPageSection1 extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_section_1s';
+  info: {
+    displayName: 'section-1';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    points: Schema.Attribute.Component<'shared.points', true>;
+    short_code: Schema.Attribute.String;
+  };
+}
+
+export interface GpuaasPageTurnkeySystems extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_turnkey_systems';
+  info: {
+    displayName: 'turnkey_systems';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card-2', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface GpuaasPageTypes extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_types';
+  info: {
+    displayName: 'types';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GpuaasPageWorkloadLibrary extends Struct.ComponentSchema {
+  collectionName: 'components_gpuaas_page_workload_libraries';
+  info: {
+    displayName: 'Workload Library';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'shared.heading', true>;
+    types: Schema.Attribute.Component<'gpuaas-page.types', true>;
+  };
+}
+
 export interface HomePageCards extends Struct.ComponentSchema {
   collectionName: 'components_home_page_cards';
   info: {
@@ -221,9 +917,512 @@ export interface HomePageWhyThynkwise extends Struct.ComponentSchema {
   };
 }
 
+export interface IndustryUsecasesTags extends Struct.ComponentSchema {
+  collectionName: 'components_industry_usecases_tags';
+  info: {
+    displayName: 'tags';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
+export interface IndustryUsecasesUsecase extends Struct.ComponentSchema {
+  collectionName: 'components_industry_usecases_usecases';
+  info: {
+    displayName: 'usecase';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    industry: Schema.Attribute.String;
+    tags: Schema.Attribute.Component<'industry-usecases.tags', true>;
+  };
+}
+
+export interface ManagedServicesPageCaseStudies extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_case_studies';
+  info: {
+    displayName: 'case_studies';
+  };
+  attributes: {
+    case_study: Schema.Attribute.Component<'case-studies.case-study', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageFaq extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    faq_item: Schema.Attribute.Component<'faq.faq-item', true>;
+  };
+}
+
+export interface ManagedServicesPageFinalCta extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_final_ctas';
+  info: {
+    displayName: 'final_cta';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    badge_1: Schema.Attribute.String;
+    badge_2: Schema.Attribute.String;
+    badge_3: Schema.Attribute.String;
+    cta_primary_link: Schema.Attribute.String;
+    cta_primary_text: Schema.Attribute.String;
+    cta_secondary_link: Schema.Attribute.String;
+    cta_secondary_text: Schema.Attribute.String;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface ManagedServicesPageIndustryUsecases
+  extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_industry_usecases';
+  info: {
+    displayName: 'industry_usecases';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    usecase: Schema.Attribute.Component<'industry-usecases.usecase', true>;
+  };
+}
+
+export interface ManagedServicesPageItems extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_items';
+  info: {
+    displayName: 'items';
+  };
+  attributes: {
+    items: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageManagedServicePillars
+  extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_managed_service_pillars';
+  info: {
+    displayName: 'managed_service_pillars';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    pillar: Schema.Attribute.Component<'managed-services-page.pillar', true>;
+  };
+}
+
+export interface ManagedServicesPagePillar extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_pillars';
+  info: {
+    displayName: 'pillar';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    items: Schema.Attribute.Component<'managed-services-page.items', true>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageProcessSteps
+  extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_process_steps';
+  info: {
+    displayName: 'process_steps';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    process_step: Schema.Attribute.Component<
+      'managed-services.process-step',
+      true
+    >;
+  };
+}
+
+export interface ManagedServicesPageServiceCatalogue
+  extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_service_catalogues';
+  info: {
+    displayName: 'service_catalogue';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    service_category: Schema.Attribute.Component<
+      'managed-services-page.service-category',
+      true
+    >;
+  };
+}
+
+export interface ManagedServicesPageServiceCategory
+  extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_service_categories';
+  info: {
+    displayName: 'service_category';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    services: Schema.Attribute.Component<
+      'managed-services-page.services',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageServices extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_services';
+  info: {
+    displayName: 'services';
+  };
+  attributes: {
+    services: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageStats extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_stats';
+  info: {
+    displayName: 'stats';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageStatsBand extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_stats_bands';
+  info: {
+    displayName: 'stats_band';
+  };
+  attributes: {
+    stats: Schema.Attribute.Component<'stats-band.stats', true>;
+  };
+}
+
+export interface ManagedServicesPageWhyCard extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_why_cards';
+  info: {
+    displayName: 'why_card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ManagedServicesPageWhyThynkwise
+  extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_page_why_thynkwises';
+  info: {
+    displayName: 'why_thynkwise';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card-1', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface ManagedServicesProcessStep extends Struct.ComponentSchema {
+  collectionName: 'components_managed_services_process_steps';
+  info: {
+    displayName: 'process_step';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    step_number: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images'>;
+    points: Schema.Attribute.Component<'shared.points', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard1 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_1s';
+  info: {
+    displayName: 'card-1';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_2s';
+  info: {
+    displayName: 'card-2';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    point: Schema.Attribute.Component<'shared.points', true>;
+    stat: Schema.Attribute.Component<'shared.stat', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard3 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_3s';
+  info: {
+    displayName: 'card-3';
+  };
+  attributes: {
+    container_1: Schema.Attribute.Component<'shared.stat', false>;
+    container_2: Schema.Attribute.Component<'shared.stat', false>;
+    description_1: Schema.Attribute.RichText;
+    description_2: Schema.Attribute.RichText;
+    icon: Schema.Attribute.Media<'images'>;
+    points: Schema.Attribute.Component<'shared.points', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard4 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_4s';
+  info: {
+    displayName: 'card-4';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    icon: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface SharedCta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_ctas';
+  info: {
+    displayName: 'cta';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    points: Schema.Attribute.Component<'shared.points', true>;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedFaq extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    q_a: Schema.Attribute.Component<'shared.question-and-answer', true>;
+  };
+}
+
+export interface SharedGpuAvailability extends Struct.ComponentSchema {
+  collectionName: 'components_shared_gpu_availabilities';
+  info: {
+    displayName: 'gpu_availability';
+  };
+  attributes: {
+    arch: Schema.Attribute.String;
+    gpu_status: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    spec: Schema.Attribute.Component<'shared.spec', true>;
+  };
+}
+
+export interface SharedHeading extends Struct.ComponentSchema {
+  collectionName: 'components_shared_headings';
+  info: {
+    displayName: 'heading';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    stat: Schema.Attribute.Component<'shared.stat', true>;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface SharedPoints extends Struct.ComponentSchema {
+  collectionName: 'components_shared_points';
+  info: {
+    displayName: 'points';
+  };
+  attributes: {
+    point: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedQuestionAndAnswer extends Struct.ComponentSchema {
+  collectionName: 'components_shared_question_and_answers';
+  info: {
+    displayName: 'question & answer';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedSpec extends Struct.ComponentSchema {
+  collectionName: 'components_shared_specs';
+  info: {
+    displayName: 'spec';
+  };
+  attributes: {
+    spec: Schema.Attribute.String;
+  };
+}
+
+export interface SharedStat extends Struct.ComponentSchema {
+  collectionName: 'components_shared_stats';
+  info: {
+    displayName: 'stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface StatsBandStats extends Struct.ComponentSchema {
+  collectionName: 'components_stats_band_stats';
+  info: {
+    displayName: 'stats';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about.hero': AboutHero;
+      'case-studies.case-study': CaseStudiesCaseStudy;
+      'cloud-migration-page.cloud-migration-hero': CloudMigrationPageCloudMigrationHero;
+      'cloud-migration-page.deliverables': CloudMigrationPageDeliverables;
+      'cloud-migration-page.industry-card': CloudMigrationPageIndustryCard;
+      'cloud-migration-page.industry-migration': CloudMigrationPageIndustryMigration;
+      'cloud-migration-page.migration-process': CloudMigrationPageMigrationProcess;
+      'cloud-migration-page.migration-risk-management': CloudMigrationPageMigrationRiskManagement;
+      'cloud-migration-page.migration-service': CloudMigrationPageMigrationService;
+      'cloud-migration-page.migration-service-types': CloudMigrationPageMigrationServiceTypes;
+      'cloud-migration-page.process-step': CloudMigrationPageProcessStep;
+      'cloud-migration-page.process-step-detailed': CloudMigrationPageProcessStepDetailed;
+      'cloud-migration-page.quick-answer': CloudMigrationPageQuickAnswer;
+      'cloud-migration-page.risk-item': CloudMigrationPageRiskItem;
+      'cloud-migration-page.six-r-framework': CloudMigrationPageSixRFramework;
+      'cloud-migration-page.six-r-strategy': CloudMigrationPageSixRStrategy;
+      'cloud-migration-page.solution-item': CloudMigrationPageSolutionItem;
+      'cloud-migration-page.stats': CloudMigrationPageStats;
+      'cloud-migration-page.tag': CloudMigrationPageTag;
+      'cloud-migration-page.trust-stats': CloudMigrationPageTrustStats;
+      'cybersecurity-page.cybersecurity-hero': CybersecurityPageCybersecurityHero;
+      'cybersecurity-page.description-points': CybersecurityPageDescriptionPoints;
+      'cybersecurity-page.framework': CybersecurityPageFramework;
+      'cybersecurity-page.meta': CybersecurityPageMeta;
+      'cybersecurity-page.partner-category': CybersecurityPagePartnerCategory;
+      'cybersecurity-page.partners': CybersecurityPagePartners;
+      'cybersecurity-page.points': CybersecurityPagePoints;
+      'cybersecurity-page.security-compliance-frameworks': CybersecurityPageSecurityComplianceFrameworks;
+      'cybersecurity-page.security-event': CybersecurityPageSecurityEvent;
+      'cybersecurity-page.security-partners': CybersecurityPageSecurityPartners;
+      'cybersecurity-page.security-service-catalogue': CybersecurityPageSecurityServiceCatalogue;
+      'cybersecurity-page.service-category': CybersecurityPageServiceCategory;
+      'cybersecurity-page.services': CybersecurityPageServices;
+      'cybersecurity-page.trust-points': CybersecurityPageTrustPoints;
+      'faq.faq-item': FaqFaqItem;
+      'gpuaas-page.card': GpuaasPageCard;
+      'gpuaas-page.faq': GpuaasPageFaq;
+      'gpuaas-page.framework-stack': GpuaasPageFrameworkStack;
+      'gpuaas-page.gpu-architecture': GpuaasPageGpuArchitecture;
+      'gpuaas-page.gpu-architecture-types': GpuaasPageGpuArchitectureTypes;
+      'gpuaas-page.gpu-architecture-vendors': GpuaasPageGpuArchitectureVendors;
+      'gpuaas-page.gpu-card': GpuaasPageGpuCard;
+      'gpuaas-page.gpu-server-oem-partners': GpuaasPageGpuServerOemPartners;
+      'gpuaas-page.gpuaas-delivery-models': GpuaasPageGpuaasDeliveryModels;
+      'gpuaas-page.gpuaas-who-deploys': GpuaasPageGpuaasWhoDeploys;
+      'gpuaas-page.hero': GpuaasPageHero;
+      'gpuaas-page.outcomes': GpuaasPageOutcomes;
+      'gpuaas-page.partner-ecosystem': GpuaasPagePartnerEcosystem;
+      'gpuaas-page.section-1': GpuaasPageSection1;
+      'gpuaas-page.turnkey-systems': GpuaasPageTurnkeySystems;
+      'gpuaas-page.types': GpuaasPageTypes;
+      'gpuaas-page.workload-library': GpuaasPageWorkloadLibrary;
       'home-page.cards': HomePageCards;
       'home-page.client-outcomes': HomePageClientOutcomes;
       'home-page.cloud-provider': HomePageCloudProvider;
@@ -240,6 +1439,40 @@ declare module '@strapi/strapi' {
       'home-page.value-item': HomePageValueItem;
       'home-page.why-card': HomePageWhyCard;
       'home-page.why-thynkwise': HomePageWhyThynkwise;
+      'industry-usecases.tags': IndustryUsecasesTags;
+      'industry-usecases.usecase': IndustryUsecasesUsecase;
+      'managed-services-page.case-studies': ManagedServicesPageCaseStudies;
+      'managed-services-page.faq': ManagedServicesPageFaq;
+      'managed-services-page.final-cta': ManagedServicesPageFinalCta;
+      'managed-services-page.hero': ManagedServicesPageHero;
+      'managed-services-page.industry-usecases': ManagedServicesPageIndustryUsecases;
+      'managed-services-page.items': ManagedServicesPageItems;
+      'managed-services-page.managed-service-pillars': ManagedServicesPageManagedServicePillars;
+      'managed-services-page.pillar': ManagedServicesPagePillar;
+      'managed-services-page.process-steps': ManagedServicesPageProcessSteps;
+      'managed-services-page.service-catalogue': ManagedServicesPageServiceCatalogue;
+      'managed-services-page.service-category': ManagedServicesPageServiceCategory;
+      'managed-services-page.services': ManagedServicesPageServices;
+      'managed-services-page.stats': ManagedServicesPageStats;
+      'managed-services-page.stats-band': ManagedServicesPageStatsBand;
+      'managed-services-page.why-card': ManagedServicesPageWhyCard;
+      'managed-services-page.why-thynkwise': ManagedServicesPageWhyThynkwise;
+      'managed-services.process-step': ManagedServicesProcessStep;
+      'shared.card': SharedCard;
+      'shared.card-1': SharedCard1;
+      'shared.card-2': SharedCard2;
+      'shared.card-3': SharedCard3;
+      'shared.card-4': SharedCard4;
+      'shared.cta': SharedCta;
+      'shared.faq': SharedFaq;
+      'shared.gpu-availability': SharedGpuAvailability;
+      'shared.heading': SharedHeading;
+      'shared.hero': SharedHero;
+      'shared.points': SharedPoints;
+      'shared.question-and-answer': SharedQuestionAndAnswer;
+      'shared.spec': SharedSpec;
+      'shared.stat': SharedStat;
+      'stats-band.stats': StatsBandStats;
     }
   }
 }

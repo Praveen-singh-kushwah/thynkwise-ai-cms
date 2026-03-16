@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cloud_migration_page_industry_migrations",
+  "info": {
+    "displayName": "industry_migration"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "industry_card": {
+      "type": "component",
+      "component": "cloud-migration-page.industry-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

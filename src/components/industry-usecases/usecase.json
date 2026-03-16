@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_industry_usecases_usecases",
+  "info": {
+    "displayName": "usecase"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "industry": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "component",
+      "component": "industry-usecases.tags",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

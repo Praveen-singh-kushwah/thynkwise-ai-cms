@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_gpuaas_page_partner_ecosystems",
+  "info": {
+    "displayName": "Partner Ecosystem"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "section_1": {
+      "type": "component",
+      "component": "gpuaas-page.gpu-architecture-vendors",
+      "repeatable": true
+    },
+    "card_4": {
+      "type": "component",
+      "component": "shared.card-4",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

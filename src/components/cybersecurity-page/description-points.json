@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_cybersecurity_page_description_points",
+  "info": {
+    "displayName": "description_points"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

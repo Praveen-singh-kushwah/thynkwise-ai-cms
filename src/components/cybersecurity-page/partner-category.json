@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_cybersecurity_page_partner_categories",
+  "info": {
+    "displayName": "partner_category"
+  },
+  "options": {},
+  "attributes": {
+    "category_name": {
+      "type": "string"
+    },
+    "partners": {
+      "type": "component",
+      "component": "cybersecurity-page.partners",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

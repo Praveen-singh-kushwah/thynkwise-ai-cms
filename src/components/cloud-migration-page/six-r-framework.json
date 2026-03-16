@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cloud_migration_page_six_r_frameworks",
+  "info": {
+    "displayName": "six_r_framework"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "six_r_strategy": {
+      "type": "component",
+      "component": "cloud-migration-page.six-r-strategy",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

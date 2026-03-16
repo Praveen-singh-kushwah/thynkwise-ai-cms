@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_cybersecurity_page_metas",
+  "info": {
+    "displayName": "meta"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

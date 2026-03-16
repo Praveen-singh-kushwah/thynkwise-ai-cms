@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_gpu_availabilities",
+  "info": {
+    "displayName": "gpu_availability"
+  },
+  "options": {},
+  "attributes": {
+    "arch": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "spec": {
+      "type": "component",
+      "component": "shared.spec",
+      "repeatable": true
+    },
+    "gpu_status": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

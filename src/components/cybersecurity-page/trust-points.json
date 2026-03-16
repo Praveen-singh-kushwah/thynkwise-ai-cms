@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_cybersecurity_page_trust_points",
+  "info": {
+    "displayName": "trust_points"
+  },
+  "options": {},
+  "attributes": {
+    "trust_point": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "q_a": {
+      "type": "component",
+      "component": "shared.question-and-answer",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

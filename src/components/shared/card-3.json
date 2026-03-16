@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_shared_card_3s",
+  "info": {
+    "displayName": "card-3"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description_1": {
+      "type": "richtext"
+    },
+    "container_1": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": false
+    },
+    "container_2": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": false
+    },
+    "description_2": {
+      "type": "richtext"
+    },
+    "points": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

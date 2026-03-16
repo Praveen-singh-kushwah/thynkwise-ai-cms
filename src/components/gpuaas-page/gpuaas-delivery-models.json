@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_gpuaas_page_gpuaas_delivery_models",
+  "info": {
+    "displayName": "gpuaas_delivery_models"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

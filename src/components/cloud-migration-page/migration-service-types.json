@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cloud_migration_page_migration_service_types",
+  "info": {
+    "displayName": "migration_service_types"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "migration_service": {
+      "type": "component",
+      "component": "cloud-migration-page.migration-service",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

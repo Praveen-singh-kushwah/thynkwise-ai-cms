@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cybersecurity_page_security_compliance_frameworks",
+  "info": {
+    "displayName": "security_compliance_frameworks"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "framework": {
+      "type": "component",
+      "component": "cybersecurity-page.framework",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

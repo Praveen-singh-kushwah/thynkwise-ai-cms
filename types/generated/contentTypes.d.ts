@@ -467,6 +467,233 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
+  collectionName: 'about_pages';
+  info: {
+    displayName: 'about page';
+    pluralName: 'about-pages';
+    singularName: 'about-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'about.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-page.about-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCloudMigrationPageCloudMigrationPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'cloud_migration_pages';
+  info: {
+    displayName: 'cloud-migration-page';
+    pluralName: 'cloud-migration-pages';
+    singularName: 'cloud-migration-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    case_study: Schema.Attribute.Component<
+      'managed-services-page.case-studies',
+      false
+    >;
+    cloud_migration_hero: Schema.Attribute.Component<
+      'cloud-migration-page.cloud-migration-hero',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta_section: Schema.Attribute.Component<
+      'managed-services-page.final-cta',
+      false
+    >;
+    faq: Schema.Attribute.Component<'managed-services-page.faq', false>;
+    industry_migration: Schema.Attribute.Component<
+      'cloud-migration-page.industry-migration',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::cloud-migration-page.cloud-migration-page'
+    > &
+      Schema.Attribute.Private;
+    migration_process: Schema.Attribute.Component<
+      'cloud-migration-page.migration-process',
+      false
+    >;
+    migration_risk_management: Schema.Attribute.Component<
+      'cloud-migration-page.migration-risk-management',
+      false
+    >;
+    migration_service_types: Schema.Attribute.Component<
+      'cloud-migration-page.migration-service-types',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    quick_answer: Schema.Attribute.Component<
+      'cloud-migration-page.quick-answer',
+      true
+    >;
+    six_r_framework: Schema.Attribute.Component<
+      'cloud-migration-page.six-r-framework',
+      false
+    >;
+    trust_stats: Schema.Attribute.Component<
+      'cloud-migration-page.trust-stats',
+      true
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCybersecurityPageCybersecurityPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'cybersecurity_pages';
+  info: {
+    displayName: 'cybersecurity-page';
+    pluralName: 'cybersecurity-pages';
+    singularName: 'cybersecurity-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'managed-services-page.final-cta', false>;
+    cybersecurity_hero: Schema.Attribute.Component<
+      'cybersecurity-page.cybersecurity-hero',
+      false
+    >;
+    faq: Schema.Attribute.Component<'managed-services-page.faq', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::cybersecurity-page.cybersecurity-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    security_case_studies: Schema.Attribute.Component<
+      'managed-services-page.case-studies',
+      false
+    >;
+    security_compliance_frameworks: Schema.Attribute.Component<
+      'cybersecurity-page.security-compliance-frameworks',
+      false
+    >;
+    security_domains: Schema.Attribute.Component<
+      'cloud-migration-page.migration-service-types',
+      false
+    >;
+    security_event: Schema.Attribute.Component<
+      'cybersecurity-page.security-event',
+      true
+    >;
+    security_partner: Schema.Attribute.Component<
+      'cybersecurity-page.security-partners',
+      false
+    >;
+    security_service_catalogue: Schema.Attribute.Component<
+      'cybersecurity-page.security-service-catalogue',
+      false
+    >;
+    security_stats_band: Schema.Attribute.Component<
+      'managed-services-page.stats-band',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_thynkwise_security: Schema.Attribute.Component<
+      'managed-services-page.why-thynkwise',
+      false
+    >;
+  };
+}
+
+export interface ApiGpuaasPageGpuaasPage extends Struct.SingleTypeSchema {
+  collectionName: 'gpuaas_pages';
+  info: {
+    displayName: 'gpuaas-page';
+    pluralName: 'gpuaas-pages';
+    singularName: 'gpuaas-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    common_questions: Schema.Attribute.Component<'shared.faq', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta_section: Schema.Attribute.Component<'shared.cta', false>;
+    faq: Schema.Attribute.Component<'gpuaas-page.faq', false>;
+    framework_stack: Schema.Attribute.Component<
+      'gpuaas-page.framework-stack',
+      false
+    >;
+    gpu_architecture: Schema.Attribute.Component<
+      'gpuaas-page.gpu-architecture',
+      false
+    >;
+    gpuaas_delivery_models: Schema.Attribute.Component<
+      'gpuaas-page.gpuaas-delivery-models',
+      false
+    >;
+    gpuaas_who_deploys: Schema.Attribute.Component<
+      'gpuaas-page.gpuaas-who-deploys',
+      false
+    >;
+    hero: Schema.Attribute.Component<'gpuaas-page.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gpuaas-page.gpuaas-page'
+    > &
+      Schema.Attribute.Private;
+    outcomes: Schema.Attribute.Component<'gpuaas-page.outcomes', false>;
+    partner_ecosystem: Schema.Attribute.Component<
+      'gpuaas-page.partner-ecosystem',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    turnkey_systems: Schema.Attribute.Component<
+      'gpuaas-page.turnkey-systems',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_thynkwise: Schema.Attribute.Component<
+      'managed-services-page.why-thynkwise',
+      false
+    >;
+    workload_library: Schema.Attribute.Component<
+      'gpuaas-page.workload-library',
+      false
+    >;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -508,6 +735,68 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     valueItem: Schema.Attribute.Component<'home-page.value-item', true>;
     WhyThynkwise: Schema.Attribute.Component<'home-page.why-thynkwise', false>;
+  };
+}
+
+export interface ApiManagedServicesPageManagedServicesPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'managed_services_pages';
+  info: {
+    displayName: 'managed-services-page';
+    pluralName: 'managed-services-pages';
+    singularName: 'managed-services-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    case_studies: Schema.Attribute.Component<
+      'managed-services-page.case-studies',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'managed-services-page.faq', false>;
+    final_cta: Schema.Attribute.Component<
+      'managed-services-page.final-cta',
+      false
+    >;
+    hero: Schema.Attribute.Component<'managed-services-page.hero', false>;
+    industry_usecases: Schema.Attribute.Component<
+      'managed-services-page.industry-usecases',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::managed-services-page.managed-services-page'
+    > &
+      Schema.Attribute.Private;
+    managed_service_pillars: Schema.Attribute.Component<
+      'managed-services-page.managed-service-pillars',
+      false
+    >;
+    process_steps: Schema.Attribute.Component<
+      'managed-services-page.process-steps',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    service_catalogue: Schema.Attribute.Component<
+      'managed-services-page.service-catalogue',
+      false
+    >;
+    stats_band: Schema.Attribute.Component<
+      'managed-services-page.stats-band',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_thynkwise: Schema.Attribute.Component<
+      'managed-services-page.why-thynkwise',
+      false
+    >;
   };
 }
 
@@ -1023,7 +1312,12 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
+      'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;
+      'api::gpuaas-page.gpuaas-page': ApiGpuaasPageGpuaasPage;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::managed-services-page.managed-services-page': ApiManagedServicesPageManagedServicesPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

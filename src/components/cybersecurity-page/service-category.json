@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_cybersecurity_page_service_categories",
+  "info": {
+    "displayName": "service_category"
+  },
+  "options": {},
+  "attributes": {
+    "category_name": {
+      "type": "string"
+    },
+    "category_icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "services": {
+      "type": "component",
+      "component": "cybersecurity-page.services",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

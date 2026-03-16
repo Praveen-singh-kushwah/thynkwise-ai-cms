@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cloud_migration_page_trust_stats",
+  "info": {
+    "displayName": "trust_stats"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

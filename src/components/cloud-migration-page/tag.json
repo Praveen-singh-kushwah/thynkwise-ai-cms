@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_cloud_migration_page_tags",
+  "info": {
+    "displayName": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

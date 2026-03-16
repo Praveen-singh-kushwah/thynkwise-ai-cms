@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_gpuaas_page_heroes",
+  "info": {
+    "displayName": "hero"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "component",
+      "component": "shared.hero",
+      "repeatable": false
+    },
+    "gpu_availability": {
+      "type": "component",
+      "component": "shared.gpu-availability",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

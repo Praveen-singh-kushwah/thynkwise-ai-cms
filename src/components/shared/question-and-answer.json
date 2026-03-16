@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_question_and_answers",
+  "info": {
+    "displayName": "question & answer"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

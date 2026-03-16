@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_cloud_migration_page_migration_risk_managements",
+  "info": {
+    "displayName": "migration_risk_management"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "risk_item": {
+      "type": "component",
+      "component": "cloud-migration-page.risk-item",
+      "repeatable": true
+    },
+    "solution_item": {
+      "type": "component",
+      "component": "cloud-migration-page.solution-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

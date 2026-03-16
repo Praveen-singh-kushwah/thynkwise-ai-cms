@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_managed_services_page_services",
+  "info": {
+    "displayName": "services"
+  },
+  "options": {},
+  "attributes": {
+    "services": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

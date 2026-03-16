@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_managed_services_page_service_catalogues",
+  "info": {
+    "displayName": "service_catalogue"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "service_category": {
+      "type": "component",
+      "component": "managed-services-page.service-category",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

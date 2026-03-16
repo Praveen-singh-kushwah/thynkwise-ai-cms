@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_cybersecurity_page_frameworks",
+  "info": {
+    "displayName": "framework"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

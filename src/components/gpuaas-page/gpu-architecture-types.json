@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_gpuaas_page_gpu_architecture_types",
+  "info": {
+    "displayName": "gpu-architecture-types"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "section_1": {
+      "type": "component",
+      "component": "gpuaas-page.section-1",
+      "repeatable": false
+    },
+    "gpu_card": {
+      "type": "component",
+      "component": "gpuaas-page.gpu-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

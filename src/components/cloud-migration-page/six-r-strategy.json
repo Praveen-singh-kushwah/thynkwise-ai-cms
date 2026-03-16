@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_cloud_migration_page_six_r_strategies",
+  "info": {
+    "displayName": "six_r_strategy"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

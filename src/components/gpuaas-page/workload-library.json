@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_gpuaas_page_workload_libraries",
+  "info": {
+    "displayName": "Workload Library"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": true
+    },
+    "types": {
+      "type": "component",
+      "component": "gpuaas-page.types",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_managed_services_page_case_studies",
+  "info": {
+    "displayName": "case_studies"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "case_study": {
+      "type": "component",
+      "component": "case-studies.case-study",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

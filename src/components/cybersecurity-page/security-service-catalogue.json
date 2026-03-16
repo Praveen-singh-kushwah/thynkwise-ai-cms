@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cybersecurity_page_security_service_catalogues",
+  "info": {
+    "displayName": "security_service_catalogue"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "service_category": {
+      "type": "component",
+      "component": "cybersecurity-page.service-category",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

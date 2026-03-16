@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_managed_services_page_stats_bands",
+  "info": {
+    "displayName": "stats_band"
+  },
+  "options": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "component": "stats-band.stats",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

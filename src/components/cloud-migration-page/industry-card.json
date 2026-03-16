@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_cloud_migration_page_industry_cards",
+  "info": {
+    "displayName": "industry_card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "industry": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "primary_cloud": {
+      "type": "string"
+    },
+    "compliance": {
+      "type": "text"
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

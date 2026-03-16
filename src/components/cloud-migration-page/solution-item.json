@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_cloud_migration_page_solution_items",
+  "info": {
+    "displayName": "solution_item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

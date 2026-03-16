@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_managed_services_page_why_thynkwises",
+  "info": {
+    "displayName": "why_thynkwise"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "shared.card-1",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
