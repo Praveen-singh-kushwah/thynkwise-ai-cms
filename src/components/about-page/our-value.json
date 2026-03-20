@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_page_our_values",
+  "info": {
+    "displayName": "Our Value"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "shared.card-1",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

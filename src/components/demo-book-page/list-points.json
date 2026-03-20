@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_demo_book_page_list_points",
+  "info": {
+    "displayName": "list points"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -15,6 +15,51 @@
       "type": "component",
       "component": "about.hero",
       "repeatable": false
+    },
+    "our_mission": {
+      "type": "component",
+      "component": "about-page.our-mission",
+      "repeatable": false
+    },
+    "by_the_numbers": {
+      "type": "component",
+      "component": "about-page.by-the-numbers",
+      "repeatable": false
+    },
+    "our_values": {
+      "type": "component",
+      "component": "about-page.our-value",
+      "repeatable": false
+    },
+    "the_team": {
+      "type": "component",
+      "component": "about-page.the-team",
+      "repeatable": false
+    },
+    "technology_partners": {
+      "type": "component",
+      "component": "about-page.technology-partners",
+      "repeatable": false
+    },
+    "where_we_are": {
+      "type": "component",
+      "component": "about-page.where-we-are",
+      "repeatable": false
+    },
+    "stats_band": {
+      "type": "component",
+      "component": "about-page.stats-band",
+      "repeatable": false
+    },
+    "cta_section": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": false
     }
   }
 }

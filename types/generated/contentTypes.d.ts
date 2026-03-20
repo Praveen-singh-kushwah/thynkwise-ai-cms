@@ -478,9 +478,15 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    by_the_numbers: Schema.Attribute.Component<
+      'about-page.by-the-numbers',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    cta_section: Schema.Attribute.Component<'shared.cta', false>;
+    faq: Schema.Attribute.Component<'shared.faq', false>;
     hero: Schema.Attribute.Component<'about.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -488,7 +494,83 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
       'api::about-page.about-page'
     > &
       Schema.Attribute.Private;
+    our_mission: Schema.Attribute.Component<'about-page.our-mission', false>;
+    our_values: Schema.Attribute.Component<'about-page.our-value', false>;
     publishedAt: Schema.Attribute.DateTime;
+    stats_band: Schema.Attribute.Component<'about-page.stats-band', false>;
+    technology_partners: Schema.Attribute.Component<
+      'about-page.technology-partners',
+      false
+    >;
+    the_team: Schema.Attribute.Component<'about-page.the-team', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    where_we_are: Schema.Attribute.Component<'about-page.where-we-are', false>;
+  };
+}
+
+export interface ApiAssessmentFormAssessmentForm
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'assessment_forms';
+  info: {
+    displayName: 'Assessment Form';
+    pluralName: 'assessment-forms';
+    singularName: 'assessment-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::assessment-form.assessment-form'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBookDemoPageBookDemoPage extends Struct.SingleTypeSchema {
+  collectionName: 'book_demo_pages';
+  info: {
+    displayName: 'Book Demo Page';
+    pluralName: 'book-demo-pages';
+    singularName: 'book-demo-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    faq: Schema.Attribute.Component<'faq.faq-item', true>;
+    feedback: Schema.Attribute.Component<'demo-book-page.feedback', false>;
+    list_point: Schema.Attribute.Component<'demo-book-page.list-points', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::book-demo-page.book-demo-page'
+    > &
+      Schema.Attribute.Private;
+    points: Schema.Attribute.Component<'shared.points', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -627,6 +709,40 @@ export interface ApiCybersecurityPageCybersecurityPage
       'managed-services-page.why-thynkwise',
       false
     >;
+  };
+}
+
+export interface ApiGetAssessmentPageGetAssessmentPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'get_assessment_pages';
+  info: {
+    displayName: 'get assessment page';
+    pluralName: 'get-assessment-pages';
+    singularName: 'get-assessment-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'faq.faq-item', true>;
+    hero: Schema.Attribute.Component<'get-assessment-page.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::get-assessment-page.get-assessment-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    question_bank: Schema.Attribute.Component<
+      'get-assessment-page.question-bank',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1313,8 +1429,11 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::assessment-form.assessment-form': ApiAssessmentFormAssessmentForm;
+      'api::book-demo-page.book-demo-page': ApiBookDemoPageBookDemoPage;
       'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;
+      'api::get-assessment-page.get-assessment-page': ApiGetAssessmentPageGetAssessmentPage;
       'api::gpuaas-page.gpuaas-page': ApiGpuaasPageGpuaasPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::managed-services-page.managed-services-page': ApiManagedServicesPageManagedServicesPage;

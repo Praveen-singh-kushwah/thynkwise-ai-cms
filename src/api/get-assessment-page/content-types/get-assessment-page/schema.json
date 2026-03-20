@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "get_assessment_pages",
+  "info": {
+    "singularName": "get-assessment-page",
+    "pluralName": "get-assessment-pages",
+    "displayName": "get assessment page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "get-assessment-page.hero",
+      "repeatable": false
+    },
+    "question_bank": {
+      "type": "component",
+      "component": "get-assessment-page.question-bank",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "faq.faq-item",
+      "repeatable": true
+    }
+  }
+}

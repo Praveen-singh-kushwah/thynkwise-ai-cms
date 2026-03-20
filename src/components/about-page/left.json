@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_page_lefts",
+  "info": {
+    "displayName": "Left"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "button_Link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

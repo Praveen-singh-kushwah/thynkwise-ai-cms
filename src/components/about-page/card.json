@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_page_cards",
+  "info": {
+    "displayName": "card"
+  },
+  "options": {},
+  "attributes": {
+    "stat": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": false
+    },
+    "sub_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

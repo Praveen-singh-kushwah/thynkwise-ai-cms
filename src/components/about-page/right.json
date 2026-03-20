@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_page_rights",
+  "info": {
+    "displayName": "Right"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text"
+    },
+    "text": {
+      "type": "string"
+    },
+    "stat": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

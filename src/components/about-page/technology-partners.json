@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_page_technology_partners",
+  "info": {
+    "displayName": "Technology Partners"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "partner_card": {
+      "type": "component",
+      "component": "about-page.partner-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

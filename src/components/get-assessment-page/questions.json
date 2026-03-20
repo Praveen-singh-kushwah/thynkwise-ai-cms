@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_get_assessment_page_questions",
+  "info": {
+    "displayName": "questions"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "sub_text": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "component": "get-assessment-page.options",
+      "repeatable": true
+    },
+    "order": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

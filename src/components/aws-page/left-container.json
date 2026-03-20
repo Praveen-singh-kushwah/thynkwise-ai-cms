@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_about_heroes",
+  "collectionName": "components_aws_page_left_containers",
   "info": {
-    "displayName": "hero"
+    "displayName": "left container"
   },
   "options": {},
   "attributes": {
@@ -19,17 +19,22 @@
         "preset": "defaultHtml"
       }
     },
-    "primary_cta_text": {
+    "primary_btn_text": {
       "type": "string"
     },
-    "primary_cta_link": {
+    "primary_btn_link": {
       "type": "string"
     },
-    "secondary_cta_text": {
+    "secondary_btn_text": {
       "type": "string"
     },
-    "secondary_cta_link": {
+    "secondary_btn_link": {
       "type": "string"
+    },
+    "points": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
     }
   },
   "config": {}

@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "aws_pages",
+  "info": {
+    "singularName": "aws-page",
+    "pluralName": "aws-pages",
+    "displayName": "aws page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "aws-page.hero",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_get_assessment_page_categories",
+  "info": {
+    "displayName": "category"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "component",
+      "component": "get-assessment-page.questions",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

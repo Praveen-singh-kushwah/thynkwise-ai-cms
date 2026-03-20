@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_about_page_stats_bands",
+  "info": {
+    "displayName": "stats_band"
+  },
+  "options": {},
+  "attributes": {
+    "stat": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

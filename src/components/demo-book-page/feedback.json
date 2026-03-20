@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_demo_book_page_feedbacks",
+  "info": {
+    "displayName": "feedback"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

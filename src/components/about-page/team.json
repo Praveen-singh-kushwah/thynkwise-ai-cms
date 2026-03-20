@@ -1,33 +1,30 @@
 {
-  "collectionName": "components_home_page_cards",
+  "collectionName": "components_about_page_teams",
   "info": {
-    "displayName": "cards"
+    "displayName": "team"
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
-    },
-    "link": {
-      "type": "string"
-    },
-    "logo": {
+    "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
         "images"
       ]
     },
-    "link_text": {
+    "name": {
       "type": "string"
     },
-    "services": {
+    "role": {
+      "type": "string"
+    },
+    "skills": {
       "type": "component",
       "component": "shared.points",
       "repeatable": true
+    },
+    "description": {
+      "type": "text"
     }
   },
   "config": {}

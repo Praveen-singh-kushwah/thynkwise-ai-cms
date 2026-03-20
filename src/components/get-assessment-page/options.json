@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_get_assessment_page_options",
+  "info": {
+    "displayName": "options"
+  },
+  "options": {},
+  "attributes": {
+    "option": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sub_text": {
+      "type": "text"
+    },
+    "option_no": {
+      "type": "integer"
+    },
+    "right_option": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

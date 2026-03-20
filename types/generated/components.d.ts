@@ -1,11 +1,156 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutPageByTheNumbers extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_by_the_numbers';
+  info: {
+    displayName: 'By the Numbers';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'about-page.card', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface AboutPageCard extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    stat: Schema.Attribute.Component<'shared.stat', false>;
+    sub_text: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageLeft extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_lefts';
+  info: {
+    displayName: 'Left';
+  };
+  attributes: {
+    button_Link: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.RichText;
+    heading: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutPageOurMission extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_our_missions';
+  info: {
+    displayName: 'Our Mission';
+  };
+  attributes: {
+    left: Schema.Attribute.Component<'about-page.left', false>;
+    right: Schema.Attribute.Component<'about-page.right', false>;
+  };
+}
+
+export interface AboutPageOurValue extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_our_values';
+  info: {
+    displayName: 'Our Value';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card-1', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface AboutPagePartnerCard extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_partner_cards';
+  info: {
+    displayName: 'partner_card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageRight extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_rights';
+  info: {
+    displayName: 'Right';
+  };
+  attributes: {
+    quote: Schema.Attribute.Text;
+    stat: Schema.Attribute.Component<'shared.stat', true>;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPageStatsBand extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_stats_bands';
+  info: {
+    displayName: 'stats_band';
+  };
+  attributes: {
+    stat: Schema.Attribute.Component<'shared.stat', true>;
+  };
+}
+
+export interface AboutPageTeam extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_teams';
+  info: {
+    displayName: 'team';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+    skills: Schema.Attribute.Component<'shared.points', true>;
+  };
+}
+
+export interface AboutPageTechnologyPartners extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_technology_partners';
+  info: {
+    displayName: 'Technology Partners';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+    partner_card: Schema.Attribute.Component<'about-page.partner-card', true>;
+  };
+}
+
+export interface AboutPageTheTeam extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_the_teams';
+  info: {
+    displayName: 'The Team';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+    team_card: Schema.Attribute.Component<'about-page.team', true>;
+  };
+}
+
+export interface AboutPageWhereWeAre extends Struct.ComponentSchema {
+  collectionName: 'components_about_page_where_we_ares';
+  info: {
+    displayName: 'Where We Are';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card', true>;
+    heading: Schema.Attribute.Component<'shared.heading', true>;
+  };
+}
+
 export interface AboutHero extends Struct.ComponentSchema {
   collectionName: 'components_about_heroes';
   info: {
     displayName: 'hero';
   };
   attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     heading: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
@@ -13,6 +158,10 @@ export interface AboutHero extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
   };
 }
 
@@ -484,6 +633,32 @@ export interface CybersecurityPageTrustPoints extends Struct.ComponentSchema {
   };
 }
 
+export interface DemoBookPageFeedback extends Struct.ComponentSchema {
+  collectionName: 'components_demo_book_page_feedbacks';
+  info: {
+    displayName: 'feedback';
+  };
+  attributes: {
+    company: Schema.Attribute.String;
+    location: Schema.Attribute.String;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+  };
+}
+
+export interface DemoBookPageListPoints extends Struct.ComponentSchema {
+  collectionName: 'components_demo_book_page_list_points';
+  info: {
+    displayName: 'list points';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface FaqFaqItem extends Struct.ComponentSchema {
   collectionName: 'components_faq_faq_items';
   info: {
@@ -492,6 +667,80 @@ export interface FaqFaqItem extends Struct.ComponentSchema {
   attributes: {
     answer: Schema.Attribute.Text;
     question: Schema.Attribute.Text;
+  };
+}
+
+export interface GetAssessmentPageCard extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {};
+}
+
+export interface GetAssessmentPageCategory extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_categories';
+  info: {
+    displayName: 'category';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images'>;
+    questions: Schema.Attribute.Component<
+      'get-assessment-page.questions',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GetAssessmentPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface GetAssessmentPageOptions extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_options';
+  info: {
+    displayName: 'options';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    option: Schema.Attribute.Text;
+    option_no: Schema.Attribute.Integer;
+    right_option: Schema.Attribute.Integer;
+    sub_text: Schema.Attribute.Text;
+  };
+}
+
+export interface GetAssessmentPageQuestionBank extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_question_banks';
+  info: {
+    displayName: 'Question Bank';
+  };
+  attributes: {
+    category: Schema.Attribute.Component<'get-assessment-page.category', true>;
+    main_question: Schema.Attribute.String;
+    sub_text: Schema.Attribute.Text;
+  };
+}
+
+export interface GetAssessmentPageQuestions extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_questions';
+  info: {
+    displayName: 'questions';
+  };
+  attributes: {
+    options: Schema.Attribute.Component<'get-assessment-page.options', true>;
+    order: Schema.Attribute.Integer;
+    question: Schema.Attribute.Text;
+    sub_text: Schema.Attribute.String;
   };
 }
 
@@ -705,7 +954,7 @@ export interface HomePageCards extends Struct.ComponentSchema {
     link: Schema.Attribute.String;
     link_text: Schema.Attribute.String;
     logo: Schema.Attribute.Media<'images'>;
-    services: Schema.Attribute.JSON;
+    services: Schema.Attribute.Component<'shared.points', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -852,6 +1101,8 @@ export interface HomePageServiceCard extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.Media<'images'>;
     link: Schema.Attribute.String;
+    link_text: Schema.Attribute.String;
+    points: Schema.Attribute.Component<'shared.points', true>;
     tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -1237,6 +1488,19 @@ export interface SharedCard4 extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCard5 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_5s';
+  info: {
+    displayName: 'card_5';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCta extends Struct.ComponentSchema {
   collectionName: 'components_shared_ctas';
   info: {
@@ -1371,6 +1635,18 @@ export interface StatsBandStats extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about-page.by-the-numbers': AboutPageByTheNumbers;
+      'about-page.card': AboutPageCard;
+      'about-page.left': AboutPageLeft;
+      'about-page.our-mission': AboutPageOurMission;
+      'about-page.our-value': AboutPageOurValue;
+      'about-page.partner-card': AboutPagePartnerCard;
+      'about-page.right': AboutPageRight;
+      'about-page.stats-band': AboutPageStatsBand;
+      'about-page.team': AboutPageTeam;
+      'about-page.technology-partners': AboutPageTechnologyPartners;
+      'about-page.the-team': AboutPageTheTeam;
+      'about-page.where-we-are': AboutPageWhereWeAre;
       'about.hero': AboutHero;
       'case-studies.case-study': CaseStudiesCaseStudy;
       'cloud-migration-page.cloud-migration-hero': CloudMigrationPageCloudMigrationHero;
@@ -1405,7 +1681,15 @@ declare module '@strapi/strapi' {
       'cybersecurity-page.service-category': CybersecurityPageServiceCategory;
       'cybersecurity-page.services': CybersecurityPageServices;
       'cybersecurity-page.trust-points': CybersecurityPageTrustPoints;
+      'demo-book-page.feedback': DemoBookPageFeedback;
+      'demo-book-page.list-points': DemoBookPageListPoints;
       'faq.faq-item': FaqFaqItem;
+      'get-assessment-page.card': GetAssessmentPageCard;
+      'get-assessment-page.category': GetAssessmentPageCategory;
+      'get-assessment-page.hero': GetAssessmentPageHero;
+      'get-assessment-page.options': GetAssessmentPageOptions;
+      'get-assessment-page.question-bank': GetAssessmentPageQuestionBank;
+      'get-assessment-page.questions': GetAssessmentPageQuestions;
       'gpuaas-page.card': GpuaasPageCard;
       'gpuaas-page.faq': GpuaasPageFaq;
       'gpuaas-page.framework-stack': GpuaasPageFrameworkStack;
@@ -1463,6 +1747,7 @@ declare module '@strapi/strapi' {
       'shared.card-2': SharedCard2;
       'shared.card-3': SharedCard3;
       'shared.card-4': SharedCard4;
+      'shared.card-5': SharedCard5;
       'shared.cta': SharedCta;
       'shared.faq': SharedFaq;
       'shared.gpu-availability': SharedGpuAvailability;

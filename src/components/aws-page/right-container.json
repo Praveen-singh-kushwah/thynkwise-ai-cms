@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_aws_page_right_containers",
+  "info": {
+    "displayName": "right_container"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "sub_text": {
+      "type": "string"
+    },
+    "list": {
+      "type": "component",
+      "component": "aws-page.list",
+      "repeatable": true
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "button_Link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
