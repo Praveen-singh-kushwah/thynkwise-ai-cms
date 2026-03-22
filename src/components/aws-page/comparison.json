@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_aws_page_comparisons",
+  "info": {
+    "displayName": "Comparison"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "aws_direct": {
+      "type": "component",
+      "component": "aws-page.aws-direct",
+      "repeatable": false
+    },
+    "aws_via_thynkwise": {
+      "type": "component",
+      "component": "aws-page.aws-via-thynkwise",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

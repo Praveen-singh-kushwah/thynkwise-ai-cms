@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_aws_page_certified_expertises",
+  "info": {
+    "displayName": "Certified Expertise"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "component": "aws-page.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

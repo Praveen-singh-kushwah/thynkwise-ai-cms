@@ -165,6 +165,193 @@ export interface AboutHero extends Struct.ComponentSchema {
   };
 }
 
+export interface AwsPageAwsDirect extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_aws_directs';
+  info: {
+    displayName: 'AWS Direct';
+  };
+  attributes: {
+    points: Schema.Attribute.Component<'shared.points', true>;
+  };
+}
+
+export interface AwsPageAwsViaThynkwise extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_aws_via_thynkwises';
+  info: {
+    displayName: 'AWS via Thynkwise';
+  };
+  attributes: {
+    points: Schema.Attribute.Component<'shared.points', true>;
+  };
+}
+
+export interface AwsPageCard extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface AwsPageCard1 extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_card1s';
+  info: {
+    displayName: 'card1';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    point: Schema.Attribute.String;
+    sub_points: Schema.Attribute.Component<'shared.points', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AwsPageCard2 extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_card2s';
+  info: {
+    displayName: 'card2';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+    message: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface AwsPageCertifiedExpertise extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_certified_expertises';
+  info: {
+    displayName: 'Certified Expertise';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'aws-page.card', true>;
+    description: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface AwsPageClientOutcomes extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_client_outcomes';
+  info: {
+    displayName: 'client_outcomes';
+  };
+  attributes: {
+    card_2: Schema.Attribute.Component<'aws-page.card2', false>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface AwsPageComparison extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_comparisons';
+  info: {
+    displayName: 'Comparison';
+  };
+  attributes: {
+    aws_direct: Schema.Attribute.Component<'aws-page.aws-direct', false>;
+    aws_via_thynkwise: Schema.Attribute.Component<
+      'aws-page.aws-via-thynkwise',
+      false
+    >;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+  };
+}
+
+export interface AwsPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    left_container: Schema.Attribute.Component<
+      'aws-page.left-container',
+      false
+    >;
+    right_container: Schema.Attribute.Component<
+      'aws-page.right-container',
+      false
+    >;
+  };
+}
+
+export interface AwsPageLeftContainer extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_left_containers';
+  info: {
+    displayName: 'left container';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    heading: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    points: Schema.Attribute.Component<'shared.points', true>;
+    primary_btn_link: Schema.Attribute.String;
+    primary_btn_text: Schema.Attribute.String;
+    secondary_btn_link: Schema.Attribute.String;
+    secondary_btn_text: Schema.Attribute.String;
+  };
+}
+
+export interface AwsPageList extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_lists';
+  info: {
+    displayName: 'list';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface AwsPageRealWorldAws extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_real_world_aws';
+  info: {
+    displayName: 'Real-World AWS';
+  };
+  attributes: {
+    card1: Schema.Attribute.Component<'aws-page.card1', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface AwsPageRightContainer extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_right_containers';
+  info: {
+    displayName: 'right_container';
+  };
+  attributes: {
+    button_Link: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    list: Schema.Attribute.Component<'aws-page.list', true>;
+    sub_text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CaseStudiesCaseStudy extends Struct.ComponentSchema {
   collectionName: 'components_case_studies_case_studies';
   info: {
@@ -1344,6 +1531,7 @@ export interface ManagedServicesPageServiceCategory
     displayName: 'service_category';
   };
   attributes: {
+    description: Schema.Attribute.Text;
     icon: Schema.Attribute.Media<'images'>;
     services: Schema.Attribute.Component<
       'managed-services-page.services',
@@ -1648,6 +1836,19 @@ declare module '@strapi/strapi' {
       'about-page.the-team': AboutPageTheTeam;
       'about-page.where-we-are': AboutPageWhereWeAre;
       'about.hero': AboutHero;
+      'aws-page.aws-direct': AwsPageAwsDirect;
+      'aws-page.aws-via-thynkwise': AwsPageAwsViaThynkwise;
+      'aws-page.card': AwsPageCard;
+      'aws-page.card1': AwsPageCard1;
+      'aws-page.card2': AwsPageCard2;
+      'aws-page.certified-expertise': AwsPageCertifiedExpertise;
+      'aws-page.client-outcomes': AwsPageClientOutcomes;
+      'aws-page.comparison': AwsPageComparison;
+      'aws-page.hero': AwsPageHero;
+      'aws-page.left-container': AwsPageLeftContainer;
+      'aws-page.list': AwsPageList;
+      'aws-page.real-world-aws': AwsPageRealWorldAws;
+      'aws-page.right-container': AwsPageRightContainer;
       'case-studies.case-study': CaseStudiesCaseStudy;
       'cloud-migration-page.cloud-migration-hero': CloudMigrationPageCloudMigrationHero;
       'cloud-migration-page.deliverables': CloudMigrationPageDeliverables;

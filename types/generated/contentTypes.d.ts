@@ -543,6 +543,59 @@ export interface ApiAssessmentFormAssessmentForm
   };
 }
 
+export interface ApiAwsPageAwsPage extends Struct.SingleTypeSchema {
+  collectionName: 'aws_pages';
+  info: {
+    displayName: 'aws page';
+    pluralName: 'aws-pages';
+    singularName: 'aws-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aws_services: Schema.Attribute.Component<
+      'managed-services-page.service-catalogue',
+      false
+    >;
+    by_the_numbers: Schema.Attribute.Component<'shared.stat', true>;
+    certified_expertise: Schema.Attribute.Component<
+      'aws-page.certified-expertise',
+      false
+    >;
+    client_outcomes: Schema.Attribute.Component<
+      'aws-page.client-outcomes',
+      false
+    >;
+    common_questions: Schema.Attribute.Component<'shared.faq', false>;
+    comparison: Schema.Attribute.Component<'aws-page.comparison', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'shared.cta', false>;
+    faq: Schema.Attribute.Component<'shared.faq', false>;
+    hero: Schema.Attribute.Component<'aws-page.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::aws-page.aws-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    real_world_aws: Schema.Attribute.Component<
+      'aws-page.real-world-aws',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_thynkwise: Schema.Attribute.Component<
+      'managed-services-page.why-thynkwise',
+      false
+    >;
+  };
+}
+
 export interface ApiBookDemoPageBookDemoPage extends Struct.SingleTypeSchema {
   collectionName: 'book_demo_pages';
   info: {
@@ -1430,6 +1483,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::assessment-form.assessment-form': ApiAssessmentFormAssessmentForm;
+      'api::aws-page.aws-page': ApiAwsPageAwsPage;
       'api::book-demo-page.book-demo-page': ApiBookDemoPageBookDemoPage;
       'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;

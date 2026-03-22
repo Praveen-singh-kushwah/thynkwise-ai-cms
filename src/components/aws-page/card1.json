@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_managed_services_page_service_categories",
+  "collectionName": "components_aws_page_card1s",
   "info": {
-    "displayName": "service_category"
+    "displayName": "card1"
   },
   "options": {},
   "attributes": {
@@ -15,13 +15,16 @@
     "title": {
       "type": "string"
     },
+    "sub_points": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    },
     "description": {
       "type": "text"
     },
-    "services": {
-      "type": "component",
-      "component": "managed-services-page.services",
-      "repeatable": true
+    "point": {
+      "type": "string"
     }
   },
   "config": {}

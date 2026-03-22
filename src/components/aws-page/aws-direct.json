@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_aws_page_aws_directs",
+  "info": {
+    "displayName": "AWS Direct"
+  },
+  "options": {},
+  "attributes": {
+    "points": {
+      "type": "component",
+      "component": "shared.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

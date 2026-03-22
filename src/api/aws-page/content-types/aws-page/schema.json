@@ -15,6 +15,56 @@
       "type": "component",
       "component": "aws-page.hero",
       "repeatable": false
+    },
+    "comparison": {
+      "type": "component",
+      "component": "aws-page.comparison",
+      "repeatable": false
+    },
+    "why_thynkwise": {
+      "type": "component",
+      "component": "managed-services-page.why-thynkwise",
+      "repeatable": false
+    },
+    "aws_services": {
+      "type": "component",
+      "component": "managed-services-page.service-catalogue",
+      "repeatable": false
+    },
+    "certified_expertise": {
+      "type": "component",
+      "component": "aws-page.certified-expertise",
+      "repeatable": false
+    },
+    "real_world_aws": {
+      "type": "component",
+      "component": "aws-page.real-world-aws",
+      "repeatable": false
+    },
+    "client_outcomes": {
+      "type": "component",
+      "component": "aws-page.client-outcomes",
+      "repeatable": false
+    },
+    "by_the_numbers": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true
+    },
+    "common_questions": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": false
     }
   }
 }
