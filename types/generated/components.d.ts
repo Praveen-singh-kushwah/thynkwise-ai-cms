@@ -171,7 +171,7 @@ export interface AwsPageAwsDirect extends Struct.ComponentSchema {
     displayName: 'AWS Direct';
   };
   attributes: {
-    points: Schema.Attribute.Component<'shared.points', true>;
+    points: Schema.Attribute.Component<'aws-page.points', true>;
   };
 }
 
@@ -181,7 +181,7 @@ export interface AwsPageAwsViaThynkwise extends Struct.ComponentSchema {
     displayName: 'AWS via Thynkwise';
   };
   attributes: {
-    points: Schema.Attribute.Component<'shared.points', true>;
+    points: Schema.Attribute.Component<'aws-page.points', true>;
   };
 }
 
@@ -237,6 +237,7 @@ export interface AwsPageCertifiedExpertise extends Struct.ComponentSchema {
     card: Schema.Attribute.Component<'aws-page.card', true>;
     description: Schema.Attribute.String;
     heading: Schema.Attribute.String;
+    sub_text: Schema.Attribute.Text;
   };
 }
 
@@ -257,13 +258,13 @@ export interface AwsPageComparison extends Struct.ComponentSchema {
     displayName: 'Comparison';
   };
   attributes: {
-    aws_direct: Schema.Attribute.Component<'aws-page.aws-direct', false>;
-    aws_via_thynkwise: Schema.Attribute.Component<
+    description: Schema.Attribute.Text;
+    direct: Schema.Attribute.Component<'aws-page.aws-direct', false>;
+    heading: Schema.Attribute.Text;
+    via_thynkwise: Schema.Attribute.Component<
       'aws-page.aws-via-thynkwise',
       false
     >;
-    description: Schema.Attribute.Text;
-    heading: Schema.Attribute.Text;
   };
 }
 
@@ -323,6 +324,17 @@ export interface AwsPageList extends Struct.ComponentSchema {
   };
 }
 
+export interface AwsPagePoints extends Struct.ComponentSchema {
+  collectionName: 'components_aws_page_points';
+  info: {
+    displayName: 'points';
+  };
+  attributes: {
+    included: Schema.Attribute.Boolean;
+    point: Schema.Attribute.String;
+  };
+}
+
 export interface AwsPageRealWorldAws extends Struct.ComponentSchema {
   collectionName: 'components_aws_page_real_world_aws';
   info: {
@@ -347,6 +359,72 @@ export interface AwsPageRightContainer extends Struct.ComponentSchema {
       true
     >;
     list: Schema.Attribute.Component<'aws-page.list', true>;
+    sub_text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AzurePageAzureForBfsiIndia extends Struct.ComponentSchema {
+  collectionName: 'components_azure_page_azure_for_bfsi_indias';
+  info: {
+    displayName: 'Azure for BFSI India';
+  };
+  attributes: {
+    left_container: Schema.Attribute.Component<
+      'azure-page.left-container',
+      false
+    >;
+    right_container: Schema.Attribute.Component<
+      'azure-page.right-container',
+      false
+    >;
+  };
+}
+
+export interface AzurePageCards extends Struct.ComponentSchema {
+  collectionName: 'components_azure_page_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface AzurePageLeftContainer extends Struct.ComponentSchema {
+  collectionName: 'components_azure_page_left_containers';
+  info: {
+    displayName: 'left container';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    points: Schema.Attribute.Component<'azure-page.points', true>;
+  };
+}
+
+export interface AzurePagePoints extends Struct.ComponentSchema {
+  collectionName: 'components_azure_page_points';
+  info: {
+    displayName: 'points';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AzurePageRightContainer extends Struct.ComponentSchema {
+  collectionName: 'components_azure_page_right_containers';
+  info: {
+    displayName: 'right container';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    by: Schema.Attribute.String;
+    card: Schema.Attribute.Component<'azure-page.cards', true>;
+    message: Schema.Attribute.Text;
     sub_text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -1847,8 +1925,14 @@ declare module '@strapi/strapi' {
       'aws-page.hero': AwsPageHero;
       'aws-page.left-container': AwsPageLeftContainer;
       'aws-page.list': AwsPageList;
+      'aws-page.points': AwsPagePoints;
       'aws-page.real-world-aws': AwsPageRealWorldAws;
       'aws-page.right-container': AwsPageRightContainer;
+      'azure-page.azure-for-bfsi-india': AzurePageAzureForBfsiIndia;
+      'azure-page.cards': AzurePageCards;
+      'azure-page.left-container': AzurePageLeftContainer;
+      'azure-page.points': AzurePagePoints;
+      'azure-page.right-container': AzurePageRightContainer;
       'case-studies.case-study': CaseStudiesCaseStudy;
       'cloud-migration-page.cloud-migration-hero': CloudMigrationPageCloudMigrationHero;
       'cloud-migration-page.deliverables': CloudMigrationPageDeliverables;

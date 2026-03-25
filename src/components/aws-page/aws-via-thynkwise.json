@@ -7,7 +7,7 @@
   "attributes": {
     "points": {
       "type": "component",
-      "component": "shared.points",
+      "component": "aws-page.points",
       "repeatable": true
     }
   },

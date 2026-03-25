@@ -15,6 +15,9 @@
       "type": "component",
       "component": "aws-page.card",
       "repeatable": true
+    },
+    "sub_text": {
+      "type": "text"
     }
   },
   "config": {}

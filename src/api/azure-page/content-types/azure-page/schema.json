@@ -1,0 +1,65 @@
+{
+  "kind": "singleType",
+  "collectionName": "azure_pages",
+  "info": {
+    "singularName": "azure-page",
+    "pluralName": "azure-pages",
+    "displayName": "azure page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "aws-page.hero",
+      "repeatable": false
+    },
+    "why_azure": {
+      "type": "component",
+      "component": "managed-services-page.why-thynkwise",
+      "repeatable": false
+    },
+    "azure_services": {
+      "type": "component",
+      "component": "managed-services-page.service-catalogue",
+      "repeatable": false
+    },
+    "azure_for_bfsi_india": {
+      "type": "component",
+      "component": "azure-page.azure-for-bfsi-india",
+      "repeatable": false
+    },
+    "team_credentials": {
+      "type": "component",
+      "component": "aws-page.certified-expertise",
+      "repeatable": false
+    },
+    "azure_success_stories": {
+      "type": "component",
+      "component": "aws-page.client-outcomes",
+      "repeatable": false
+    },
+    "comparison": {
+      "type": "component",
+      "component": "aws-page.comparison",
+      "repeatable": false
+    },
+    "common_questions": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": false
+    }
+  }
+}

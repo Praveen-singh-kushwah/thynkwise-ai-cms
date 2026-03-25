@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_azure_page_left_containers",
+  "info": {
+    "displayName": "left container"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "points": {
+      "type": "component",
+      "component": "azure-page.points",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

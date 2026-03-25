@@ -11,12 +11,12 @@
     "description": {
       "type": "text"
     },
-    "aws_direct": {
+    "direct": {
       "type": "component",
       "component": "aws-page.aws-direct",
       "repeatable": false
     },
-    "aws_via_thynkwise": {
+    "via_thynkwise": {
       "type": "component",
       "component": "aws-page.aws-via-thynkwise",
       "repeatable": false

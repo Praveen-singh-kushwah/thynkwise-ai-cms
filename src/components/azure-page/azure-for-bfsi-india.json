@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_azure_page_azure_for_bfsi_indias",
+  "info": {
+    "displayName": "Azure for BFSI India"
+  },
+  "options": {},
+  "attributes": {
+    "left_container": {
+      "type": "component",
+      "component": "azure-page.left-container",
+      "repeatable": false
+    },
+    "right_container": {
+      "type": "component",
+      "component": "azure-page.right-container",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

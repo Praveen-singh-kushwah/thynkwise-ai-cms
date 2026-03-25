@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_aws_page_points",
+  "info": {
+    "displayName": "points"
+  },
+  "options": {},
+  "attributes": {
+    "included": {
+      "type": "boolean"
+    },
+    "point": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

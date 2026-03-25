@@ -596,6 +596,58 @@ export interface ApiAwsPageAwsPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAzurePageAzurePage extends Struct.SingleTypeSchema {
+  collectionName: 'azure_pages';
+  info: {
+    displayName: 'azure page';
+    pluralName: 'azure-pages';
+    singularName: 'azure-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    azure_for_bfsi_india: Schema.Attribute.Component<
+      'azure-page.azure-for-bfsi-india',
+      false
+    >;
+    azure_services: Schema.Attribute.Component<
+      'managed-services-page.service-catalogue',
+      false
+    >;
+    azure_success_stories: Schema.Attribute.Component<
+      'aws-page.client-outcomes',
+      false
+    >;
+    common_questions: Schema.Attribute.Component<'shared.faq', false>;
+    comparison: Schema.Attribute.Component<'aws-page.comparison', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'shared.cta', false>;
+    faq: Schema.Attribute.Component<'shared.faq', false>;
+    hero: Schema.Attribute.Component<'aws-page.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::azure-page.azure-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    team_credentials: Schema.Attribute.Component<
+      'aws-page.certified-expertise',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_azure: Schema.Attribute.Component<
+      'managed-services-page.why-thynkwise',
+      false
+    >;
+  };
+}
+
 export interface ApiBookDemoPageBookDemoPage extends Struct.SingleTypeSchema {
   collectionName: 'book_demo_pages';
   info: {
@@ -1484,6 +1536,7 @@ declare module '@strapi/strapi' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::assessment-form.assessment-form': ApiAssessmentFormAssessmentForm;
       'api::aws-page.aws-page': ApiAwsPageAwsPage;
+      'api::azure-page.azure-page': ApiAzurePageAzurePage;
       'api::book-demo-page.book-demo-page': ApiBookDemoPageBookDemoPage;
       'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;

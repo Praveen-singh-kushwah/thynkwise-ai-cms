@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_azure_page_right_containers",
+  "info": {
+    "displayName": "right container"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_text": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "component": "azure-page.cards",
+      "repeatable": true
+    },
+    "message": {
+      "type": "text"
+    },
+    "by": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
