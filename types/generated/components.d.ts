@@ -247,7 +247,7 @@ export interface AwsPageClientOutcomes extends Struct.ComponentSchema {
     displayName: 'client_outcomes';
   };
   attributes: {
-    card_2: Schema.Attribute.Component<'aws-page.card2', false>;
+    card_2: Schema.Attribute.Component<'aws-page.card2', true>;
     heading: Schema.Attribute.Component<'shared.heading', false>;
   };
 }

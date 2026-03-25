@@ -13,7 +13,7 @@
     "card_2": {
       "type": "component",
       "component": "aws-page.card2",
-      "repeatable": false
+      "repeatable": true
     }
   },
   "config": {}

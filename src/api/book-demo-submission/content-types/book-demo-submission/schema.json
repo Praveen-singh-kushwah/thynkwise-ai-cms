@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "book_demo_submissions",
+  "info": {
+    "singularName": "book-demo-submission",
+    "pluralName": "book-demo-submissions",
+    "displayName": "Book Demo Submission",
+    "description": "Stores submissions received from the Book Demo page form"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "designation": {
+      "type": "string",
+      "required": true
+    },
+    "businessEmail": {
+      "type": "email",
+      "required": true
+    },
+    "whatsappPhone": {
+      "type": "string",
+      "required": true
+    },
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "industry": {
+      "type": "string"
+    },
+    "companySize": {
+      "type": "string"
+    },
+    "currentCloudProvider": {
+      "type": "string"
+    },
+    "monthlyCloudSpend": {
+      "type": "string"
+    },
+    "discussionNotes": {
+      "type": "text"
+    },
+    "preferredDate": {
+      "type": "date"
+    },
+    "preferredTimeSlot": {
+      "type": "string"
+    },
+    "meetingFormat": {
+      "type": "string"
+    },
+    "sourcePage": {
+      "type": "string",
+      "default": "book-demo"
+    },
+    "bookingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "contacted",
+        "scheduled",
+        "completed",
+        "cancelled"
+      ],
+      "default": "new"
+    },
+    "metadata": {
+      "type": "json"
+    }
+  }
+}

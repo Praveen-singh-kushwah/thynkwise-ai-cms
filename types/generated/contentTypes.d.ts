@@ -682,6 +682,55 @@ export interface ApiBookDemoPageBookDemoPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiBookDemoSubmissionBookDemoSubmission
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'book_demo_submissions';
+  info: {
+    description: 'Stores submissions received from the Book Demo page form';
+    displayName: 'Book Demo Submission';
+    pluralName: 'book-demo-submissions';
+    singularName: 'book-demo-submission';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    bookingStatus: Schema.Attribute.Enumeration<
+      ['new', 'contacted', 'scheduled', 'completed', 'cancelled']
+    > &
+      Schema.Attribute.DefaultTo<'new'>;
+    businessEmail: Schema.Attribute.Email & Schema.Attribute.Required;
+    companyName: Schema.Attribute.String & Schema.Attribute.Required;
+    companySize: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    currentCloudProvider: Schema.Attribute.String;
+    designation: Schema.Attribute.String & Schema.Attribute.Required;
+    discussionNotes: Schema.Attribute.Text;
+    fullName: Schema.Attribute.String & Schema.Attribute.Required;
+    industry: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::book-demo-submission.book-demo-submission'
+    > &
+      Schema.Attribute.Private;
+    meetingFormat: Schema.Attribute.String;
+    metadata: Schema.Attribute.JSON;
+    monthlyCloudSpend: Schema.Attribute.String;
+    preferredDate: Schema.Attribute.Date;
+    preferredTimeSlot: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    sourcePage: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'book-demo'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whatsappPhone: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ApiCloudMigrationPageCloudMigrationPage
   extends Struct.SingleTypeSchema {
   collectionName: 'cloud_migration_pages';
@@ -1538,6 +1587,7 @@ declare module '@strapi/strapi' {
       'api::aws-page.aws-page': ApiAwsPageAwsPage;
       'api::azure-page.azure-page': ApiAzurePageAzurePage;
       'api::book-demo-page.book-demo-page': ApiBookDemoPageBookDemoPage;
+      'api::book-demo-submission.book-demo-submission': ApiBookDemoSubmissionBookDemoSubmission;
       'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;
       'api::get-assessment-page.get-assessment-page': ApiGetAssessmentPageGetAssessmentPage;
