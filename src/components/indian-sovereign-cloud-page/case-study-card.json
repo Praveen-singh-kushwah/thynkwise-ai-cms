@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_case_study_cards",
+  "info": {
+    "displayName": "Case Study Card"
+  },
+  "options": {},
+  "attributes": {
+    "header_theme": {
+      "type": "enumeration",
+      "enum": [
+        "navy",
+        "green",
+        "purple"
+      ],
+      "default": "navy"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "challenge": {
+      "type": "text"
+    },
+    "metrics": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.case-study-metric",
+      "repeatable": true
+    },
+    "outcome": {
+      "type": "text"
+    },
+    "key_outcome": {
+      "type": "text"
+    },
+    "provider_text": {
+      "type": "string"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

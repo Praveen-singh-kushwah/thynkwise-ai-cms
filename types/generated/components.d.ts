@@ -1755,6 +1755,471 @@ export interface HomePageWhyThynkwise extends Struct.ComponentSchema {
   };
 }
 
+export interface IndianSovereignCloudPageBenefitCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_benefit_cards';
+  info: {
+    displayName: 'Benefit Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageCaseStudiesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_case_studies_sections';
+  info: {
+    displayName: 'Case Studies Section';
+  };
+  attributes: {
+    case_study_cards: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.case-study-card',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface IndianSovereignCloudPageCaseStudyCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_case_study_cards';
+  info: {
+    displayName: 'Case Study Card';
+  };
+  attributes: {
+    challenge: Schema.Attribute.Text;
+    company: Schema.Attribute.String;
+    cta_link: Schema.Attribute.String;
+    cta_text: Schema.Attribute.String;
+    header_theme: Schema.Attribute.Enumeration<['navy', 'green', 'purple']> &
+      Schema.Attribute.DefaultTo<'navy'>;
+    icon: Schema.Attribute.String;
+    industry: Schema.Attribute.String;
+    key_outcome: Schema.Attribute.Text;
+    metrics: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.case-study-metric',
+      true
+    >;
+    outcome: Schema.Attribute.Text;
+    provider_text: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageCaseStudyMetric
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_case_study_metrics';
+  info: {
+    displayName: 'Case Study Metric';
+  };
+  attributes: {
+    background_tone: Schema.Attribute.Enumeration<
+      ['teal', 'orange', 'green', 'blue', 'purple']
+    > &
+      Schema.Attribute.DefaultTo<'teal'>;
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+    value_tone: Schema.Attribute.Enumeration<
+      ['teal', 'orange', 'green', 'blue', 'purple']
+    > &
+      Schema.Attribute.DefaultTo<'teal'>;
+  };
+}
+
+export interface IndianSovereignCloudPageCommonQuestionsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_common_questions_sections';
+  info: {
+    displayName: 'Common Questions Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    questions: Schema.Attribute.Component<'shared.question-and-answer', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface IndianSovereignCloudPageComparisonColumn
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_comparison_columns';
+  info: {
+    displayName: 'Comparison Column';
+  };
+  attributes: {
+    highlighted: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    icon: Schema.Attribute.String;
+    points: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.comparison-item',
+      true
+    >;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageComparisonItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_comparison_items';
+  info: {
+    displayName: 'Comparison Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    included: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageComparisonSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_comparison_sections';
+  info: {
+    displayName: 'Comparison Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    foreign_hyperscaler_column: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.comparison-column',
+      false
+    >;
+    indian_csp_column: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.comparison-column',
+      false
+    >;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface IndianSovereignCloudPageComplianceCredentialCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_compliance_credential_cards';
+  info: {
+    displayName: 'Compliance Credential Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageDashboardCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_dashboard_cards';
+  info: {
+    displayName: 'Dashboard Card';
+  };
+  attributes: {
+    cta_link: Schema.Attribute.String;
+    cta_text: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    rows: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.dashboard-row',
+      true
+    >;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageDashboardRow
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_dashboard_rows';
+  info: {
+    displayName: 'Dashboard Row';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+    value_tone: Schema.Attribute.Enumeration<
+      ['teal', 'green', 'white', 'saffron']
+    > &
+      Schema.Attribute.DefaultTo<'teal'>;
+  };
+}
+
+export interface IndianSovereignCloudPageFaqSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_faq_sections';
+  info: {
+    displayName: 'FAQ Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    questions: Schema.Attribute.Component<'shared.question-and-answer', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface IndianSovereignCloudPageFinalCtaSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_final_cta_sections';
+  info: {
+    displayName: 'Final CTA Section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    support_note: Schema.Attribute.Text;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    whatsapp_link: Schema.Attribute.String;
+    whatsapp_text: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageHeroSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    compliance_badge_text: Schema.Attribute.String;
+    dashboard_card: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.dashboard-card',
+      false
+    >;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    sovereign_badge_text: Schema.Attribute.String;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    trust_stats: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.hero-trust-stat',
+      true
+    >;
+  };
+}
+
+export interface IndianSovereignCloudPageHeroTrustStat
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_hero_trust_stats';
+  info: {
+    displayName: 'Hero Trust Stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPagePartnerBadge
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_partner_badges';
+  info: {
+    displayName: 'Partner Badge';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPagePartnerCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_partner_cards';
+  info: {
+    displayName: 'Partner Card';
+  };
+  attributes: {
+    badges: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.partner-badge',
+      true
+    >;
+    brand_theme: Schema.Attribute.Enumeration<
+      ['esds', 'yotta', 'ctrls', 'sify', 'e2e', 'ntt', 'custom']
+    > &
+      Schema.Attribute.DefaultTo<'custom'>;
+    logo: Schema.Attribute.Media<'images'>;
+    partner_name: Schema.Attribute.String;
+    tagline: Schema.Attribute.Text;
+  };
+}
+
+export interface IndianSovereignCloudPagePartnerEcosystemSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_partner_ecosystem_sections';
+  info: {
+    displayName: 'Partner Ecosystem Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    partner_cards: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.partner-card',
+      true
+    >;
+    selection_note_description: Schema.Attribute.Text;
+    selection_note_title: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface IndianSovereignCloudPageServiceCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_service_cards';
+  info: {
+    displayName: 'Service Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    tags: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.text-tag',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageServicesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_services_sections';
+  info: {
+    displayName: 'Services Section';
+  };
+  attributes: {
+    credential_cards: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.compliance-credential-card',
+      true
+    >;
+    credentials_eyebrow: Schema.Attribute.String;
+    credentials_title: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    service_cards: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.service-card',
+      true
+    >;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface IndianSovereignCloudPageStatBandSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_stat_band_sections';
+  info: {
+    displayName: 'Stat Band Section';
+  };
+  attributes: {
+    stats: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.stat-item',
+      true
+    >;
+  };
+}
+
+export interface IndianSovereignCloudPageStatItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_stat_items';
+  info: {
+    displayName: 'Stat Item';
+  };
+  attributes: {
+    label: Schema.Attribute.Text;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageTextTag
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_text_tags';
+  info: {
+    displayName: 'Text Tag';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageUseCaseCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_use_case_cards';
+  info: {
+    displayName: 'Use Case Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    result_text: Schema.Attribute.Text;
+    tags: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.text-tag',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IndianSovereignCloudPageUseCasesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_use_cases_sections';
+  info: {
+    displayName: 'Use Cases Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+    use_case_cards: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.use-case-card',
+      true
+    >;
+  };
+}
+
+export interface IndianSovereignCloudPageWhyPartnerSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_indian_sovereign_cloud_page_why_partner_sections';
+  info: {
+    displayName: 'Why Partner Section';
+  };
+  attributes: {
+    benefit_cards: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.benefit-card',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface IndustryUsecasesTags extends Struct.ComponentSchema {
   collectionName: 'components_industry_usecases_tags';
   info: {
@@ -2352,6 +2817,32 @@ declare module '@strapi/strapi' {
       'home-page.value-item': HomePageValueItem;
       'home-page.why-card': HomePageWhyCard;
       'home-page.why-thynkwise': HomePageWhyThynkwise;
+      'indian-sovereign-cloud-page.benefit-card': IndianSovereignCloudPageBenefitCard;
+      'indian-sovereign-cloud-page.case-studies-section': IndianSovereignCloudPageCaseStudiesSection;
+      'indian-sovereign-cloud-page.case-study-card': IndianSovereignCloudPageCaseStudyCard;
+      'indian-sovereign-cloud-page.case-study-metric': IndianSovereignCloudPageCaseStudyMetric;
+      'indian-sovereign-cloud-page.common-questions-section': IndianSovereignCloudPageCommonQuestionsSection;
+      'indian-sovereign-cloud-page.comparison-column': IndianSovereignCloudPageComparisonColumn;
+      'indian-sovereign-cloud-page.comparison-item': IndianSovereignCloudPageComparisonItem;
+      'indian-sovereign-cloud-page.comparison-section': IndianSovereignCloudPageComparisonSection;
+      'indian-sovereign-cloud-page.compliance-credential-card': IndianSovereignCloudPageComplianceCredentialCard;
+      'indian-sovereign-cloud-page.dashboard-card': IndianSovereignCloudPageDashboardCard;
+      'indian-sovereign-cloud-page.dashboard-row': IndianSovereignCloudPageDashboardRow;
+      'indian-sovereign-cloud-page.faq-section': IndianSovereignCloudPageFaqSection;
+      'indian-sovereign-cloud-page.final-cta-section': IndianSovereignCloudPageFinalCtaSection;
+      'indian-sovereign-cloud-page.hero-section': IndianSovereignCloudPageHeroSection;
+      'indian-sovereign-cloud-page.hero-trust-stat': IndianSovereignCloudPageHeroTrustStat;
+      'indian-sovereign-cloud-page.partner-badge': IndianSovereignCloudPagePartnerBadge;
+      'indian-sovereign-cloud-page.partner-card': IndianSovereignCloudPagePartnerCard;
+      'indian-sovereign-cloud-page.partner-ecosystem-section': IndianSovereignCloudPagePartnerEcosystemSection;
+      'indian-sovereign-cloud-page.service-card': IndianSovereignCloudPageServiceCard;
+      'indian-sovereign-cloud-page.services-section': IndianSovereignCloudPageServicesSection;
+      'indian-sovereign-cloud-page.stat-band-section': IndianSovereignCloudPageStatBandSection;
+      'indian-sovereign-cloud-page.stat-item': IndianSovereignCloudPageStatItem;
+      'indian-sovereign-cloud-page.text-tag': IndianSovereignCloudPageTextTag;
+      'indian-sovereign-cloud-page.use-case-card': IndianSovereignCloudPageUseCaseCard;
+      'indian-sovereign-cloud-page.use-cases-section': IndianSovereignCloudPageUseCasesSection;
+      'indian-sovereign-cloud-page.why-partner-section': IndianSovereignCloudPageWhyPartnerSection;
       'industry-usecases.tags': IndustryUsecasesTags;
       'industry-usecases.usecase': IndustryUsecasesUsecase;
       'managed-services-page.case-studies': ManagedServicesPageCaseStudies;

@@ -1070,6 +1070,78 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiIndianSovereignCloudPageIndianSovereignCloudPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'indian_sovereign_cloud_pages';
+  info: {
+    displayName: 'Indian Sovereign Cloud Page';
+    pluralName: 'indian-sovereign-cloud-pages';
+    singularName: 'indian-sovereign-cloud-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    case_studies: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.case-studies-section',
+      false
+    >;
+    common_questions: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.common-questions-section',
+      false
+    >;
+    comparison: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.comparison-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.faq-section',
+      false
+    >;
+    final_cta: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.final-cta-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::indian-sovereign-cloud-page.indian-sovereign-cloud-page'
+    > &
+      Schema.Attribute.Private;
+    partner_ecosystem: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.partner-ecosystem-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.services-section',
+      false
+    >;
+    stats_band: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.stat-band-section',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    use_cases: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.use-cases-section',
+      false
+    >;
+    why_thynkwise: Schema.Attribute.Component<
+      'indian-sovereign-cloud-page.why-partner-section',
+      false
+    >;
+  };
+}
+
 export interface ApiManagedServicesPageManagedServicesPage
   extends Struct.SingleTypeSchema {
   collectionName: 'managed_services_pages';
@@ -1656,6 +1728,7 @@ declare module '@strapi/strapi' {
       'api::get-assessment-page.get-assessment-page': ApiGetAssessmentPageGetAssessmentPage;
       'api::gpuaas-page.gpuaas-page': ApiGpuaasPageGpuaasPage;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::indian-sovereign-cloud-page.indian-sovereign-cloud-page': ApiIndianSovereignCloudPageIndianSovereignCloudPage;
       'api::managed-services-page.managed-services-page': ApiManagedServicesPageManagedServicesPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

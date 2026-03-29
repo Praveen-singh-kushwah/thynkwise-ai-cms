@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_use_cases_sections",
+  "info": {
+    "displayName": "Use Cases Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "use_case_cards": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.use-case-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

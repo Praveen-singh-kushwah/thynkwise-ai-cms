@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_partner_ecosystem_sections",
+  "info": {
+    "displayName": "Partner Ecosystem Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "partner_cards": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.partner-card",
+      "repeatable": true
+    },
+    "selection_note_title": {
+      "type": "string"
+    },
+    "selection_note_description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

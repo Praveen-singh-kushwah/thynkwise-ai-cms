@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_case_study_metrics",
+  "info": {
+    "displayName": "Case Study Metric"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "background_tone": {
+      "type": "enumeration",
+      "enum": [
+        "teal",
+        "orange",
+        "green",
+        "blue",
+        "purple"
+      ],
+      "default": "teal"
+    },
+    "value_tone": {
+      "type": "enumeration",
+      "enum": [
+        "teal",
+        "orange",
+        "green",
+        "blue",
+        "purple"
+      ],
+      "default": "teal"
+    }
+  },
+  "config": {}
+}

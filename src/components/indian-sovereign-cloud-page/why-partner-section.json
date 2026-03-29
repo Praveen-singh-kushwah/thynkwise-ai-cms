@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_why_partner_sections",
+  "info": {
+    "displayName": "Why Partner Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "benefit_cards": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.benefit-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

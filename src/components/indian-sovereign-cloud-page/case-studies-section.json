@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_case_studies_sections",
+  "info": {
+    "displayName": "Case Studies Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "case_study_cards": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.case-study-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

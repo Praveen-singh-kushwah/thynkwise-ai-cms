@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_stat_band_sections",
+  "info": {
+    "displayName": "Stat Band Section"
+  },
+  "options": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.stat-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

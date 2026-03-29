@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_comparison_items",
+  "info": {
+    "displayName": "Comparison Item"
+  },
+  "options": {},
+  "attributes": {
+    "included": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

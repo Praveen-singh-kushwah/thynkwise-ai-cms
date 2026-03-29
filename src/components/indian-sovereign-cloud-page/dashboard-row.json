@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_dashboard_rows",
+  "info": {
+    "displayName": "Dashboard Row"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "value_tone": {
+      "type": "enumeration",
+      "enum": [
+        "teal",
+        "green",
+        "white",
+        "saffron"
+      ],
+      "default": "teal"
+    }
+  },
+  "config": {}
+}

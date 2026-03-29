@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_use_case_cards",
+  "info": {
+    "displayName": "Use Case Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.text-tag",
+      "repeatable": true
+    },
+    "result_text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

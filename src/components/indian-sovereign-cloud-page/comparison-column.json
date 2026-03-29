@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_comparison_columns",
+  "info": {
+    "displayName": "Comparison Column"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "highlighted": {
+      "type": "boolean",
+      "default": false
+    },
+    "points": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.comparison-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

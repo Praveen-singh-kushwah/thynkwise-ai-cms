@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_services_sections",
+  "info": {
+    "displayName": "Services Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "service_cards": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.service-card",
+      "repeatable": true
+    },
+    "credentials_eyebrow": {
+      "type": "string"
+    },
+    "credentials_title": {
+      "type": "text"
+    },
+    "credential_cards": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.compliance-credential-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

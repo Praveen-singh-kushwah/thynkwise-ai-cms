@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_text_tags",
+  "info": {
+    "displayName": "Text Tag"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

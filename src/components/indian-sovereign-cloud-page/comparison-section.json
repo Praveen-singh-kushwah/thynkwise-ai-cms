@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_comparison_sections",
+  "info": {
+    "displayName": "Comparison Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "foreign_hyperscaler_column": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.comparison-column",
+      "repeatable": false
+    },
+    "indian_csp_column": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.comparison-column",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

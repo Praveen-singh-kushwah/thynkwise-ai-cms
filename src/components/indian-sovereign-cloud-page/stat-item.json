@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_stat_items",
+  "info": {
+    "displayName": "Stat Item"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

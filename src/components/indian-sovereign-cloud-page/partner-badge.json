@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_partner_badges",
+  "info": {
+    "displayName": "Partner Badge"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

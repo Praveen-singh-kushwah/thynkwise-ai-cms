@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_indian_sovereign_cloud_page_partner_cards",
+  "info": {
+    "displayName": "Partner Card"
+  },
+  "options": {},
+  "attributes": {
+    "brand_theme": {
+      "type": "enumeration",
+      "enum": [
+        "esds",
+        "yotta",
+        "ctrls",
+        "sify",
+        "e2e",
+        "ntt",
+        "custom"
+      ],
+      "default": "custom"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "partner_name": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "text"
+    },
+    "badges": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.partner-badge",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

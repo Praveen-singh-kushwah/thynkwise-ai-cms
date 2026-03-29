@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "indian_sovereign_cloud_pages",
+  "info": {
+    "singularName": "indian-sovereign-cloud-page",
+    "pluralName": "indian-sovereign-cloud-pages",
+    "displayName": "Indian Sovereign Cloud Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.hero-section",
+      "repeatable": false
+    },
+    "comparison": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.comparison-section",
+      "repeatable": false
+    },
+    "why_thynkwise": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.why-partner-section",
+      "repeatable": false
+    },
+    "services": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.services-section",
+      "repeatable": false
+    },
+    "use_cases": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.use-cases-section",
+      "repeatable": false
+    },
+    "stats_band": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.stat-band-section",
+      "repeatable": false
+    },
+    "case_studies": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.case-studies-section",
+      "repeatable": false
+    },
+    "partner_ecosystem": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.partner-ecosystem-section",
+      "repeatable": false
+    },
+    "common_questions": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.common-questions-section",
+      "repeatable": false
+    },
+    "final_cta": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.final-cta-section",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "indian-sovereign-cloud-page.faq-section",
+      "repeatable": false
+    }
+  }
+}
