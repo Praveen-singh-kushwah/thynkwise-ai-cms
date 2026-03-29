@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_gcp_page_hero_trust_points",
+  "info": {
+    "displayName": "Hero Trust Point"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

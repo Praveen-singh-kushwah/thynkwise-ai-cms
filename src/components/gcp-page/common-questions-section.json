@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_gcp_page_common_questions_sections",
+  "info": {
+    "displayName": "Common Questions Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "questions": {
+      "type": "component",
+      "component": "shared.question-and-answer",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

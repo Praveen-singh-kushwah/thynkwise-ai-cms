@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_gcp_page_comparison_sections",
+  "info": {
+    "displayName": "Comparison Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "direct_option": {
+      "type": "component",
+      "component": "gcp-page.comparison-column",
+      "repeatable": false
+    },
+    "thynkwise_option": {
+      "type": "component",
+      "component": "gcp-page.comparison-column",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

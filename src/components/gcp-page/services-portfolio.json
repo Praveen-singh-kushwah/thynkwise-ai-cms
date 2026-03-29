@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_gcp_page_services_portfolios",
+  "info": {
+    "displayName": "Services Portfolio"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "service_cards": {
+      "type": "component",
+      "component": "gcp-page.service-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

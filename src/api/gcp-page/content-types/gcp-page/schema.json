@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "gcp_pages",
+  "info": {
+    "singularName": "gcp-page",
+    "pluralName": "gcp-pages",
+    "displayName": "gcp page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "gcp-page.hero-section",
+      "repeatable": false
+    },
+    "comparison": {
+      "type": "component",
+      "component": "gcp-page.comparison-section",
+      "repeatable": false
+    },
+    "why_thynkwise_gcp": {
+      "type": "component",
+      "component": "gcp-page.why-thynkwise-gcp",
+      "repeatable": false
+    },
+    "gcp_services_portfolio": {
+      "type": "component",
+      "component": "gcp-page.services-portfolio",
+      "repeatable": false
+    },
+    "gcp_certifications": {
+      "type": "component",
+      "component": "gcp-page.certifications-section",
+      "repeatable": false
+    },
+    "real_world_gcp_in_india": {
+      "type": "component",
+      "component": "gcp-page.use-cases-section",
+      "repeatable": false
+    },
+    "client_outcomes": {
+      "type": "component",
+      "component": "gcp-page.case-study-section",
+      "repeatable": false
+    },
+    "by_the_numbers": {
+      "type": "component",
+      "component": "gcp-page.by-the-numbers-section",
+      "repeatable": false
+    },
+    "common_questions": {
+      "type": "component",
+      "component": "gcp-page.common-questions-section",
+      "repeatable": false
+    },
+    "final_cta": {
+      "type": "component",
+      "component": "gcp-page.final-cta-section",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "gcp-page.faq-section",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_gcp_page_by_the_numbers_sections",
+  "info": {
+    "displayName": "By the Numbers Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

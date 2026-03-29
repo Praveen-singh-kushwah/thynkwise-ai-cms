@@ -935,6 +935,328 @@ export interface FaqFaqItem extends Struct.ComponentSchema {
   };
 }
 
+export interface GcpPageBenefitCard extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_benefit_cards';
+  info: {
+    displayName: 'Benefit Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageByTheNumbersSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_by_the_numbers_sections';
+  info: {
+    displayName: 'By the Numbers Section';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'shared.stat', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageCaseStudyCard extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_case_study_cards';
+  info: {
+    displayName: 'Case Study Card';
+  };
+  attributes: {
+    challenge_quote: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    industry: Schema.Attribute.String;
+    metric_label: Schema.Attribute.String;
+    metric_value: Schema.Attribute.String;
+    organization_name: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageCaseStudySection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_case_study_sections';
+  info: {
+    displayName: 'Case Study Section';
+  };
+  attributes: {
+    case_study_cards: Schema.Attribute.Component<
+      'gcp-page.case-study-card',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageCertificationCard extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_certification_cards';
+  info: {
+    displayName: 'Certification Card';
+  };
+  attributes: {
+    count: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    level: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageCertificationsSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_certifications_sections';
+  info: {
+    displayName: 'Certifications Section';
+  };
+  attributes: {
+    certification_cards: Schema.Attribute.Component<
+      'gcp-page.certification-card',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageCommonQuestionsSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_common_questions_sections';
+  info: {
+    displayName: 'Common Questions Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    questions: Schema.Attribute.Component<'shared.question-and-answer', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageComparisonColumn extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_comparison_columns';
+  info: {
+    displayName: 'Comparison Column';
+  };
+  attributes: {
+    highlighted: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    points: Schema.Attribute.Component<'gcp-page.comparison-point', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageComparisonPoint extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_comparison_points';
+  info: {
+    displayName: 'Comparison Point';
+  };
+  attributes: {
+    included: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageComparisonSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_comparison_sections';
+  info: {
+    displayName: 'Comparison Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    direct_option: Schema.Attribute.Component<
+      'gcp-page.comparison-column',
+      false
+    >;
+    eyebrow: Schema.Attribute.String;
+    thynkwise_option: Schema.Attribute.Component<
+      'gcp-page.comparison-column',
+      false
+    >;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageDashboardStat extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_dashboard_stats';
+  info: {
+    displayName: 'Dashboard Stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    tone: Schema.Attribute.Enumeration<
+      ['default', 'white', 'yellow', 'green']
+    > &
+      Schema.Attribute.DefaultTo<'default'>;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_faq_sections';
+  info: {
+    displayName: 'FAQ Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    questions: Schema.Attribute.Component<'shared.question-and-answer', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageFinalCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_final_cta_sections';
+  info: {
+    displayName: 'Final CTA Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    support_note: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+    whatsapp_link: Schema.Attribute.String;
+    whatsapp_text: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    certification_badge_text: Schema.Attribute.String;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    partner_badge_text: Schema.Attribute.String;
+    partner_dashboard_card: Schema.Attribute.Component<
+      'gcp-page.partner-dashboard-card',
+      false
+    >;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    trust_points: Schema.Attribute.Component<'gcp-page.hero-trust-point', true>;
+  };
+}
+
+export interface GcpPageHeroTrustPoint extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_hero_trust_points';
+  info: {
+    displayName: 'Hero Trust Point';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPagePartnerDashboardCard extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_partner_dashboard_cards';
+  info: {
+    displayName: 'Partner Dashboard Card';
+  };
+  attributes: {
+    button_link: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'gcp-page.dashboard-stat', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageServiceCard extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_service_cards';
+  info: {
+    displayName: 'Service Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    tags: Schema.Attribute.Component<'gcp-page.tag', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageServicesPortfolio extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_services_portfolios';
+  info: {
+    displayName: 'Services Portfolio';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    service_cards: Schema.Attribute.Component<'gcp-page.service-card', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageTag extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_tags';
+  info: {
+    displayName: 'Tag';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface GcpPageUseCaseCard extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_use_case_cards';
+  info: {
+    displayName: 'Use Case Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    result: Schema.Attribute.Text;
+    tags: Schema.Attribute.Component<'gcp-page.tag', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface GcpPageUseCasesSection extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_use_cases_sections';
+  info: {
+    displayName: 'Use Cases Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+    use_case_cards: Schema.Attribute.Component<'gcp-page.use-case-card', true>;
+  };
+}
+
+export interface GcpPageWhyThynkwiseGcp extends Struct.ComponentSchema {
+  collectionName: 'components_gcp_page_why_thynkwise_gcps';
+  info: {
+    displayName: 'Why Thynkwise for GCP';
+  };
+  attributes: {
+    benefit_cards: Schema.Attribute.Component<'gcp-page.benefit-card', true>;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface GetAssessmentPageCard extends Struct.ComponentSchema {
   collectionName: 'components_get_assessment_page_cards';
   info: {
@@ -1969,6 +2291,28 @@ declare module '@strapi/strapi' {
       'demo-book-page.feedback': DemoBookPageFeedback;
       'demo-book-page.list-points': DemoBookPageListPoints;
       'faq.faq-item': FaqFaqItem;
+      'gcp-page.benefit-card': GcpPageBenefitCard;
+      'gcp-page.by-the-numbers-section': GcpPageByTheNumbersSection;
+      'gcp-page.case-study-card': GcpPageCaseStudyCard;
+      'gcp-page.case-study-section': GcpPageCaseStudySection;
+      'gcp-page.certification-card': GcpPageCertificationCard;
+      'gcp-page.certifications-section': GcpPageCertificationsSection;
+      'gcp-page.common-questions-section': GcpPageCommonQuestionsSection;
+      'gcp-page.comparison-column': GcpPageComparisonColumn;
+      'gcp-page.comparison-point': GcpPageComparisonPoint;
+      'gcp-page.comparison-section': GcpPageComparisonSection;
+      'gcp-page.dashboard-stat': GcpPageDashboardStat;
+      'gcp-page.faq-section': GcpPageFaqSection;
+      'gcp-page.final-cta-section': GcpPageFinalCtaSection;
+      'gcp-page.hero-section': GcpPageHeroSection;
+      'gcp-page.hero-trust-point': GcpPageHeroTrustPoint;
+      'gcp-page.partner-dashboard-card': GcpPagePartnerDashboardCard;
+      'gcp-page.service-card': GcpPageServiceCard;
+      'gcp-page.services-portfolio': GcpPageServicesPortfolio;
+      'gcp-page.tag': GcpPageTag;
+      'gcp-page.use-case-card': GcpPageUseCaseCard;
+      'gcp-page.use-cases-section': GcpPageUseCasesSection;
+      'gcp-page.why-thynkwise-gcp': GcpPageWhyThynkwiseGcp;
       'get-assessment-page.card': GetAssessmentPageCard;
       'get-assessment-page.category': GetAssessmentPageCategory;
       'get-assessment-page.hero': GetAssessmentPageHero;

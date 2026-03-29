@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_gcp_page_faq_sections",
+  "info": {
+    "displayName": "FAQ Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "questions": {
+      "type": "component",
+      "component": "shared.question-and-answer",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

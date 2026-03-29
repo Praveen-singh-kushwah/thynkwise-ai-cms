@@ -866,6 +866,68 @@ export interface ApiCybersecurityPageCybersecurityPage
   };
 }
 
+export interface ApiGcpPageGcpPage extends Struct.SingleTypeSchema {
+  collectionName: 'gcp_pages';
+  info: {
+    displayName: 'gcp page';
+    pluralName: 'gcp-pages';
+    singularName: 'gcp-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    by_the_numbers: Schema.Attribute.Component<
+      'gcp-page.by-the-numbers-section',
+      false
+    >;
+    client_outcomes: Schema.Attribute.Component<
+      'gcp-page.case-study-section',
+      false
+    >;
+    common_questions: Schema.Attribute.Component<
+      'gcp-page.common-questions-section',
+      false
+    >;
+    comparison: Schema.Attribute.Component<
+      'gcp-page.comparison-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'gcp-page.faq-section', false>;
+    final_cta: Schema.Attribute.Component<'gcp-page.final-cta-section', false>;
+    gcp_certifications: Schema.Attribute.Component<
+      'gcp-page.certifications-section',
+      false
+    >;
+    gcp_services_portfolio: Schema.Attribute.Component<
+      'gcp-page.services-portfolio',
+      false
+    >;
+    hero: Schema.Attribute.Component<'gcp-page.hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gcp-page.gcp-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    real_world_gcp_in_india: Schema.Attribute.Component<
+      'gcp-page.use-cases-section',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    why_thynkwise_gcp: Schema.Attribute.Component<
+      'gcp-page.why-thynkwise-gcp',
+      false
+    >;
+  };
+}
+
 export interface ApiGetAssessmentPageGetAssessmentPage
   extends Struct.SingleTypeSchema {
   collectionName: 'get_assessment_pages';
@@ -1590,6 +1652,7 @@ declare module '@strapi/strapi' {
       'api::book-demo-submission.book-demo-submission': ApiBookDemoSubmissionBookDemoSubmission;
       'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;
+      'api::gcp-page.gcp-page': ApiGcpPageGcpPage;
       'api::get-assessment-page.get-assessment-page': ApiGetAssessmentPageGetAssessmentPage;
       'api::gpuaas-page.gpuaas-page': ApiGpuaasPageGpuaasPage;
       'api::home-page.home-page': ApiHomePageHomePage;

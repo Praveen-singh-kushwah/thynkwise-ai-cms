@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_gcp_page_comparison_points",
+  "info": {
+    "displayName": "Comparison Point"
+  },
+  "options": {},
+  "attributes": {
+    "included": {
+      "type": "boolean",
+      "default": true
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

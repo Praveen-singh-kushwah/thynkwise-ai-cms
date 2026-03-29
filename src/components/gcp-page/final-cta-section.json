@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_gcp_page_final_cta_sections",
+  "info": {
+    "displayName": "Final CTA Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primary_cta_text": {
+      "type": "string"
+    },
+    "primary_cta_link": {
+      "type": "string"
+    },
+    "secondary_cta_text": {
+      "type": "string"
+    },
+    "secondary_cta_link": {
+      "type": "string"
+    },
+    "support_note": {
+      "type": "text"
+    },
+    "whatsapp_text": {
+      "type": "string"
+    },
+    "whatsapp_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

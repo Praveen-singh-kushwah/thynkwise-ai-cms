@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_gcp_page_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "partner_badge_text": {
+      "type": "string"
+    },
+    "certification_badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "primary_cta_text": {
+      "type": "string"
+    },
+    "primary_cta_link": {
+      "type": "string"
+    },
+    "secondary_cta_text": {
+      "type": "string"
+    },
+    "secondary_cta_link": {
+      "type": "string"
+    },
+    "trust_points": {
+      "type": "component",
+      "component": "gcp-page.hero-trust-point",
+      "repeatable": true
+    },
+    "partner_dashboard_card": {
+      "type": "component",
+      "component": "gcp-page.partner-dashboard-card",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

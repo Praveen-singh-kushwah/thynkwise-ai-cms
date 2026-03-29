@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_gcp_page_partner_dashboard_cards",
+  "info": {
+    "displayName": "Partner Dashboard Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "component": "gcp-page.dashboard-stat",
+      "repeatable": true
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "button_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

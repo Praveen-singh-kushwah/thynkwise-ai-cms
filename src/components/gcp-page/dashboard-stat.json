@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_gcp_page_dashboard_stats",
+  "info": {
+    "displayName": "Dashboard Stat"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "white",
+        "yellow",
+        "green"
+      ],
+      "default": "default"
+    }
+  },
+  "config": {}
+}

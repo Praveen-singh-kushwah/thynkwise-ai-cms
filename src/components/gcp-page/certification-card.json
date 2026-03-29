@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_gcp_page_certification_cards",
+  "info": {
+    "displayName": "Certification Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "count": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

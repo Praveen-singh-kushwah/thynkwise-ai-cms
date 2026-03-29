@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_gcp_page_case_study_cards",
+  "info": {
+    "displayName": "Case Study Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "organization_name": {
+      "type": "string"
+    },
+    "challenge_quote": {
+      "type": "text"
+    },
+    "metric_value": {
+      "type": "string"
+    },
+    "metric_label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

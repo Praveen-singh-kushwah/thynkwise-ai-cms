@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_gcp_page_comparison_columns",
+  "info": {
+    "displayName": "Comparison Column"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "highlighted": {
+      "type": "boolean",
+      "default": false
+    },
+    "points": {
+      "type": "component",
+      "component": "gcp-page.comparison-point",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
