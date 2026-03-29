@@ -1,0 +1,48 @@
+﻿{
+  "collectionName": "components_get_assessment_page_contact_form_sections",
+  "info": {
+    "displayName": "Contact Form Section"
+  },
+  "options": {},
+  "attributes": {
+    "step_label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "first_name_placeholder": {
+      "type": "string"
+    },
+    "company_name_placeholder": {
+      "type": "string"
+    },
+    "business_email_placeholder": {
+      "type": "string"
+    },
+    "phone_placeholder": {
+      "type": "string"
+    },
+    "role_placeholder": {
+      "type": "string"
+    },
+    "role_options": {
+      "type": "component",
+      "component": "get-assessment-page.role-option",
+      "repeatable": true
+    },
+    "back_button_text": {
+      "type": "string"
+    },
+    "submit_button_text": {
+      "type": "string"
+    },
+    "privacy_note": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

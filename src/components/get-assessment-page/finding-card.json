@@ -1,0 +1,30 @@
+﻿{
+  "collectionName": "components_get_assessment_page_finding_cards",
+  "info": {
+    "displayName": "Finding Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "severity_label": {
+      "type": "string"
+    },
+    "severity_tone": {
+      "type": "enumeration",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

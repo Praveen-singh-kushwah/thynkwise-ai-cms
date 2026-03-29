@@ -1,0 +1,25 @@
+﻿{
+  "collectionName": "components_get_assessment_page_score_cards",
+  "info": {
+    "displayName": "Score Card"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "score_value": {
+      "type": "integer"
+    },
+    "score_suffix": {
+      "type": "string"
+    },
+    "grade_text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

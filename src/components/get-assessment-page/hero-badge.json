@@ -1,0 +1,16 @@
+﻿{
+  "collectionName": "components_get_assessment_page_hero_badges",
+  "info": {
+    "displayName": "Hero Badge"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

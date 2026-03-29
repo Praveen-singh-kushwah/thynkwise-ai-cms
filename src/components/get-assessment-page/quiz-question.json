@@ -1,0 +1,35 @@
+﻿{
+  "collectionName": "components_get_assessment_page_quiz_questions",
+  "info": {
+    "displayName": "Quiz Question"
+  },
+  "options": {},
+  "attributes": {
+    "step_number": {
+      "type": "integer"
+    },
+    "question_label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "selection_type": {
+      "type": "enumeration",
+      "enum": [
+        "single_card",
+        "single_text",
+        "multi_card"
+      ]
+    },
+    "options": {
+      "type": "component",
+      "component": "get-assessment-page.quiz-option",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

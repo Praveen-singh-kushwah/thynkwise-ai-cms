@@ -1,0 +1,90 @@
+﻿{
+  "kind": "collectionType",
+  "collectionName": "get_assessment_submissions",
+  "info": {
+    "singularName": "get-assessment-submission",
+    "pluralName": "get-assessment-submissions",
+    "displayName": "Get Assessment Submission",
+    "description": "Stores submissions received from the Get Assessment page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "businessEmail": {
+      "type": "email",
+      "required": true
+    },
+    "whatsappPhone": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "currentCloudSituation": {
+      "type": "string"
+    },
+    "monthlyCloudSpend": {
+      "type": "string"
+    },
+    "currentCloudProviders": {
+      "type": "json"
+    },
+    "biggestCloudPainPoint": {
+      "type": "string"
+    },
+    "applicableRegulations": {
+      "type": "json"
+    },
+    "cloudOperationsModel": {
+      "type": "string"
+    },
+    "investmentHorizon": {
+      "type": "string"
+    },
+    "priorityOutcome": {
+      "type": "string"
+    },
+    "readinessScore": {
+      "type": "integer"
+    },
+    "readinessGrade": {
+      "type": "string"
+    },
+    "scoreDescription": {
+      "type": "text"
+    },
+    "recommendedActions": {
+      "type": "json"
+    },
+    "sourcePage": {
+      "type": "string",
+      "default": "get-assessment"
+    },
+    "submissionStatus": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "reviewed",
+        "contacted",
+        "qualified",
+        "closed"
+      ],
+      "default": "new"
+    },
+    "metadata": {
+      "type": "json"
+    }
+  }
+}

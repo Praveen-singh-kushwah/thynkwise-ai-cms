@@ -1,0 +1,24 @@
+﻿{
+  "collectionName": "components_get_assessment_page_assessment_quiz_sections",
+  "info": {
+    "displayName": "Assessment Quiz Section"
+  },
+  "options": {},
+  "attributes": {
+    "questions": {
+      "type": "component",
+      "component": "get-assessment-page.quiz-question",
+      "repeatable": true
+    },
+    "next_button_text": {
+      "type": "string"
+    },
+    "previous_button_text": {
+      "type": "string"
+    },
+    "final_button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

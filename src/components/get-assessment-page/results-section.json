@@ -1,0 +1,36 @@
+﻿{
+  "collectionName": "components_get_assessment_page_results_sections",
+  "info": {
+    "displayName": "Results Section"
+  },
+  "options": {},
+  "attributes": {
+    "score_card": {
+      "type": "component",
+      "component": "get-assessment-page.score-card",
+      "repeatable": false
+    },
+    "findings_heading": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "component",
+      "component": "get-assessment-page.finding-card",
+      "repeatable": true
+    },
+    "recommendations_heading": {
+      "type": "string"
+    },
+    "recommendation_cards": {
+      "type": "component",
+      "component": "get-assessment-page.recommendation-card",
+      "repeatable": true
+    },
+    "delivery_box": {
+      "type": "component",
+      "component": "get-assessment-page.delivery-box",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

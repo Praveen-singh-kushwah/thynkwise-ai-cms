@@ -1,0 +1,16 @@
+﻿{
+  "collectionName": "components_get_assessment_page_role_options",
+  "info": {
+    "displayName": "Role Option"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,33 @@
+﻿{
+  "collectionName": "components_get_assessment_page_quiz_options",
+  "info": {
+    "displayName": "Quiz Option"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtext": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "display_style": {
+      "type": "enumeration",
+      "enum": [
+        "card",
+        "text"
+      ]
+    },
+    "is_default_selected": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

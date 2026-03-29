@@ -1,0 +1,29 @@
+﻿{
+  "collectionName": "components_get_assessment_page_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "badge_items": {
+      "type": "component",
+      "component": "get-assessment-page.hero-badge",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

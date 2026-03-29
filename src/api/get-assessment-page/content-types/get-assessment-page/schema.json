@@ -1,10 +1,10 @@
-{
+﻿{
   "kind": "singleType",
   "collectionName": "get_assessment_pages",
   "info": {
     "singularName": "get-assessment-page",
     "pluralName": "get-assessment-pages",
-    "displayName": "get assessment page"
+    "displayName": "Get Assessment Page"
   },
   "options": {
     "draftAndPublish": true
@@ -13,18 +13,28 @@
   "attributes": {
     "hero": {
       "type": "component",
-      "component": "get-assessment-page.hero",
+      "component": "get-assessment-page.hero-section",
       "repeatable": false
     },
-    "question_bank": {
+    "assessment_quiz": {
       "type": "component",
-      "component": "get-assessment-page.question-bank",
+      "component": "get-assessment-page.assessment-quiz-section",
+      "repeatable": false
+    },
+    "contact_form": {
+      "type": "component",
+      "component": "get-assessment-page.contact-form-section",
+      "repeatable": false
+    },
+    "results_section": {
+      "type": "component",
+      "component": "get-assessment-page.results-section",
       "repeatable": false
     },
     "faq": {
       "type": "component",
-      "component": "faq.faq-item",
-      "repeatable": true
+      "component": "get-assessment-page.faq-section",
+      "repeatable": false
     }
   }
 }

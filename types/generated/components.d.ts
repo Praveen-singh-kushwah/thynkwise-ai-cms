@@ -1257,77 +1257,229 @@ export interface GcpPageWhyThynkwiseGcp extends Struct.ComponentSchema {
   };
 }
 
-export interface GetAssessmentPageCard extends Struct.ComponentSchema {
-  collectionName: 'components_get_assessment_page_cards';
+export interface GetAssessmentPageAssessmentQuizSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_assessment_quiz_sections';
   info: {
-    displayName: 'card';
-  };
-  attributes: {};
-}
-
-export interface GetAssessmentPageCategory extends Struct.ComponentSchema {
-  collectionName: 'components_get_assessment_page_categories';
-  info: {
-    displayName: 'category';
+    displayName: 'Assessment Quiz Section';
   };
   attributes: {
-    description: Schema.Attribute.String;
-    icon: Schema.Attribute.Media<'images'>;
+    final_button_text: Schema.Attribute.String;
+    next_button_text: Schema.Attribute.String;
+    previous_button_text: Schema.Attribute.String;
     questions: Schema.Attribute.Component<
-      'get-assessment-page.questions',
+      'get-assessment-page.quiz-question',
       true
     >;
+  };
+}
+
+export interface GetAssessmentPageContactFormSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_contact_form_sections';
+  info: {
+    displayName: 'Contact Form Section';
+  };
+  attributes: {
+    back_button_text: Schema.Attribute.String;
+    business_email_placeholder: Schema.Attribute.String;
+    company_name_placeholder: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    first_name_placeholder: Schema.Attribute.String;
+    phone_placeholder: Schema.Attribute.String;
+    privacy_note: Schema.Attribute.Text;
+    role_options: Schema.Attribute.Component<
+      'get-assessment-page.role-option',
+      true
+    >;
+    role_placeholder: Schema.Attribute.String;
+    step_label: Schema.Attribute.String;
+    submit_button_text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
 
-export interface GetAssessmentPageHero extends Struct.ComponentSchema {
-  collectionName: 'components_get_assessment_page_heroes';
+export interface GetAssessmentPageDeliveryBox extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_delivery_boxes';
   info: {
-    displayName: 'hero';
+    displayName: 'Delivery Box';
   };
   attributes: {
     description: Schema.Attribute.Text;
-    heading: Schema.Attribute.String;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface GetAssessmentPageOptions extends Struct.ComponentSchema {
-  collectionName: 'components_get_assessment_page_options';
+export interface GetAssessmentPageFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_faq_sections';
   info: {
-    displayName: 'options';
+    displayName: 'FAQ Section';
   };
   attributes: {
-    icon: Schema.Attribute.Media<'images'>;
-    option: Schema.Attribute.Text;
-    option_no: Schema.Attribute.Integer;
-    right_option: Schema.Attribute.Integer;
-    sub_text: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    questions: Schema.Attribute.Component<'shared.question-and-answer', true>;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface GetAssessmentPageQuestionBank extends Struct.ComponentSchema {
-  collectionName: 'components_get_assessment_page_question_banks';
+export interface GetAssessmentPageFindingCard extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_finding_cards';
   info: {
-    displayName: 'Question Bank';
+    displayName: 'Finding Card';
   };
   attributes: {
-    category: Schema.Attribute.Component<'get-assessment-page.category', true>;
-    main_question: Schema.Attribute.String;
-    sub_text: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    severity_label: Schema.Attribute.String;
+    severity_tone: Schema.Attribute.Enumeration<['high', 'medium', 'low']>;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface GetAssessmentPageQuestions extends Struct.ComponentSchema {
-  collectionName: 'components_get_assessment_page_questions';
+export interface GetAssessmentPageHeroBadge extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_hero_badges';
   info: {
-    displayName: 'questions';
+    displayName: 'Hero Badge';
   };
   attributes: {
-    options: Schema.Attribute.Component<'get-assessment-page.options', true>;
-    order: Schema.Attribute.Integer;
-    question: Schema.Attribute.Text;
-    sub_text: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface GetAssessmentPageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    badge_items: Schema.Attribute.Component<
+      'get-assessment-page.hero-badge',
+      true
+    >;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface GetAssessmentPageQuizOption extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_quiz_options';
+  info: {
+    displayName: 'Quiz Option';
+  };
+  attributes: {
+    display_style: Schema.Attribute.Enumeration<['card', 'text']>;
+    icon: Schema.Attribute.String;
+    is_default_selected: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    subtext: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface GetAssessmentPageQuizQuestion extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_quiz_questions';
+  info: {
+    displayName: 'Quiz Question';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    options: Schema.Attribute.Component<
+      'get-assessment-page.quiz-option',
+      true
+    >;
+    question_label: Schema.Attribute.String;
+    selection_type: Schema.Attribute.Enumeration<
+      ['single_card', 'single_text', 'multi_card']
+    >;
+    step_number: Schema.Attribute.Integer;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GetAssessmentPageRecommendationCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_recommendation_cards';
+  info: {
+    displayName: 'Recommendation Card';
+  };
+  attributes: {
+    cta_link: Schema.Attribute.String;
+    cta_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface GetAssessmentPageResultsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_results_sections';
+  info: {
+    displayName: 'Results Section';
+  };
+  attributes: {
+    delivery_box: Schema.Attribute.Component<
+      'get-assessment-page.delivery-box',
+      false
+    >;
+    findings: Schema.Attribute.Component<
+      'get-assessment-page.finding-card',
+      true
+    >;
+    findings_heading: Schema.Attribute.String;
+    recommendation_cards: Schema.Attribute.Component<
+      'get-assessment-page.recommendation-card',
+      true
+    >;
+    recommendations_heading: Schema.Attribute.String;
+    score_card: Schema.Attribute.Component<
+      'get-assessment-page.score-card',
+      false
+    >;
+  };
+}
+
+export interface GetAssessmentPageRoleOption extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_role_options';
+  info: {
+    displayName: 'Role Option';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface GetAssessmentPageScoreCard extends Struct.ComponentSchema {
+  collectionName: 'components_get_assessment_page_score_cards';
+  info: {
+    displayName: 'Score Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    grade_text: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    score_suffix: Schema.Attribute.String;
+    score_value: Schema.Attribute.Integer;
   };
 }
 
@@ -2778,12 +2930,19 @@ declare module '@strapi/strapi' {
       'gcp-page.use-case-card': GcpPageUseCaseCard;
       'gcp-page.use-cases-section': GcpPageUseCasesSection;
       'gcp-page.why-thynkwise-gcp': GcpPageWhyThynkwiseGcp;
-      'get-assessment-page.card': GetAssessmentPageCard;
-      'get-assessment-page.category': GetAssessmentPageCategory;
-      'get-assessment-page.hero': GetAssessmentPageHero;
-      'get-assessment-page.options': GetAssessmentPageOptions;
-      'get-assessment-page.question-bank': GetAssessmentPageQuestionBank;
-      'get-assessment-page.questions': GetAssessmentPageQuestions;
+      'get-assessment-page.assessment-quiz-section': GetAssessmentPageAssessmentQuizSection;
+      'get-assessment-page.contact-form-section': GetAssessmentPageContactFormSection;
+      'get-assessment-page.delivery-box': GetAssessmentPageDeliveryBox;
+      'get-assessment-page.faq-section': GetAssessmentPageFaqSection;
+      'get-assessment-page.finding-card': GetAssessmentPageFindingCard;
+      'get-assessment-page.hero-badge': GetAssessmentPageHeroBadge;
+      'get-assessment-page.hero-section': GetAssessmentPageHeroSection;
+      'get-assessment-page.quiz-option': GetAssessmentPageQuizOption;
+      'get-assessment-page.quiz-question': GetAssessmentPageQuizQuestion;
+      'get-assessment-page.recommendation-card': GetAssessmentPageRecommendationCard;
+      'get-assessment-page.results-section': GetAssessmentPageResultsSection;
+      'get-assessment-page.role-option': GetAssessmentPageRoleOption;
+      'get-assessment-page.score-card': GetAssessmentPageScoreCard;
       'gpuaas-page.card': GpuaasPageCard;
       'gpuaas-page.faq': GpuaasPageFaq;
       'gpuaas-page.framework-stack': GpuaasPageFrameworkStack;

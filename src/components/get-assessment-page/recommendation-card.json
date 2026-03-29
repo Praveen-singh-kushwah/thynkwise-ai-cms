@@ -1,0 +1,25 @@
+﻿{
+  "collectionName": "components_get_assessment_page_recommendation_cards",
+  "info": {
+    "displayName": "Recommendation Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

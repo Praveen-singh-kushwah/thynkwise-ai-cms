@@ -510,39 +510,6 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiAssessmentFormAssessmentForm
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'assessment_forms';
-  info: {
-    displayName: 'Assessment Form';
-    pluralName: 'assessment-forms';
-    singularName: 'assessment-form';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    companyName: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.Email;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::assessment-form.assessment-form'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    phone: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    role: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiAwsPageAwsPage extends Struct.SingleTypeSchema {
   collectionName: 'aws_pages';
   info: {
@@ -932,7 +899,7 @@ export interface ApiGetAssessmentPageGetAssessmentPage
   extends Struct.SingleTypeSchema {
   collectionName: 'get_assessment_pages';
   info: {
-    displayName: 'get assessment page';
+    displayName: 'Get Assessment Page';
     pluralName: 'get-assessment-pages';
     singularName: 'get-assessment-page';
   };
@@ -940,11 +907,19 @@ export interface ApiGetAssessmentPageGetAssessmentPage
     draftAndPublish: true;
   };
   attributes: {
+    assessment_quiz: Schema.Attribute.Component<
+      'get-assessment-page.assessment-quiz-section',
+      false
+    >;
+    contact_form: Schema.Attribute.Component<
+      'get-assessment-page.contact-form-section',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    faq: Schema.Attribute.Component<'faq.faq-item', true>;
-    hero: Schema.Attribute.Component<'get-assessment-page.hero', false>;
+    faq: Schema.Attribute.Component<'get-assessment-page.faq-section', false>;
+    hero: Schema.Attribute.Component<'get-assessment-page.hero-section', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -952,13 +927,66 @@ export interface ApiGetAssessmentPageGetAssessmentPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    question_bank: Schema.Attribute.Component<
-      'get-assessment-page.question-bank',
+    results_section: Schema.Attribute.Component<
+      'get-assessment-page.results-section',
       false
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGetAssessmentSubmissionGetAssessmentSubmission
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'get_assessment_submissions';
+  info: {
+    description: 'Stores submissions received from the Get Assessment page';
+    displayName: 'Get Assessment Submission';
+    pluralName: 'get-assessment-submissions';
+    singularName: 'get-assessment-submission';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    applicableRegulations: Schema.Attribute.JSON;
+    biggestCloudPainPoint: Schema.Attribute.String;
+    businessEmail: Schema.Attribute.Email & Schema.Attribute.Required;
+    cloudOperationsModel: Schema.Attribute.String;
+    companyName: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    currentCloudProviders: Schema.Attribute.JSON;
+    currentCloudSituation: Schema.Attribute.String;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    investmentHorizon: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::get-assessment-submission.get-assessment-submission'
+    > &
+      Schema.Attribute.Private;
+    metadata: Schema.Attribute.JSON;
+    monthlyCloudSpend: Schema.Attribute.String;
+    priorityOutcome: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    readinessGrade: Schema.Attribute.String;
+    readinessScore: Schema.Attribute.Integer;
+    recommendedActions: Schema.Attribute.JSON;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
+    scoreDescription: Schema.Attribute.Text;
+    sourcePage: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'get-assessment'>;
+    submissionStatus: Schema.Attribute.Enumeration<
+      ['new', 'reviewed', 'contacted', 'qualified', 'closed']
+    > &
+      Schema.Attribute.DefaultTo<'new'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whatsappPhone: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -1717,7 +1745,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
-      'api::assessment-form.assessment-form': ApiAssessmentFormAssessmentForm;
       'api::aws-page.aws-page': ApiAwsPageAwsPage;
       'api::azure-page.azure-page': ApiAzurePageAzurePage;
       'api::book-demo-page.book-demo-page': ApiBookDemoPageBookDemoPage;
@@ -1726,6 +1753,7 @@ declare module '@strapi/strapi' {
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;
       'api::gcp-page.gcp-page': ApiGcpPageGcpPage;
       'api::get-assessment-page.get-assessment-page': ApiGetAssessmentPageGetAssessmentPage;
+      'api::get-assessment-submission.get-assessment-submission': ApiGetAssessmentSubmissionGetAssessmentSubmission;
       'api::gpuaas-page.gpuaas-page': ApiGpuaasPageGpuaasPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::indian-sovereign-cloud-page.indian-sovereign-cloud-page': ApiIndianSovereignCloudPageIndianSovereignCloudPage;
