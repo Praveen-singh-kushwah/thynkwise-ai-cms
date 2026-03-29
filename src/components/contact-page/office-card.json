@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_contact_page_office_cards",
+  "info": {
+    "displayName": "Office Card"
+  },
+  "options": {},
+  "attributes": {
+    "city_icon": {
+      "type": "string"
+    },
+    "city_name": {
+      "type": "string"
+    },
+    "location_tag": {
+      "type": "string"
+    },
+    "tag_tone": {
+      "type": "enumeration",
+      "enum": ["hq", "sre", "office"]
+    },
+    "address": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_link": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "email_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

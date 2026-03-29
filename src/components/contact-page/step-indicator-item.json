@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_contact_page_step_indicator_items",
+  "info": {
+    "displayName": "Step Indicator Item"
+  },
+  "options": {},
+  "attributes": {
+    "step_number": {
+      "type": "integer",
+      "min": 1
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

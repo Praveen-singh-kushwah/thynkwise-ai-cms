@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_contact_page_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "response_channels": {
+      "type": "component",
+      "component": "contact-page.response-channel",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

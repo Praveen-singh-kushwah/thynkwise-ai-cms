@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_contact_page_success_states",
+  "info": {
+    "displayName": "Success State"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title_template": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "what_happens_next_title": {
+      "type": "string"
+    },
+    "what_happens_next_items": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "primary_button_text": {
+      "type": "string"
+    },
+    "primary_button_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_contact_page_faq_strip_cards",
+  "info": {
+    "displayName": "FAQ Strip Card"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -767,6 +767,52 @@ export interface ApiCloudMigrationPageCloudMigrationPage
   };
 }
 
+export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
+  collectionName: 'contact_pages';
+  info: {
+    displayName: 'Contact Page';
+    pluralName: 'contact-pages';
+    singularName: 'contact-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_channels: Schema.Attribute.Component<
+      'contact-page.contact-channels-section',
+      false
+    >;
+    contact_form: Schema.Attribute.Component<
+      'contact-page.contact-form-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'contact-page.faq-section', false>;
+    faq_strip: Schema.Attribute.Component<
+      'contact-page.faq-strip-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<'contact-page.hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-page.contact-page'
+    > &
+      Schema.Attribute.Private;
+    offices: Schema.Attribute.Component<'contact-page.offices-section', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    trust_band: Schema.Attribute.Component<
+      'contact-page.trust-band-section',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCybersecurityPageCybersecurityPage
   extends Struct.SingleTypeSchema {
   collectionName: 'cybersecurity_pages';
@@ -1750,6 +1796,7 @@ declare module '@strapi/strapi' {
       'api::book-demo-page.book-demo-page': ApiBookDemoPageBookDemoPage;
       'api::book-demo-submission.book-demo-submission': ApiBookDemoSubmissionBookDemoSubmission;
       'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;
       'api::gcp-page.gcp-page': ApiGcpPageGcpPage;
       'api::get-assessment-page.get-assessment-page': ApiGetAssessmentPageGetAssessmentPage;

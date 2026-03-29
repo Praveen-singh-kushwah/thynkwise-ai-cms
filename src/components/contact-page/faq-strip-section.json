@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_contact_page_faq_strip_sections",
+  "info": {
+    "displayName": "FAQ Strip Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "contact-page.faq-strip-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

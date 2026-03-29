@@ -702,6 +702,369 @@ export interface CloudMigrationPageTrustStats extends Struct.ComponentSchema {
   };
 }
 
+export interface ContactPageAboutYouStep extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_about_you_steps';
+  info: {
+    displayName: 'About You Step';
+  };
+  attributes: {
+    company_label: Schema.Attribute.String;
+    company_placeholder: Schema.Attribute.String;
+    continue_button_text: Schema.Attribute.String;
+    first_name_label: Schema.Attribute.String;
+    first_name_placeholder: Schema.Attribute.String;
+    last_name_label: Schema.Attribute.String;
+    last_name_placeholder: Schema.Attribute.String;
+    phone_label: Schema.Attribute.String;
+    phone_placeholder: Schema.Attribute.String;
+    role_label: Schema.Attribute.String;
+    role_options: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    role_placeholder: Schema.Attribute.String;
+    work_email_label: Schema.Attribute.String;
+    work_email_placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageChannelCard extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_channel_cards';
+  info: {
+    displayName: 'Channel Card';
+  };
+  attributes: {
+    cta_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    style_tone: Schema.Attribute.Enumeration<
+      ['whatsapp', 'demo', 'assessment', 'email']
+    >;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageCloudSituationStep extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_cloud_situation_steps';
+  info: {
+    displayName: 'Cloud Situation Step';
+  };
+  attributes: {
+    back_button_text: Schema.Attribute.String;
+    challenge_label: Schema.Attribute.String;
+    challenge_options: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    challenge_placeholder: Schema.Attribute.String;
+    continue_button_text: Schema.Attribute.String;
+    current_cloud_label: Schema.Attribute.String;
+    current_cloud_options: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    current_cloud_placeholder: Schema.Attribute.String;
+    industry_label: Schema.Attribute.String;
+    industry_options: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    industry_placeholder: Schema.Attribute.String;
+    monthly_spend_label: Schema.Attribute.String;
+    monthly_spend_options: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    monthly_spend_placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageContactChannelsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_contact_channels_sections';
+  info: {
+    displayName: 'Contact Channels Section';
+  };
+  attributes: {
+    channels: Schema.Attribute.Component<'contact-page.channel-card', true>;
+  };
+}
+
+export interface ContactPageContactFormSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_contact_form_sections';
+  info: {
+    displayName: 'Contact Form Section';
+  };
+  attributes: {
+    about_you_step: Schema.Attribute.Component<
+      'contact-page.about-you-step',
+      false
+    >;
+    cloud_situation_step: Schema.Attribute.Component<
+      'contact-page.cloud-situation-step',
+      false
+    >;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    quick_actions: Schema.Attribute.Component<
+      'contact-page.quick-action',
+      true
+    >;
+    quick_actions_note: Schema.Attribute.Text;
+    requirements_step: Schema.Attribute.Component<
+      'contact-page.requirements-step',
+      false
+    >;
+    step_indicators: Schema.Attribute.Component<
+      'contact-page.step-indicator-item',
+      true
+    >;
+    success_state: Schema.Attribute.Component<
+      'contact-page.success-state',
+      false
+    >;
+  };
+}
+
+export interface ContactPageFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_faq_items';
+  info: {
+    displayName: 'FAQ Item';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_faq_sections';
+  info: {
+    displayName: 'FAQ Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    questions: Schema.Attribute.Component<'contact-page.faq-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageFaqStripCard extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_faq_strip_cards';
+  info: {
+    displayName: 'FAQ Strip Card';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageFaqStripSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_faq_strip_sections';
+  info: {
+    displayName: 'FAQ Strip Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'contact-page.faq-strip-card', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    eyebrow: Schema.Attribute.String;
+    response_channels: Schema.Attribute.Component<
+      'contact-page.response-channel',
+      true
+    >;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface ContactPageOfficeCard extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_office_cards';
+  info: {
+    displayName: 'Office Card';
+  };
+  attributes: {
+    address: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    city_icon: Schema.Attribute.String;
+    city_name: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    email_link: Schema.Attribute.String;
+    location_tag: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    phone_link: Schema.Attribute.String;
+    tag_tone: Schema.Attribute.Enumeration<['hq', 'sre', 'office']>;
+  };
+}
+
+export interface ContactPageOfficesSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_offices_sections';
+  info: {
+    displayName: 'Offices Section';
+  };
+  attributes: {
+    city_count_label: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    offices: Schema.Attribute.Component<'contact-page.office-card', true>;
+  };
+}
+
+export interface ContactPageQuickAction extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_quick_actions';
+  info: {
+    displayName: 'Quick Action';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    style_tone: Schema.Attribute.Enumeration<
+      ['whatsapp', 'call', 'demo', 'assessment']
+    >;
+    subtext: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageRequirementsStep extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_requirements_steps';
+  info: {
+    displayName: 'Requirements Step';
+  };
+  attributes: {
+    back_button_text: Schema.Attribute.String;
+    contact_method_label: Schema.Attribute.String;
+    contact_method_options: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    contact_method_placeholder: Schema.Attribute.String;
+    message_label: Schema.Attribute.String;
+    message_placeholder: Schema.Attribute.Text;
+    privacy_note: Schema.Attribute.Text;
+    service_label: Schema.Attribute.String;
+    service_options: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    service_placeholder: Schema.Attribute.String;
+    submit_button_text: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageResponseChannel extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_response_channels';
+  info: {
+    displayName: 'Response Channel';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    badge_tone: Schema.Attribute.Enumeration<['green', 'orange', 'blue']>;
+    channel_title: Schema.Attribute.String;
+    dot_tone: Schema.Attribute.Enumeration<['green', 'orange', 'blue']>;
+    icon: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageSelectOption extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_select_options';
+  info: {
+    displayName: 'Select Option';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageStepIndicatorItem extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_step_indicator_items';
+  info: {
+    displayName: 'Step Indicator Item';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    step_number: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
+export interface ContactPageSuccessState extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_success_states';
+  info: {
+    displayName: 'Success State';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    primary_button_link: Schema.Attribute.String;
+    primary_button_text: Schema.Attribute.String;
+    title_template: Schema.Attribute.String;
+    what_happens_next_items: Schema.Attribute.Component<
+      'contact-page.select-option',
+      true
+    >;
+    what_happens_next_title: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageTrustBandItem extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_trust_band_items';
+  info: {
+    displayName: 'Trust Band Item';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface ContactPageTrustBandSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_page_trust_band_sections';
+  info: {
+    displayName: 'Trust Band Section';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'contact-page.trust-band-item', true>;
+  };
+}
+
 export interface CybersecurityPageCybersecurityHero
   extends Struct.ComponentSchema {
   collectionName: 'components_cybersecurity_page_cybersecurity_heroes';
@@ -2891,6 +3254,26 @@ declare module '@strapi/strapi' {
       'cloud-migration-page.stats': CloudMigrationPageStats;
       'cloud-migration-page.tag': CloudMigrationPageTag;
       'cloud-migration-page.trust-stats': CloudMigrationPageTrustStats;
+      'contact-page.about-you-step': ContactPageAboutYouStep;
+      'contact-page.channel-card': ContactPageChannelCard;
+      'contact-page.cloud-situation-step': ContactPageCloudSituationStep;
+      'contact-page.contact-channels-section': ContactPageContactChannelsSection;
+      'contact-page.contact-form-section': ContactPageContactFormSection;
+      'contact-page.faq-item': ContactPageFaqItem;
+      'contact-page.faq-section': ContactPageFaqSection;
+      'contact-page.faq-strip-card': ContactPageFaqStripCard;
+      'contact-page.faq-strip-section': ContactPageFaqStripSection;
+      'contact-page.hero-section': ContactPageHeroSection;
+      'contact-page.office-card': ContactPageOfficeCard;
+      'contact-page.offices-section': ContactPageOfficesSection;
+      'contact-page.quick-action': ContactPageQuickAction;
+      'contact-page.requirements-step': ContactPageRequirementsStep;
+      'contact-page.response-channel': ContactPageResponseChannel;
+      'contact-page.select-option': ContactPageSelectOption;
+      'contact-page.step-indicator-item': ContactPageStepIndicatorItem;
+      'contact-page.success-state': ContactPageSuccessState;
+      'contact-page.trust-band-item': ContactPageTrustBandItem;
+      'contact-page.trust-band-section': ContactPageTrustBandSection;
       'cybersecurity-page.cybersecurity-hero': CybersecurityPageCybersecurityHero;
       'cybersecurity-page.description-points': CybersecurityPageDescriptionPoints;
       'cybersecurity-page.framework': CybersecurityPageFramework;

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_contact_page_contact_channels_sections",
+  "info": {
+    "displayName": "Contact Channels Section"
+  },
+  "options": {},
+  "attributes": {
+    "channels": {
+      "type": "component",
+      "component": "contact-page.channel-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

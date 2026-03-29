@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_contact_page_contact_form_sections",
+  "info": {
+    "displayName": "Contact Form Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "step_indicators": {
+      "type": "component",
+      "component": "contact-page.step-indicator-item",
+      "repeatable": true
+    },
+    "about_you_step": {
+      "type": "component",
+      "component": "contact-page.about-you-step",
+      "repeatable": false
+    },
+    "cloud_situation_step": {
+      "type": "component",
+      "component": "contact-page.cloud-situation-step",
+      "repeatable": false
+    },
+    "requirements_step": {
+      "type": "component",
+      "component": "contact-page.requirements-step",
+      "repeatable": false
+    },
+    "success_state": {
+      "type": "component",
+      "component": "contact-page.success-state",
+      "repeatable": false
+    },
+    "quick_actions": {
+      "type": "component",
+      "component": "contact-page.quick-action",
+      "repeatable": true
+    },
+    "quick_actions_note": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

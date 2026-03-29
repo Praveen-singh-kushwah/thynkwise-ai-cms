@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_contact_page_response_channels",
+  "info": {
+    "displayName": "Response Channel"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "channel_title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "badge_text": {
+      "type": "string"
+    },
+    "badge_tone": {
+      "type": "enumeration",
+      "enum": ["green", "orange", "blue"]
+    },
+    "dot_tone": {
+      "type": "enumeration",
+      "enum": ["green", "orange", "blue"]
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_contact_page_requirements_steps",
+  "info": {
+    "displayName": "Requirements Step"
+  },
+  "options": {},
+  "attributes": {
+    "service_label": {
+      "type": "string"
+    },
+    "service_placeholder": {
+      "type": "string"
+    },
+    "service_options": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "contact_method_label": {
+      "type": "string"
+    },
+    "contact_method_placeholder": {
+      "type": "string"
+    },
+    "contact_method_options": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "message_label": {
+      "type": "string"
+    },
+    "message_placeholder": {
+      "type": "text"
+    },
+    "privacy_note": {
+      "type": "text"
+    },
+    "back_button_text": {
+      "type": "string"
+    },
+    "submit_button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

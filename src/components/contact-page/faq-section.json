@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_contact_page_faq_sections",
+  "info": {
+    "displayName": "FAQ Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "questions": {
+      "type": "component",
+      "component": "contact-page.faq-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

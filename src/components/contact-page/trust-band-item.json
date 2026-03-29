@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_contact_page_trust_band_items",
+  "info": {
+    "displayName": "Trust Band Item"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

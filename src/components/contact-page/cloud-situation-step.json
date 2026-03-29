@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_contact_page_cloud_situation_steps",
+  "info": {
+    "displayName": "Cloud Situation Step"
+  },
+  "options": {},
+  "attributes": {
+    "current_cloud_label": {
+      "type": "string"
+    },
+    "current_cloud_placeholder": {
+      "type": "string"
+    },
+    "current_cloud_options": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "monthly_spend_label": {
+      "type": "string"
+    },
+    "monthly_spend_placeholder": {
+      "type": "string"
+    },
+    "monthly_spend_options": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "industry_label": {
+      "type": "string"
+    },
+    "industry_placeholder": {
+      "type": "string"
+    },
+    "industry_options": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "challenge_label": {
+      "type": "string"
+    },
+    "challenge_placeholder": {
+      "type": "string"
+    },
+    "challenge_options": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "back_button_text": {
+      "type": "string"
+    },
+    "continue_button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

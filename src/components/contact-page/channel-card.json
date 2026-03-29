@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_contact_page_channel_cards",
+  "info": {
+    "displayName": "Channel Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "style_tone": {
+      "type": "enumeration",
+      "enum": ["whatsapp", "demo", "assessment", "email"]
+    }
+  },
+  "config": {}
+}

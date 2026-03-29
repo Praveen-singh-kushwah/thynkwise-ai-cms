@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_contact_page_about_you_steps",
+  "info": {
+    "displayName": "About You Step"
+  },
+  "options": {},
+  "attributes": {
+    "first_name_label": {
+      "type": "string"
+    },
+    "first_name_placeholder": {
+      "type": "string"
+    },
+    "last_name_label": {
+      "type": "string"
+    },
+    "last_name_placeholder": {
+      "type": "string"
+    },
+    "work_email_label": {
+      "type": "string"
+    },
+    "work_email_placeholder": {
+      "type": "string"
+    },
+    "company_label": {
+      "type": "string"
+    },
+    "company_placeholder": {
+      "type": "string"
+    },
+    "role_label": {
+      "type": "string"
+    },
+    "role_placeholder": {
+      "type": "string"
+    },
+    "role_options": {
+      "type": "component",
+      "component": "contact-page.select-option",
+      "repeatable": true
+    },
+    "phone_label": {
+      "type": "string"
+    },
+    "phone_placeholder": {
+      "type": "string"
+    },
+    "continue_button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_contact_page_quick_actions",
+  "info": {
+    "displayName": "Quick Action"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "style_tone": {
+      "type": "enumeration",
+      "enum": ["whatsapp", "call", "demo", "assessment"]
+    }
+  },
+  "config": {}
+}

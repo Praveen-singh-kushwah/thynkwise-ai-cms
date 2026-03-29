@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_contact_page_trust_band_sections",
+  "info": {
+    "displayName": "Trust Band Section"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "contact-page.trust-band-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

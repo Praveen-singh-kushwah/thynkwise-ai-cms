@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_contact_page_offices_sections",
+  "info": {
+    "displayName": "Offices Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "city_count_label": {
+      "type": "string"
+    },
+    "offices": {
+      "type": "component",
+      "component": "contact-page.office-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
