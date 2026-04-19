@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_home_page_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "primary_cta": {
+      "type": "component",
+      "component": "home-page.action-button",
+      "repeatable": false
+    },
+    "secondary_cta": {
+      "type": "component",
+      "component": "home-page.action-button",
+      "repeatable": false
+    },
+    "vertical_cards": {
+      "type": "component",
+      "component": "home-page.hero-vertical-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

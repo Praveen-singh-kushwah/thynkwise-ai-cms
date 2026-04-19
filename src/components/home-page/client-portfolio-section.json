@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_page_client_portfolio_sections",
+  "info": {
+    "displayName": "Client Portfolio Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "client_cards": {
+      "type": "component",
+      "component": "home-page.client-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

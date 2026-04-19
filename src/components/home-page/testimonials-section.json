@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_page_testimonials_sections",
+  "info": {
+    "displayName": "Testimonials Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "testimonial_cards": {
+      "type": "component",
+      "component": "home-page.testimonial-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -2047,88 +2047,140 @@ export interface GpuaasPageWorkloadLibrary extends Struct.ComponentSchema {
   };
 }
 
-export interface HomePageCards extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_cards';
+export interface HomePageActionButton extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_action_buttons';
   info: {
-    displayName: 'cards';
+    displayName: 'Action Button';
   };
   attributes: {
-    link: Schema.Attribute.String;
-    link_text: Schema.Attribute.String;
-    logo: Schema.Attribute.Media<'images'>;
-    services: Schema.Attribute.Component<'shared.points', true>;
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    button_link: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<
+      ['primary', 'secondary', 'outline', 'whatsapp']
+    >;
   };
 }
 
-export interface HomePageClientOutcomes extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_client_outcomes';
+export interface HomePageCapabilitiesSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_capabilities_sections';
   info: {
-    displayName: 'Client Outcomes';
+    displayName: 'Capabilities Section';
   };
   attributes: {
-    heading: Schema.Attribute.String;
-    outcomesCard: Schema.Attribute.Component<'home-page.outcomes-card', true>;
-    subHeading: Schema.Attribute.Text;
-  };
-}
-
-export interface HomePageCloudProvider extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_cloud_providers';
-  info: {
-    displayName: 'cloud-provider';
-  };
-  attributes: {
-    cards: Schema.Attribute.Component<'home-page.cards', true>;
+    capability_cards: Schema.Attribute.Component<
+      'home-page.capability-card',
+      true
+    >;
     description: Schema.Attribute.Text;
-    heading: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageCta extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_ctas';
-  info: {
-    displayName: 'cta';
-  };
-  attributes: {
-    description: Schema.Attribute.String;
-    primary_cta_link: Schema.Attribute.String;
-    primary_cta_text: Schema.Attribute.String;
-    secondary_cta_link: Schema.Attribute.String;
-    secondary_cta_text: Schema.Attribute.String;
+    eyebrow_text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
 
-export interface HomePageFaq extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_faqs';
+export interface HomePageCapabilityCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_capability_cards';
   info: {
-    displayName: 'faq';
+    displayName: 'Capability Card';
+  };
+  attributes: {
+    accent_tone: Schema.Attribute.Enumeration<
+      ['blue', 'orange', 'purple', 'green']
+    >;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    link_text: Schema.Attribute.String;
+    link_url: Schema.Attribute.String;
+    order_label: Schema.Attribute.String;
+    result_label: Schema.Attribute.String;
+    result_value: Schema.Attribute.Text;
+    tags: Schema.Attribute.Component<'home-page.tag-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageClientCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_client_cards';
+  info: {
+    displayName: 'Client Card';
+  };
+  attributes: {
+    category_label: Schema.Attribute.String;
+    client_name: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    geography: Schema.Attribute.String;
+    metric_label: Schema.Attribute.String;
+    metric_value: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageClientPortfolioSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_client_portfolio_sections';
+  info: {
+    displayName: 'Client Portfolio Section';
+  };
+  attributes: {
+    client_cards: Schema.Attribute.Component<'home-page.client-card', true>;
+    description: Schema.Attribute.Text;
+    eyebrow_text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_faq_items';
+  info: {
+    displayName: 'FAQ Item';
   };
   attributes: {
     answer: Schema.Attribute.Text;
-    question: Schema.Attribute.Text;
+    is_open_by_default: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    question: Schema.Attribute.String;
   };
 }
 
-export interface HomePageHero extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_heroes';
+export interface HomePageFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_faq_sections';
   info: {
-    displayName: 'hero';
+    displayName: 'FAQ Section';
   };
   attributes: {
-    primary_cta_link: Schema.Attribute.String;
-    primary_cta_text: Schema.Attribute.String;
-    secondary_cta_link: Schema.Attribute.String;
-    secondary_cta_text: Schema.Attribute.String;
-    subtitle: Schema.Attribute.RichText &
+    description: Schema.Attribute.Text;
+    eyebrow_text: Schema.Attribute.String;
+    faq_items: Schema.Attribute.Component<'home-page.faq-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageFinalCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_final_cta_sections';
+  info: {
+    displayName: 'Final CTA Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    primary_cta: Schema.Attribute.Component<'home-page.action-button', false>;
+    secondary_cta: Schema.Attribute.Component<'home-page.action-button', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultHtml';
         }
       >;
+    eyebrow_text: Schema.Attribute.String;
+    primary_cta: Schema.Attribute.Component<'home-page.action-button', false>;
+    secondary_cta: Schema.Attribute.Component<'home-page.action-button', false>;
     title: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
@@ -2136,137 +2188,123 @@ export interface HomePageHero extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    vertical_cards: Schema.Attribute.Component<
+      'home-page.hero-vertical-card',
+      true
+    >;
   };
 }
 
-export interface HomePageIndustry extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_industries';
+export interface HomePageHeroVerticalCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_hero_vertical_cards';
   info: {
-    displayName: 'industry';
-  };
-  attributes: {
-    heading: Schema.Attribute.String;
-    industryCard: Schema.Attribute.Component<'home-page.industry-card', true>;
-    subHeading: Schema.Attribute.Text;
-  };
-}
-
-export interface HomePageIndustryCard extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_industry_cards';
-  info: {
-    displayName: 'industryCard';
-  };
-  attributes: {
-    description: Schema.Attribute.String;
-    icon: Schema.Attribute.Media<'images'>;
-    link: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageOutcomesCard extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_outcomes_cards';
-  info: {
-    displayName: 'Outcomes Card';
-  };
-  attributes: {
-    challenge: Schema.Attribute.Text;
-    company: Schema.Attribute.String;
-    icon: Schema.Attribute.Media<'images'>;
-    industry: Schema.Attribute.String;
-    kpi_1_label: Schema.Attribute.String;
-    kpi_1_value: Schema.Attribute.String;
-    kpi_2_label: Schema.Attribute.String;
-    kpi_2_value: Schema.Attribute.String;
-    service: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageService extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_services';
-  info: {
-    displayName: 'service';
+    displayName: 'Hero Vertical Card';
   };
   attributes: {
     description: Schema.Attribute.Text;
-    heading: Schema.Attribute.String;
-    serviceCard: Schema.Attribute.Component<'home-page.service-card', true>;
-  };
-}
-
-export interface HomePageServiceCard extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_service_cards';
-  info: {
-    displayName: 'service card';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    icon: Schema.Attribute.Media<'images'>;
-    link: Schema.Attribute.String;
     link_text: Schema.Attribute.String;
-    points: Schema.Attribute.Component<'shared.points', true>;
-    tag: Schema.Attribute.String;
+    link_url: Schema.Attribute.String;
+    order_label: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
 
-export interface HomePageStat extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_stats';
+export interface HomePagePartnerNetworkSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_partner_network_sections';
   info: {
-    displayName: 'stat';
+    displayName: 'Partner Network Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow_text: Schema.Attribute.String;
+    partner_pills: Schema.Attribute.Component<'home-page.partner-pill', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomePagePartnerPill extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_partner_pills';
+  info: {
+    displayName: 'Partner Pill';
   };
   attributes: {
     label: Schema.Attribute.String;
-    number: Schema.Attribute.String;
   };
 }
 
-export interface HomePageTestimonial extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_testimonials';
+export interface HomePageSeoSettings extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_seo_settings';
   info: {
-    displayName: 'testimonial';
+    displayName: 'SEO Settings';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images'>;
-    name: Schema.Attribute.String;
-    role: Schema.Attribute.String;
-    text: Schema.Attribute.Text;
+    browser_title: Schema.Attribute.String;
+    canonical_url: Schema.Attribute.String;
+    meta_description: Schema.Attribute.Text;
+    meta_keywords: Schema.Attribute.Text;
+    og_description: Schema.Attribute.Text;
+    og_title: Schema.Attribute.String;
+    twitter_title: Schema.Attribute.String;
   };
 }
 
-export interface HomePageValueItem extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_value_items';
+export interface HomePageStatItem extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_stat_items';
   info: {
-    displayName: 'value-item';
+    displayName: 'Stat Item';
+  };
+  attributes: {
+    metric_label: Schema.Attribute.String;
+    metric_value: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageStatsBandSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_stats_band_sections';
+  info: {
+    displayName: 'Stats Band Section';
+  };
+  attributes: {
+    stats: Schema.Attribute.Component<'home-page.stat-item', true>;
+  };
+}
+
+export interface HomePageTagItem extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_tag_items';
+  info: {
+    displayName: 'Tag Item';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface HomePageTestimonialCard extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_testimonial_cards';
+  info: {
+    displayName: 'Testimonial Card';
+  };
+  attributes: {
+    author_name: Schema.Attribute.String;
+    author_role: Schema.Attribute.String;
+    avatar_initials: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+  };
+}
+
+export interface HomePageTestimonialsSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_page_testimonials_sections';
+  info: {
+    displayName: 'Testimonials Section';
   };
   attributes: {
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'>;
+    eyebrow_text: Schema.Attribute.String;
+    testimonial_cards: Schema.Attribute.Component<
+      'home-page.testimonial-card',
+      true
+    >;
     title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageWhyCard extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_why_cards';
-  info: {
-    displayName: 'why_card';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    icon: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface HomePageWhyThynkwise extends Struct.ComponentSchema {
-  collectionName: 'components_home_page_why_thynkwises';
-  info: {
-    displayName: 'Why Thynkwise';
-  };
-  attributes: {
-    subtitle: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-    why_card: Schema.Attribute.Component<'home-page.why-card', true>;
   };
 }
 
@@ -3343,22 +3381,24 @@ declare module '@strapi/strapi' {
       'gpuaas-page.turnkey-systems': GpuaasPageTurnkeySystems;
       'gpuaas-page.types': GpuaasPageTypes;
       'gpuaas-page.workload-library': GpuaasPageWorkloadLibrary;
-      'home-page.cards': HomePageCards;
-      'home-page.client-outcomes': HomePageClientOutcomes;
-      'home-page.cloud-provider': HomePageCloudProvider;
-      'home-page.cta': HomePageCta;
-      'home-page.faq': HomePageFaq;
-      'home-page.hero': HomePageHero;
-      'home-page.industry': HomePageIndustry;
-      'home-page.industry-card': HomePageIndustryCard;
-      'home-page.outcomes-card': HomePageOutcomesCard;
-      'home-page.service': HomePageService;
-      'home-page.service-card': HomePageServiceCard;
-      'home-page.stat': HomePageStat;
-      'home-page.testimonial': HomePageTestimonial;
-      'home-page.value-item': HomePageValueItem;
-      'home-page.why-card': HomePageWhyCard;
-      'home-page.why-thynkwise': HomePageWhyThynkwise;
+      'home-page.action-button': HomePageActionButton;
+      'home-page.capabilities-section': HomePageCapabilitiesSection;
+      'home-page.capability-card': HomePageCapabilityCard;
+      'home-page.client-card': HomePageClientCard;
+      'home-page.client-portfolio-section': HomePageClientPortfolioSection;
+      'home-page.faq-item': HomePageFaqItem;
+      'home-page.faq-section': HomePageFaqSection;
+      'home-page.final-cta-section': HomePageFinalCtaSection;
+      'home-page.hero-section': HomePageHeroSection;
+      'home-page.hero-vertical-card': HomePageHeroVerticalCard;
+      'home-page.partner-network-section': HomePagePartnerNetworkSection;
+      'home-page.partner-pill': HomePagePartnerPill;
+      'home-page.seo-settings': HomePageSeoSettings;
+      'home-page.stat-item': HomePageStatItem;
+      'home-page.stats-band-section': HomePageStatsBandSection;
+      'home-page.tag-item': HomePageTagItem;
+      'home-page.testimonial-card': HomePageTestimonialCard;
+      'home-page.testimonials-section': HomePageTestimonialsSection;
       'indian-sovereign-cloud-page.benefit-card': IndianSovereignCloudPageBenefitCard;
       'indian-sovereign-cloud-page.case-studies-section': IndianSovereignCloudPageCaseStudiesSection;
       'indian-sovereign-cloud-page.case-study-card': IndianSovereignCloudPageCaseStudyCard;

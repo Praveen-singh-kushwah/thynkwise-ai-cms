@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_home_page_seo_settings",
+  "info": {
+    "displayName": "SEO Settings"
+  },
+  "options": {},
+  "attributes": {
+    "browser_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "meta_keywords": {
+      "type": "text"
+    },
+    "canonical_url": {
+      "type": "string"
+    },
+    "og_title": {
+      "type": "string"
+    },
+    "og_description": {
+      "type": "text"
+    },
+    "twitter_title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

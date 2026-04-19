@@ -1111,36 +1111,46 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    ClientOutcomes: Schema.Attribute.Component<
-      'home-page.client-outcomes',
+    capabilities_section: Schema.Attribute.Component<
+      'home-page.capabilities-section',
       false
     >;
-    cloudProvider: Schema.Attribute.Component<
-      'home-page.cloud-provider',
+    client_portfolio_section: Schema.Attribute.Component<
+      'home-page.client-portfolio-section',
       false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    cta: Schema.Attribute.Component<'home-page.cta', false>;
-    faq: Schema.Attribute.Component<'home-page.faq', true>;
-    hero: Schema.Attribute.Component<'home-page.hero', false>;
-    industry: Schema.Attribute.Component<'home-page.industry', false>;
+    faq_section: Schema.Attribute.Component<'home-page.faq-section', false>;
+    final_cta_section: Schema.Attribute.Component<
+      'home-page.final-cta-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<'home-page.hero-section', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    partner_network_section: Schema.Attribute.Component<
+      'home-page.partner-network-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    service: Schema.Attribute.Component<'home-page.service', false>;
-    stat: Schema.Attribute.Component<'home-page.stat', true>;
-    testimonial: Schema.Attribute.Component<'home-page.testimonial', true>;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
+    stats_band: Schema.Attribute.Component<
+      'home-page.stats-band-section',
+      false
+    >;
+    testimonials_section: Schema.Attribute.Component<
+      'home-page.testimonials-section',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    valueItem: Schema.Attribute.Component<'home-page.value-item', true>;
-    WhyThynkwise: Schema.Attribute.Component<'home-page.why-thynkwise', false>;
   };
 }
 

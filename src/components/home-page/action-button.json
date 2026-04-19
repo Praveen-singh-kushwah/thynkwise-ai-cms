@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_page_action_buttons",
+  "info": {
+    "displayName": "Action Button"
+  },
+  "options": {},
+  "attributes": {
+    "button_text": {
+      "type": "string"
+    },
+    "button_link": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "outline",
+        "whatsapp"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_page_hero_vertical_cards",
+  "info": {
+    "displayName": "Hero Vertical Card"
+  },
+  "options": {},
+  "attributes": {
+    "order_label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "link_text": {
+      "type": "string"
+    },
+    "link_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

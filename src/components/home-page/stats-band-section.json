@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_page_stats_band_sections",
+  "info": {
+    "displayName": "Stats Band Section"
+  },
+  "options": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "component": "home-page.stat-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

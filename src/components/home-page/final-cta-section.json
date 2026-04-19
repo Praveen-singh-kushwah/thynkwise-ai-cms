@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_home_page_final_cta_sections",
+  "info": {
+    "displayName": "Final CTA Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primary_cta": {
+      "type": "component",
+      "component": "home-page.action-button",
+      "repeatable": false
+    },
+    "secondary_cta": {
+      "type": "component",
+      "component": "home-page.action-button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_page_partner_network_sections",
+  "info": {
+    "displayName": "Partner Network Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "partner_pills": {
+      "type": "component",
+      "component": "home-page.partner-pill",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -13,58 +13,48 @@
   "attributes": {
     "hero": {
       "type": "component",
-      "component": "home-page.hero",
+      "component": "home-page.hero-section",
       "repeatable": false
     },
-    "valueItem": {
+    "stats_band": {
       "type": "component",
-      "component": "home-page.value-item",
-      "repeatable": true
-    },
-    "service": {
-      "type": "component",
-      "component": "home-page.service",
+      "component": "home-page.stats-band-section",
       "repeatable": false
     },
-    "cloudProvider": {
+    "capabilities_section": {
       "type": "component",
-      "component": "home-page.cloud-provider",
+      "component": "home-page.capabilities-section",
       "repeatable": false
     },
-    "stat": {
+    "partner_network_section": {
       "type": "component",
-      "component": "home-page.stat",
-      "repeatable": true
-    },
-    "WhyThynkwise": {
-      "type": "component",
-      "component": "home-page.why-thynkwise",
+      "component": "home-page.partner-network-section",
       "repeatable": false
     },
-    "industry": {
+    "client_portfolio_section": {
       "type": "component",
-      "component": "home-page.industry",
+      "component": "home-page.client-portfolio-section",
       "repeatable": false
     },
-    "ClientOutcomes": {
+    "testimonials_section": {
       "type": "component",
-      "component": "home-page.client-outcomes",
+      "component": "home-page.testimonials-section",
       "repeatable": false
     },
-    "testimonial": {
+    "faq_section": {
       "type": "component",
-      "component": "home-page.testimonial",
-      "repeatable": true
-    },
-    "cta": {
-      "type": "component",
-      "component": "home-page.cta",
+      "component": "home-page.faq-section",
       "repeatable": false
     },
-    "faq": {
+    "final_cta_section": {
       "type": "component",
-      "component": "home-page.faq",
-      "repeatable": true
+      "component": "home-page.final-cta-section",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "home-page.seo-settings",
+      "repeatable": false
     }
   }
 }

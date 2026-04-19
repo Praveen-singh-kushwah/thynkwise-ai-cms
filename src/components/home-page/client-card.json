@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_page_client_cards",
+  "info": {
+    "displayName": "Client Card"
+  },
+  "options": {},
+  "attributes": {
+    "category_label": {
+      "type": "string"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "geography": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "metric_value": {
+      "type": "string"
+    },
+    "metric_label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
