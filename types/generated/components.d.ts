@@ -3026,6 +3026,411 @@ export interface ManagedServicesProcessStep extends Struct.ComponentSchema {
   };
 }
 
+export interface SalesConsultingPageAcademyBanner
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_academy_banners';
+  info: {
+    displayName: 'Academy Banner';
+  };
+  attributes: {
+    academy_stats: Schema.Attribute.Component<
+      'sales-consulting-page.academy-stat',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    eyebrow_text: Schema.Attribute.String;
+    primary_cta: Schema.Attribute.Component<
+      'sales-consulting-page.action-button',
+      false
+    >;
+    secondary_cta: Schema.Attribute.Component<
+      'sales-consulting-page.action-button',
+      false
+    >;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface SalesConsultingPageAcademyStat extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_academy_stats';
+  info: {
+    displayName: 'Academy Stat';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageActionButton
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_action_buttons';
+  info: {
+    displayName: 'Action Button';
+  };
+  attributes: {
+    button_link: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<
+      ['primary', 'secondary', 'outline', 'whatsapp', 'email']
+    >;
+  };
+}
+
+export interface SalesConsultingPageBeyondCrmSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_beyond_crm_sections';
+  info: {
+    displayName: 'Beyond CRM Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow_text: Schema.Attribute.String;
+    service_cards: Schema.Attribute.Component<
+      'sales-consulting-page.service-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageBulletItem extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_bullet_items';
+  info: {
+    displayName: 'Bullet Item';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface SalesConsultingPageCaseStudyMetric
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_case_study_metrics';
+  info: {
+    displayName: 'Case Study Metric';
+  };
+  attributes: {
+    metric_label: Schema.Attribute.String;
+    metric_value: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageCaseStudySection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_case_study_sections';
+  info: {
+    displayName: 'Case Study Section';
+  };
+  attributes: {
+    case_label: Schema.Attribute.String;
+    challenge_label: Schema.Attribute.String;
+    challenge_quote: Schema.Attribute.Text;
+    company_name: Schema.Attribute.String;
+    delivered_label: Schema.Attribute.String;
+    delivered_steps: Schema.Attribute.Component<
+      'sales-consulting-page.bullet-item',
+      true
+    >;
+    eyebrow_text: Schema.Attribute.String;
+    geography: Schema.Attribute.String;
+    metrics: Schema.Attribute.Component<
+      'sales-consulting-page.case-study-metric',
+      true
+    >;
+    quote: Schema.Attribute.Text;
+    quote_author: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageCostMetric extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_cost_metrics';
+  info: {
+    displayName: 'Cost Metric';
+  };
+  attributes: {
+    metric_label: Schema.Attribute.String;
+    metric_value: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageCrmPlatformCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_crm_platform_cards';
+  info: {
+    displayName: 'CRM Platform Card';
+  };
+  attributes: {
+    accent_color: Schema.Attribute.String;
+    badge_text: Schema.Attribute.String;
+    bullet_items: Schema.Attribute.Component<
+      'sales-consulting-page.bullet-item',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    platform_label: Schema.Attribute.String;
+    result_text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageCrmPlatformsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_crm_platforms_sections';
+  info: {
+    displayName: 'CRM Platforms Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow_text: Schema.Attribute.String;
+    platform_cards: Schema.Attribute.Component<
+      'sales-consulting-page.crm-platform-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageEngagementModelSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_engagement_model_sections';
+  info: {
+    displayName: 'Engagement Model Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow_text: Schema.Attribute.String;
+    process_steps: Schema.Attribute.Component<
+      'sales-consulting-page.process-step',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_faq_items';
+  info: {
+    displayName: 'FAQ Item';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    is_open_by_default: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_faq_sections';
+  info: {
+    displayName: 'FAQ Section';
+  };
+  attributes: {
+    eyebrow_text: Schema.Attribute.String;
+    faq_items: Schema.Attribute.Component<
+      'sales-consulting-page.faq-item',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageFinalCtaSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_final_cta_sections';
+  info: {
+    displayName: 'Final CTA Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    primary_cta: Schema.Attribute.Component<
+      'sales-consulting-page.action-button',
+      false
+    >;
+    secondary_cta: Schema.Attribute.Component<
+      'sales-consulting-page.action-button',
+      false
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    breadcrumb_label: Schema.Attribute.String;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    eyebrow_text: Schema.Attribute.String;
+    primary_cta: Schema.Attribute.Component<
+      'sales-consulting-page.action-button',
+      false
+    >;
+    proof_stats: Schema.Attribute.Component<
+      'sales-consulting-page.stat-item',
+      true
+    >;
+    secondary_cta: Schema.Attribute.Component<
+      'sales-consulting-page.action-button',
+      false
+    >;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface SalesConsultingPagePainPoint extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_pain_points';
+  info: {
+    displayName: 'Pain Point';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface SalesConsultingPageProblemSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_problem_sections';
+  info: {
+    displayName: 'Problem Section';
+  };
+  attributes: {
+    cost_box_label: Schema.Attribute.String;
+    cost_metrics: Schema.Attribute.Component<
+      'sales-consulting-page.cost-metric',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    difference_description: Schema.Attribute.Text;
+    difference_label: Schema.Attribute.String;
+    eyebrow_text: Schema.Attribute.String;
+    pain_points: Schema.Attribute.Component<
+      'sales-consulting-page.pain-point',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageProcessStep extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_process_steps';
+  info: {
+    displayName: 'Process Step';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    step_number: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageSeoSettings extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_seo_settings';
+  info: {
+    displayName: 'SEO Settings';
+  };
+  attributes: {
+    area_served: Schema.Attribute.Component<
+      'sales-consulting-page.tag-item',
+      true
+    >;
+    browser_title: Schema.Attribute.String;
+    canonical_url: Schema.Attribute.String;
+    meta_description: Schema.Attribute.Text;
+    meta_keywords: Schema.Attribute.Text;
+    og_description: Schema.Attribute.Text;
+    og_title: Schema.Attribute.String;
+    service_schema_description: Schema.Attribute.Text;
+    service_schema_name: Schema.Attribute.String;
+    service_type: Schema.Attribute.String;
+    twitter_title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageServiceCard extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_service_cards';
+  info: {
+    displayName: 'Service Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageStatItem extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_stat_items';
+  info: {
+    displayName: 'Stat Item';
+  };
+  attributes: {
+    metric_label: Schema.Attribute.String;
+    metric_value: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageTagItem extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_tag_items';
+  info: {
+    displayName: 'Tag Item';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface SalesConsultingPageTestimonialCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_testimonial_cards';
+  info: {
+    displayName: 'Testimonial Card';
+  };
+  attributes: {
+    author_name: Schema.Attribute.String;
+    author_role: Schema.Attribute.String;
+    avatar_initials: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+  };
+}
+
+export interface SalesConsultingPageTestimonialsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sales_consulting_page_testimonials_sections';
+  info: {
+    displayName: 'Testimonials Section';
+  };
+  attributes: {
+    eyebrow_text: Schema.Attribute.String;
+    testimonial_cards: Schema.Attribute.Component<
+      'sales-consulting-page.testimonial-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_cards';
   info: {
@@ -3444,6 +3849,30 @@ declare module '@strapi/strapi' {
       'managed-services-page.why-card': ManagedServicesPageWhyCard;
       'managed-services-page.why-thynkwise': ManagedServicesPageWhyThynkwise;
       'managed-services.process-step': ManagedServicesProcessStep;
+      'sales-consulting-page.academy-banner': SalesConsultingPageAcademyBanner;
+      'sales-consulting-page.academy-stat': SalesConsultingPageAcademyStat;
+      'sales-consulting-page.action-button': SalesConsultingPageActionButton;
+      'sales-consulting-page.beyond-crm-section': SalesConsultingPageBeyondCrmSection;
+      'sales-consulting-page.bullet-item': SalesConsultingPageBulletItem;
+      'sales-consulting-page.case-study-metric': SalesConsultingPageCaseStudyMetric;
+      'sales-consulting-page.case-study-section': SalesConsultingPageCaseStudySection;
+      'sales-consulting-page.cost-metric': SalesConsultingPageCostMetric;
+      'sales-consulting-page.crm-platform-card': SalesConsultingPageCrmPlatformCard;
+      'sales-consulting-page.crm-platforms-section': SalesConsultingPageCrmPlatformsSection;
+      'sales-consulting-page.engagement-model-section': SalesConsultingPageEngagementModelSection;
+      'sales-consulting-page.faq-item': SalesConsultingPageFaqItem;
+      'sales-consulting-page.faq-section': SalesConsultingPageFaqSection;
+      'sales-consulting-page.final-cta-section': SalesConsultingPageFinalCtaSection;
+      'sales-consulting-page.hero-section': SalesConsultingPageHeroSection;
+      'sales-consulting-page.pain-point': SalesConsultingPagePainPoint;
+      'sales-consulting-page.problem-section': SalesConsultingPageProblemSection;
+      'sales-consulting-page.process-step': SalesConsultingPageProcessStep;
+      'sales-consulting-page.seo-settings': SalesConsultingPageSeoSettings;
+      'sales-consulting-page.service-card': SalesConsultingPageServiceCard;
+      'sales-consulting-page.stat-item': SalesConsultingPageStatItem;
+      'sales-consulting-page.tag-item': SalesConsultingPageTagItem;
+      'sales-consulting-page.testimonial-card': SalesConsultingPageTestimonialCard;
+      'sales-consulting-page.testimonials-section': SalesConsultingPageTestimonialsSection;
       'shared.card': SharedCard;
       'shared.card-1': SharedCard1;
       'shared.card-2': SharedCard2;

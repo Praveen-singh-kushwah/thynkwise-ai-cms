@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sales_consulting_page_crm_platforms_sections",
+  "info": { "displayName": "CRM Platforms Section" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "platform_cards": { "type": "component", "component": "sales-consulting-page.crm-platform-card", "repeatable": true }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sales_consulting_page_problem_sections",
+  "info": { "displayName": "Problem Section" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "pain_points": { "type": "component", "component": "sales-consulting-page.pain-point", "repeatable": true },
+    "cost_box_label": { "type": "string" },
+    "cost_metrics": { "type": "component", "component": "sales-consulting-page.cost-metric", "repeatable": true },
+    "difference_label": { "type": "string" },
+    "difference_description": { "type": "text" }
+  },
+  "config": {}
+}

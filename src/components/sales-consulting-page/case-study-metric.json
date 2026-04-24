@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_sales_consulting_page_case_study_metrics",
+  "info": { "displayName": "Case Study Metric" },
+  "options": {},
+  "attributes": {
+    "metric_value": { "type": "string" },
+    "metric_label": { "type": "string" }
+  },
+  "config": {}
+}

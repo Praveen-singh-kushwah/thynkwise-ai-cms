@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sales_consulting_page_testimonial_cards",
+  "info": { "displayName": "Testimonial Card" },
+  "options": {},
+  "attributes": {
+    "quote": { "type": "text" },
+    "avatar_initials": { "type": "string" },
+    "author_name": { "type": "string" },
+    "author_role": { "type": "string" }
+  },
+  "config": {}
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sales_consulting_page_seo_settings",
+  "info": { "displayName": "SEO Settings" },
+  "options": {},
+  "attributes": {
+    "browser_title": { "type": "string" },
+    "meta_description": { "type": "text" },
+    "meta_keywords": { "type": "text" },
+    "canonical_url": { "type": "string" },
+    "og_title": { "type": "string" },
+    "og_description": { "type": "text" },
+    "twitter_title": { "type": "string" },
+    "service_schema_name": { "type": "string" },
+    "service_schema_description": { "type": "text" },
+    "service_type": { "type": "string" },
+    "area_served": { "type": "component", "component": "sales-consulting-page.tag-item", "repeatable": true }
+  },
+  "config": {}
+}

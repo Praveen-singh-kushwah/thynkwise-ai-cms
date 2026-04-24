@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_sales_consulting_page_testimonials_sections",
+  "info": { "displayName": "Testimonials Section" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "string" },
+    "testimonial_cards": { "type": "component", "component": "sales-consulting-page.testimonial-card", "repeatable": true }
+  },
+  "config": {}
+}

@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_sales_consulting_page_academy_stats",
+  "info": { "displayName": "Academy Stat" },
+  "options": {},
+  "attributes": {
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "label": { "type": "string" }
+  },
+  "config": {}
+}

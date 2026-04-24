@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sales_consulting_page_case_study_sections",
+  "info": { "displayName": "Case Study Section" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "string" },
+    "case_label": { "type": "string" },
+    "company_name": { "type": "string" },
+    "geography": { "type": "string" },
+    "challenge_label": { "type": "string" },
+    "challenge_quote": { "type": "text" },
+    "delivered_label": { "type": "string" },
+    "delivered_steps": { "type": "component", "component": "sales-consulting-page.bullet-item", "repeatable": true },
+    "metrics": { "type": "component", "component": "sales-consulting-page.case-study-metric", "repeatable": true },
+    "quote": { "type": "text" },
+    "quote_author": { "type": "string" }
+  },
+  "config": {}
+}

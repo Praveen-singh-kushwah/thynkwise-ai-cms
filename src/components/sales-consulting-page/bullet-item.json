@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sales_consulting_page_bullet_items",
+  "info": { "displayName": "Bullet Item" },
+  "options": {},
+  "attributes": {
+    "text": { "type": "text" }
+  },
+  "config": {}
+}

@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_sales_consulting_page_stat_items",
+  "info": { "displayName": "Stat Item" },
+  "options": {},
+  "attributes": {
+    "metric_value": { "type": "string" },
+    "metric_label": { "type": "string" }
+  },
+  "config": {}
+}

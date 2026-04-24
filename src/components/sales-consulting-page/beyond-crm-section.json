@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sales_consulting_page_beyond_crm_sections",
+  "info": { "displayName": "Beyond CRM Section" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "service_cards": { "type": "component", "component": "sales-consulting-page.service-card", "repeatable": true }
+  },
+  "config": {}
+}

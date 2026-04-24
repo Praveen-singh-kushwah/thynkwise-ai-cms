@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sales_consulting_page_crm_platform_cards",
+  "info": { "displayName": "CRM Platform Card" },
+  "options": {},
+  "attributes": {
+    "accent_color": { "type": "string" },
+    "platform_label": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "bullet_items": { "type": "component", "component": "sales-consulting-page.bullet-item", "repeatable": true },
+    "badge_text": { "type": "string" },
+    "result_text": { "type": "text" }
+  },
+  "config": {}
+}

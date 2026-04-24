@@ -1288,6 +1288,78 @@ export interface ApiManagedServicesPageManagedServicesPage
   };
 }
 
+export interface ApiSalesConsultingPageSalesConsultingPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'sales_consulting_pages';
+  info: {
+    displayName: 'Sales Consulting Page';
+    pluralName: 'sales-consulting-pages';
+    singularName: 'sales-consulting-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    academy_banner: Schema.Attribute.Component<
+      'sales-consulting-page.academy-banner',
+      false
+    >;
+    beyond_crm_section: Schema.Attribute.Component<
+      'sales-consulting-page.beyond-crm-section',
+      false
+    >;
+    case_study_section: Schema.Attribute.Component<
+      'sales-consulting-page.case-study-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    crm_platforms_section: Schema.Attribute.Component<
+      'sales-consulting-page.crm-platforms-section',
+      false
+    >;
+    engagement_model_section: Schema.Attribute.Component<
+      'sales-consulting-page.engagement-model-section',
+      false
+    >;
+    faq_section: Schema.Attribute.Component<
+      'sales-consulting-page.faq-section',
+      false
+    >;
+    final_cta_section: Schema.Attribute.Component<
+      'sales-consulting-page.final-cta-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<
+      'sales-consulting-page.hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sales-consulting-page.sales-consulting-page'
+    > &
+      Schema.Attribute.Private;
+    problem_section: Schema.Attribute.Component<
+      'sales-consulting-page.problem-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<
+      'sales-consulting-page.seo-settings',
+      false
+    >;
+    testimonials_section: Schema.Attribute.Component<
+      'sales-consulting-page.testimonials-section',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1815,6 +1887,7 @@ declare module '@strapi/strapi' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::indian-sovereign-cloud-page.indian-sovereign-cloud-page': ApiIndianSovereignCloudPageIndianSovereignCloudPage;
       'api::managed-services-page.managed-services-page': ApiManagedServicesPageManagedServicesPage;
+      'api::sales-consulting-page.sales-consulting-page': ApiSalesConsultingPageSalesConsultingPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

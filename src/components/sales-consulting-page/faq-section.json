@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_sales_consulting_page_faq_sections",
+  "info": { "displayName": "FAQ Section" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "string" },
+    "faq_items": { "type": "component", "component": "sales-consulting-page.faq-item", "repeatable": true }
+  },
+  "config": {}
+}

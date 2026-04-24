@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sales_consulting_page_tag_items",
+  "info": { "displayName": "Tag Item" },
+  "options": {},
+  "attributes": {
+    "label": { "type": "string" }
+  },
+  "config": {}
+}

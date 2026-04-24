@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sales_consulting_page_academy_banners",
+  "info": { "displayName": "Academy Banner" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "customField", "customField": "plugin::ckeditor5.CKEditor", "options": { "preset": "defaultHtml" } },
+    "description": { "type": "text" },
+    "primary_cta": { "type": "component", "component": "sales-consulting-page.action-button", "repeatable": false },
+    "secondary_cta": { "type": "component", "component": "sales-consulting-page.action-button", "repeatable": false },
+    "academy_stats": { "type": "component", "component": "sales-consulting-page.academy-stat", "repeatable": true }
+  },
+  "config": {}
+}

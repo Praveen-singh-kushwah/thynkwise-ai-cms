@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sales_consulting_page_pain_points",
+  "info": { "displayName": "Pain Point" },
+  "options": {},
+  "attributes": {
+    "text": { "type": "text" }
+  },
+  "config": {}
+}

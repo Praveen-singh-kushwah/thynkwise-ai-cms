@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "sales_consulting_pages",
+  "info": {
+    "singularName": "sales-consulting-page",
+    "pluralName": "sales-consulting-pages",
+    "displayName": "Sales Consulting Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "sales-consulting-page.seo-settings",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "sales-consulting-page.hero-section",
+      "repeatable": false
+    },
+    "problem_section": {
+      "type": "component",
+      "component": "sales-consulting-page.problem-section",
+      "repeatable": false
+    },
+    "crm_platforms_section": {
+      "type": "component",
+      "component": "sales-consulting-page.crm-platforms-section",
+      "repeatable": false
+    },
+    "beyond_crm_section": {
+      "type": "component",
+      "component": "sales-consulting-page.beyond-crm-section",
+      "repeatable": false
+    },
+    "academy_banner": {
+      "type": "component",
+      "component": "sales-consulting-page.academy-banner",
+      "repeatable": false
+    },
+    "case_study_section": {
+      "type": "component",
+      "component": "sales-consulting-page.case-study-section",
+      "repeatable": false
+    },
+    "engagement_model_section": {
+      "type": "component",
+      "component": "sales-consulting-page.engagement-model-section",
+      "repeatable": false
+    },
+    "testimonials_section": {
+      "type": "component",
+      "component": "sales-consulting-page.testimonials-section",
+      "repeatable": false
+    },
+    "faq_section": {
+      "type": "component",
+      "component": "sales-consulting-page.faq-section",
+      "repeatable": false
+    },
+    "final_cta_section": {
+      "type": "component",
+      "component": "sales-consulting-page.final-cta-section",
+      "repeatable": false
+    }
+  }
+}

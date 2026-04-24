@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sales_consulting_page_engagement_model_sections",
+  "info": { "displayName": "Engagement Model Section" },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "process_steps": { "type": "component", "component": "sales-consulting-page.process-step", "repeatable": true }
+  },
+  "config": {}
+}

@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_sales_consulting_page_cost_metrics",
+  "info": { "displayName": "Cost Metric" },
+  "options": {},
+  "attributes": {
+    "metric_value": { "type": "string" },
+    "metric_label": { "type": "string" }
+  },
+  "config": {}
+}
