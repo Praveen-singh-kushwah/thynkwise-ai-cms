@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cost_optimization_page_waste_bars",
+  "info": {
+    "displayName": "waste_bar"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value_label": {
+      "type": "string"
+    },
+    "bar_percentage": {
+      "type": "integer"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

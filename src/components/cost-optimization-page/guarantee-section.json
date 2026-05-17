@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_cost_optimization_page_guarantee_sections",
+  "info": {
+    "displayName": "guarantee_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "text"
+    },
+    "primary_cta_text": {
+      "type": "string"
+    },
+    "primary_cta_link": {
+      "type": "string"
+    },
+    "secondary_cta_text": {
+      "type": "string"
+    },
+    "secondary_cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_cost_optimization_page_optimization_cards",
+  "info": {
+    "displayName": "optimization_card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "impact_label": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

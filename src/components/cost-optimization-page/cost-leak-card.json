@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_cost_optimization_page_cost_leak_cards",
+  "info": {
+    "displayName": "cost_leak_card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "percentage": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "example": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cost_optimization_page_calculator_provider_options",
+  "info": {
+    "displayName": "calculator_provider_option"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "waste_percentage": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

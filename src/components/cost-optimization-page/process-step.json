@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_cost_optimization_page_process_steps",
+  "info": {
+    "displayName": "process_step"
+  },
+  "options": {},
+  "attributes": {
+    "step_number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "time_label": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_cost_optimization_page_timeline_phases",
+  "info": {
+    "displayName": "timeline_phase"
+  },
+  "options": {},
+  "attributes": {
+    "time_label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "cost-optimization-page.note-item",
+      "repeatable": true
+    },
+    "saving_label": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

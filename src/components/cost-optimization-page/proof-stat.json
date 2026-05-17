@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_cost_optimization_page_proof_stats",
+  "info": {
+    "displayName": "proof_stat"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cost_optimization_page_faq_sections",
+  "info": {
+    "displayName": "faq_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "faq_items": {
+      "type": "component",
+      "component": "faq.faq-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

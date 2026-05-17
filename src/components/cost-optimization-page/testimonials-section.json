@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cost_optimization_page_testimonials_sections",
+  "info": {
+    "displayName": "testimonials_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "cost-optimization-page.testimonial-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

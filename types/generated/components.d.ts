@@ -1065,6 +1065,488 @@ export interface ContactPageTrustBandSection extends Struct.ComponentSchema {
   };
 }
 
+export interface CostOptimizationPageAnswerBox extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_answer_boxes';
+  info: {
+    displayName: 'answer_box';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface CostOptimizationPageCalculatorProviderOption
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_calculator_provider_options';
+  info: {
+    displayName: 'calculator_provider_option';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    waste_percentage: Schema.Attribute.Integer;
+  };
+}
+
+export interface CostOptimizationPageCalculatorResult
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_calculator_results';
+  info: {
+    displayName: 'calculator_result';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageCalculatorSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_calculator_sections';
+  info: {
+    displayName: 'calculator_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    default_spend: Schema.Attribute.Integer;
+    description: Schema.Attribute.Text;
+    disclaimer: Schema.Attribute.Text;
+    max_spend: Schema.Attribute.Integer;
+    min_spend: Schema.Attribute.Integer;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    provider_label: Schema.Attribute.String;
+    provider_options: Schema.Attribute.Component<
+      'cost-optimization-page.calculator-provider-option',
+      true
+    >;
+    result_items: Schema.Attribute.Component<
+      'cost-optimization-page.calculator-result',
+      true
+    >;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    spend_label: Schema.Attribute.String;
+    step_amount: Schema.Attribute.Integer;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageCostLeakCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_cost_leak_cards';
+  info: {
+    displayName: 'cost_leak_card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    example: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    percentage: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageCostLeaksSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_cost_leaks_sections';
+  info: {
+    displayName: 'cost_leaks_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    cards: Schema.Attribute.Component<
+      'cost-optimization-page.cost-leak-card',
+      true
+    >;
+    cta_link: Schema.Attribute.String;
+    cta_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface CostOptimizationPageFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_faq_sections';
+  info: {
+    displayName: 'faq_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    faq_items: Schema.Attribute.Component<'faq.faq-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageFinalCtaSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_final_cta_sections';
+  info: {
+    displayName: 'final_cta_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    trust_notes: Schema.Attribute.Component<
+      'cost-optimization-page.note-item',
+      true
+    >;
+  };
+}
+
+export interface CostOptimizationPageFinopsProcessSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_finops_process_sections';
+  info: {
+    displayName: 'finops_process_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    steps: Schema.Attribute.Component<
+      'cost-optimization-page.process-step',
+      true
+    >;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface CostOptimizationPageGuaranteeSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_guarantee_sections';
+  info: {
+    displayName: 'guarantee_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface CostOptimizationPageHeroSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_hero_sections';
+  info: {
+    displayName: 'hero_section';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    eyebrow_text: Schema.Attribute.String;
+    primary_cta_link: Schema.Attribute.String;
+    primary_cta_text: Schema.Attribute.String;
+    proof_stats: Schema.Attribute.Component<
+      'cost-optimization-page.proof-stat',
+      true
+    >;
+    secondary_cta_link: Schema.Attribute.String;
+    secondary_cta_text: Schema.Attribute.String;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    waste_meter: Schema.Attribute.Component<
+      'cost-optimization-page.waste-meter',
+      false
+    >;
+  };
+}
+
+export interface CostOptimizationPageNoteItem extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_note_items';
+  info: {
+    displayName: 'note_item';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageOptimizationCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_optimization_cards';
+  info: {
+    displayName: 'optimization_card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    impact_label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageOptimizationLayersSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_optimization_layers_sections';
+  info: {
+    displayName: 'optimization_layers_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    cards: Schema.Attribute.Component<
+      'cost-optimization-page.optimization-card',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface CostOptimizationPageProcessStep
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_process_steps';
+  info: {
+    displayName: 'process_step';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    step_number: Schema.Attribute.String;
+    time_label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageProofStat extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_proof_stats';
+  info: {
+    displayName: 'proof_stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageRoiTimelineSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_roi_timeline_sections';
+  info: {
+    displayName: 'roi_timeline_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    cta_link: Schema.Attribute.String;
+    cta_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    guarantee_description: Schema.Attribute.Text;
+    guarantee_title: Schema.Attribute.String;
+    phases: Schema.Attribute.Component<
+      'cost-optimization-page.timeline-phase',
+      true
+    >;
+    title: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+  };
+}
+
+export interface CostOptimizationPageSavingsProofRow
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_savings_proof_rows';
+  info: {
+    displayName: 'savings_proof_row';
+  };
+  attributes: {
+    after_cost: Schema.Attribute.String;
+    before_cost: Schema.Attribute.String;
+    cloud_provider: Schema.Attribute.String;
+    company: Schema.Attribute.String;
+    company_detail: Schema.Attribute.String;
+    method: Schema.Attribute.Text;
+    monthly_saving: Schema.Attribute.String;
+    time_to_save: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageSavingsProofSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_savings_proof_sections';
+  info: {
+    displayName: 'savings_proof_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    footnote: Schema.Attribute.Text;
+    rows: Schema.Attribute.Component<
+      'cost-optimization-page.savings-proof-row',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageTestimonialCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_testimonial_cards';
+  info: {
+    displayName: 'testimonial_card';
+  };
+  attributes: {
+    author_name: Schema.Attribute.String;
+    author_role: Schema.Attribute.String;
+    avatar_initials: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    rating_label: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageTestimonialsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_testimonials_sections';
+  info: {
+    displayName: 'testimonials_section';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String;
+    testimonials: Schema.Attribute.Component<
+      'cost-optimization-page.testimonial-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageTimelinePhase
+  extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_timeline_phases';
+  info: {
+    displayName: 'timeline_phase';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'cost-optimization-page.note-item', true>;
+    saving_label: Schema.Attribute.String;
+    time_label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageTrustBand extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_trust_bands';
+  info: {
+    displayName: 'trust_band';
+  };
+  attributes: {
+    stats: Schema.Attribute.Component<
+      'cost-optimization-page.proof-stat',
+      true
+    >;
+  };
+}
+
+export interface CostOptimizationPageWasteBar extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_waste_bars';
+  info: {
+    displayName: 'waste_bar';
+  };
+  attributes: {
+    bar_percentage: Schema.Attribute.Integer;
+    label: Schema.Attribute.String;
+    tone: Schema.Attribute.String;
+    value_label: Schema.Attribute.String;
+  };
+}
+
+export interface CostOptimizationPageWasteMeter extends Struct.ComponentSchema {
+  collectionName: 'components_cost_optimization_page_waste_meters';
+  info: {
+    displayName: 'waste_meter';
+  };
+  attributes: {
+    saving_context: Schema.Attribute.String;
+    saving_label: Schema.Attribute.String;
+    saving_subtext: Schema.Attribute.String;
+    saving_value: Schema.Attribute.String;
+    spend_label: Schema.Attribute.String;
+    spend_subtext: Schema.Attribute.String;
+    spend_value: Schema.Attribute.String;
+    status_label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    waste_items: Schema.Attribute.Component<
+      'cost-optimization-page.waste-bar',
+      true
+    >;
+  };
+}
+
 export interface CybersecurityPageCybersecurityHero
   extends Struct.ComponentSchema {
   collectionName: 'components_cybersecurity_page_cybersecurity_heroes';
@@ -3717,6 +4199,31 @@ declare module '@strapi/strapi' {
       'contact-page.success-state': ContactPageSuccessState;
       'contact-page.trust-band-item': ContactPageTrustBandItem;
       'contact-page.trust-band-section': ContactPageTrustBandSection;
+      'cost-optimization-page.answer-box': CostOptimizationPageAnswerBox;
+      'cost-optimization-page.calculator-provider-option': CostOptimizationPageCalculatorProviderOption;
+      'cost-optimization-page.calculator-result': CostOptimizationPageCalculatorResult;
+      'cost-optimization-page.calculator-section': CostOptimizationPageCalculatorSection;
+      'cost-optimization-page.cost-leak-card': CostOptimizationPageCostLeakCard;
+      'cost-optimization-page.cost-leaks-section': CostOptimizationPageCostLeaksSection;
+      'cost-optimization-page.faq-section': CostOptimizationPageFaqSection;
+      'cost-optimization-page.final-cta-section': CostOptimizationPageFinalCtaSection;
+      'cost-optimization-page.finops-process-section': CostOptimizationPageFinopsProcessSection;
+      'cost-optimization-page.guarantee-section': CostOptimizationPageGuaranteeSection;
+      'cost-optimization-page.hero-section': CostOptimizationPageHeroSection;
+      'cost-optimization-page.note-item': CostOptimizationPageNoteItem;
+      'cost-optimization-page.optimization-card': CostOptimizationPageOptimizationCard;
+      'cost-optimization-page.optimization-layers-section': CostOptimizationPageOptimizationLayersSection;
+      'cost-optimization-page.process-step': CostOptimizationPageProcessStep;
+      'cost-optimization-page.proof-stat': CostOptimizationPageProofStat;
+      'cost-optimization-page.roi-timeline-section': CostOptimizationPageRoiTimelineSection;
+      'cost-optimization-page.savings-proof-row': CostOptimizationPageSavingsProofRow;
+      'cost-optimization-page.savings-proof-section': CostOptimizationPageSavingsProofSection;
+      'cost-optimization-page.testimonial-card': CostOptimizationPageTestimonialCard;
+      'cost-optimization-page.testimonials-section': CostOptimizationPageTestimonialsSection;
+      'cost-optimization-page.timeline-phase': CostOptimizationPageTimelinePhase;
+      'cost-optimization-page.trust-band': CostOptimizationPageTrustBand;
+      'cost-optimization-page.waste-bar': CostOptimizationPageWasteBar;
+      'cost-optimization-page.waste-meter': CostOptimizationPageWasteMeter;
       'cybersecurity-page.cybersecurity-hero': CybersecurityPageCybersecurityHero;
       'cybersecurity-page.description-points': CybersecurityPageDescriptionPoints;
       'cybersecurity-page.framework': CybersecurityPageFramework;

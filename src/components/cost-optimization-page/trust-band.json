@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_cost_optimization_page_trust_bands",
+  "info": {
+    "displayName": "trust_band"
+  },
+  "options": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "component": "cost-optimization-page.proof-stat",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

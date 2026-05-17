@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_cost_optimization_page_calculator_results",
+  "info": {
+    "displayName": "calculator_result"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

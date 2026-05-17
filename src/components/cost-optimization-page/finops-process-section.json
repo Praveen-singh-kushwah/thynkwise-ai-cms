@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_cost_optimization_page_finops_process_sections",
+  "info": {
+    "displayName": "finops_process_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "text"
+    },
+    "steps": {
+      "type": "component",
+      "component": "cost-optimization-page.process-step",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

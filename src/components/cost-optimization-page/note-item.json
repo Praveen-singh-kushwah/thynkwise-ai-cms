@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cost_optimization_page_note_items",
+  "info": {
+    "displayName": "note_item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

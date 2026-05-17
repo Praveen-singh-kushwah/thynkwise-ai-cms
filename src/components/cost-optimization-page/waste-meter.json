@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_cost_optimization_page_waste_meters",
+  "info": {
+    "displayName": "waste_meter"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "status_label": {
+      "type": "string"
+    },
+    "spend_label": {
+      "type": "string"
+    },
+    "spend_value": {
+      "type": "string"
+    },
+    "spend_subtext": {
+      "type": "string"
+    },
+    "waste_items": {
+      "type": "component",
+      "component": "cost-optimization-page.waste-bar",
+      "repeatable": true
+    },
+    "saving_label": {
+      "type": "string"
+    },
+    "saving_context": {
+      "type": "string"
+    },
+    "saving_value": {
+      "type": "string"
+    },
+    "saving_subtext": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

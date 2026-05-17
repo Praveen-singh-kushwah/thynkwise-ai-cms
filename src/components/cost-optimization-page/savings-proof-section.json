@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_cost_optimization_page_savings_proof_sections",
+  "info": {
+    "displayName": "savings_proof_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "rows": {
+      "type": "component",
+      "component": "cost-optimization-page.savings-proof-row",
+      "repeatable": true
+    },
+    "footnote": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

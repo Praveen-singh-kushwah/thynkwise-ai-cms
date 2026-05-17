@@ -107,43 +107,6 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface AdminAuditLog extends Struct.CollectionTypeSchema {
-  collectionName: 'strapi_audit_logs';
-  info: {
-    displayName: 'Audit Log';
-    pluralName: 'audit-logs';
-    singularName: 'audit-log';
-  };
-  options: {
-    draftAndPublish: false;
-    timestamps: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    action: Schema.Attribute.String & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::audit-log'> &
-      Schema.Attribute.Private;
-    payload: Schema.Attribute.JSON;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    user: Schema.Attribute.Relation<'oneToOne', 'admin::user'>;
-  };
-}
-
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -805,6 +768,87 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     trust_band: Schema.Attribute.Component<
       'contact-page.trust-band-section',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCostOptimizationPageCostOptimizationPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'cost_optimization_pages';
+  info: {
+    displayName: 'Cost Optimization Page';
+    pluralName: 'cost-optimization-pages';
+    singularName: 'cost-optimization-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    answer_box: Schema.Attribute.Component<
+      'cost-optimization-page.answer-box',
+      false
+    >;
+    calculator_section: Schema.Attribute.Component<
+      'cost-optimization-page.calculator-section',
+      false
+    >;
+    cost_leaks_section: Schema.Attribute.Component<
+      'cost-optimization-page.cost-leaks-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq_section: Schema.Attribute.Component<
+      'cost-optimization-page.faq-section',
+      false
+    >;
+    final_cta_section: Schema.Attribute.Component<
+      'cost-optimization-page.final-cta-section',
+      false
+    >;
+    finops_process_section: Schema.Attribute.Component<
+      'cost-optimization-page.finops-process-section',
+      false
+    >;
+    guarantee_section: Schema.Attribute.Component<
+      'cost-optimization-page.guarantee-section',
+      false
+    >;
+    hero: Schema.Attribute.Component<
+      'cost-optimization-page.hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::cost-optimization-page.cost-optimization-page'
+    > &
+      Schema.Attribute.Private;
+    optimization_layers_section: Schema.Attribute.Component<
+      'cost-optimization-page.optimization-layers-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    roi_timeline_section: Schema.Attribute.Component<
+      'cost-optimization-page.roi-timeline-section',
+      false
+    >;
+    savings_proof_section: Schema.Attribute.Component<
+      'cost-optimization-page.savings-proof-section',
+      false
+    >;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
+    testimonials_section: Schema.Attribute.Component<
+      'cost-optimization-page.testimonials-section',
+      false
+    >;
+    trust_band: Schema.Attribute.Component<
+      'cost-optimization-page.trust-band',
       false
     >;
     updatedAt: Schema.Attribute.DateTime;
@@ -1865,7 +1909,6 @@ declare module '@strapi/strapi' {
     export interface ContentTypeSchemas {
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
-      'admin::audit-log': AdminAuditLog;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
       'admin::session': AdminSession;
@@ -1879,6 +1922,7 @@ declare module '@strapi/strapi' {
       'api::book-demo-submission.book-demo-submission': ApiBookDemoSubmissionBookDemoSubmission;
       'api::cloud-migration-page.cloud-migration-page': ApiCloudMigrationPageCloudMigrationPage;
       'api::contact-page.contact-page': ApiContactPageContactPage;
+      'api::cost-optimization-page.cost-optimization-page': ApiCostOptimizationPageCostOptimizationPage;
       'api::cybersecurity-page.cybersecurity-page': ApiCybersecurityPageCybersecurityPage;
       'api::gcp-page.gcp-page': ApiGcpPageGcpPage;
       'api::get-assessment-page.get-assessment-page': ApiGetAssessmentPageGetAssessmentPage;

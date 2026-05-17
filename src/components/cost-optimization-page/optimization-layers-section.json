@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_cost_optimization_page_optimization_layers_sections",
+  "info": {
+    "displayName": "optimization_layers_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "cost-optimization-page.optimization-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

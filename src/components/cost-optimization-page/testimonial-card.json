@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_cost_optimization_page_testimonial_cards",
+  "info": {
+    "displayName": "testimonial_card"
+  },
+  "options": {},
+  "attributes": {
+    "rating_label": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "avatar_initials": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "author_role": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

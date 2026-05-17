@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_cost_optimization_page_calculator_sections",
+  "info": {
+    "displayName": "calculator_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "spend_label": {
+      "type": "string"
+    },
+    "provider_label": {
+      "type": "string"
+    },
+    "min_spend": {
+      "type": "integer"
+    },
+    "max_spend": {
+      "type": "integer"
+    },
+    "default_spend": {
+      "type": "integer"
+    },
+    "step_amount": {
+      "type": "integer"
+    },
+    "provider_options": {
+      "type": "component",
+      "component": "cost-optimization-page.calculator-provider-option",
+      "repeatable": true
+    },
+    "result_items": {
+      "type": "component",
+      "component": "cost-optimization-page.calculator-result",
+      "repeatable": true
+    },
+    "disclaimer": {
+      "type": "text"
+    },
+    "primary_cta_text": {
+      "type": "string"
+    },
+    "primary_cta_link": {
+      "type": "string"
+    },
+    "secondary_cta_text": {
+      "type": "string"
+    },
+    "secondary_cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

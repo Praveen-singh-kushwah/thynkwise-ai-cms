@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_cost_optimization_page_roi_timeline_sections",
+  "info": {
+    "displayName": "roi_timeline_section"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description": {
+      "type": "text"
+    },
+    "phases": {
+      "type": "component",
+      "component": "cost-optimization-page.timeline-phase",
+      "repeatable": true
+    },
+    "guarantee_title": {
+      "type": "string"
+    },
+    "guarantee_description": {
+      "type": "text"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
