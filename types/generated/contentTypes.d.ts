@@ -460,6 +460,7 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     our_mission: Schema.Attribute.Component<'about-page.our-mission', false>;
     our_values: Schema.Attribute.Component<'about-page.our-value', false>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     stats_band: Schema.Attribute.Component<'about-page.stats-band', false>;
     technology_partners: Schema.Attribute.Component<
       'about-page.technology-partners',
@@ -516,6 +517,7 @@ export interface ApiAwsPageAwsPage extends Struct.SingleTypeSchema {
       'aws-page.real-world-aws',
       false
     >;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -564,6 +566,7 @@ export interface ApiAzurePageAzurePage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     team_credentials: Schema.Attribute.Component<
       'aws-page.certified-expertise',
       false
@@ -605,6 +608,7 @@ export interface ApiBookDemoPageBookDemoPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     points: Schema.Attribute.Component<'shared.points', true>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -716,6 +720,7 @@ export interface ApiCloudMigrationPageCloudMigrationPage
       'cloud-migration-page.quick-answer',
       true
     >;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     six_r_framework: Schema.Attribute.Component<
       'cloud-migration-page.six-r-framework',
       false
@@ -766,6 +771,7 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     offices: Schema.Attribute.Component<'contact-page.offices-section', false>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     trust_band: Schema.Attribute.Component<
       'contact-page.trust-band-section',
       false
@@ -913,6 +919,7 @@ export interface ApiCybersecurityPageCybersecurityPage
       'managed-services-page.stats-band',
       false
     >;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -975,6 +982,7 @@ export interface ApiGcpPageGcpPage extends Struct.SingleTypeSchema {
       'gcp-page.use-cases-section',
       false
     >;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1021,6 +1029,7 @@ export interface ApiGetAssessmentPageGetAssessmentPage
       'get-assessment-page.results-section',
       false
     >;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1126,6 +1135,7 @@ export interface ApiGpuaasPageGpuaasPage extends Struct.SingleTypeSchema {
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     turnkey_systems: Schema.Attribute.Component<
       'gpuaas-page.turnkey-systems',
       false
@@ -1248,6 +1258,7 @@ export interface ApiIndianSovereignCloudPageIndianSovereignCloudPage
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     services: Schema.Attribute.Component<
       'indian-sovereign-cloud-page.services-section',
       false
@@ -1314,6 +1325,7 @@ export interface ApiManagedServicesPageManagedServicesPage
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'home-page.seo-settings', false>;
     service_catalogue: Schema.Attribute.Component<
       'managed-services-page.service-catalogue',
       false

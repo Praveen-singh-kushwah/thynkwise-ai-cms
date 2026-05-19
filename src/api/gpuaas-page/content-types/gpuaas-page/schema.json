@@ -11,6 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "home-page.seo-settings",
+      "repeatable": false
+    },
     "hero": {
       "type": "component",
       "component": "gpuaas-page.hero",

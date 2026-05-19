@@ -11,6 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "home-page.seo-settings",
+      "repeatable": false
+    },
     "cloud_migration_hero": {
       "type": "component",
       "component": "cloud-migration-page.cloud-migration-hero",

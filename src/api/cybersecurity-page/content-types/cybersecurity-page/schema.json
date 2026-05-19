@@ -11,6 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "home-page.seo-settings",
+      "repeatable": false
+    },
     "cybersecurity_hero": {
       "type": "component",
       "component": "cybersecurity-page.cybersecurity-hero",
